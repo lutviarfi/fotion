@@ -39,9 +39,10 @@ html, body {
 	font-family: Comfortaa_Regular;
 	font-size: 15px;
 	background-color:#EBE4CF;
-	background-image:url(../images/header1.jpg);
+	background-image:url(../images/header4.jpg);
 	background-position:left top;
-	background-repeat:repeat-x;
+	background-repeat:no-repeat;
+background-size: 1500px 420px;
 	color:#904E2B;
 	margin:0 0 1px;
 	height:100%;
