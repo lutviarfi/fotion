@@ -8,34 +8,21 @@ class CRUDModel extends CI_Model {
 
 
   //insert data login table
-	public function InsertDaftar($data){
+	public function Insertfood($data){
 
 		$checkinsert = false;
 		try{
-			$this->db->insert('login',$data);
+			$this->db->insert('food',$data);
 			$checkinsert = true;
 		}catch (Exception $ex) {
 			$checkinsert = false;
 		}
 		return $checkinsert;
   }
-	
-	//insert data buku table
-  public function InsertBuku($data){
-
-		$checkinsert = false;
-		try{
-			$this->db->insert('buku',$data);
-			$checkinsert = true;
-		}catch (Exception $ex) {
-			$checkinsert = false;
-		}
-		return $checkinsert;
-	}
 
   //read data login table
 	public function readUser($username,$password){
-		$result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',md5($password))->limit(1)->get('login');
+		$result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',md5($password))->limit(1)->get('restogistration');
 		return $result->row();
 
 	}
@@ -52,13 +39,13 @@ class CRUDModel extends CI_Model {
 
 	//ambil data buku table
 	public function getAllBuku(){
-		$result = $this->db->get('buku');
+		$result = $this->db->get('');
 		return $result->result();
 	}
 
 	//ambil data login table
 	public function getAllUser(){
-		$result = $this->db->get('login');
+		$result = $this->db->get('restogistration');
 		return $result->result();
 	}
 

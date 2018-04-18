@@ -43,7 +43,7 @@
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-						<span class="username username-hide-mobile"><?php echo $nama; ?></span>
+						<span class="username username-hide-mobile">php echo $nama; </span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -148,11 +148,8 @@
 													<th>Judul Buku</th>
 													<th>Penulis</th>
 													<th>Penerbit</th>
-													<?php if($auth=="1" || $auth == "0") { ?>
 													<th colspan="2"> Action</th>
-													<?php }else { ?>                     
-                       										 <?php } ?>
-												</thead>
+													</thead>
 
 												<?php foreach($buku as $data){?>
 												<tr>

@@ -40,8 +40,12 @@ class CRUD extends CI_Controller {
 		$auth = $this->session->auth;
 		$data['auth'] = $auth;
 
-		$this->load->view('ListBuku',$data);	
+		$this->load->view('ListFood',$data);	
 	
+	}
+
+	public function tampil(){
+		$this->load->view('ListFood');
 	}
 
 	public function Detil($id) {
