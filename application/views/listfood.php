@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>P&acirc;tisserie</title>
+<title>FOTION</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<?php blink('patisserie/css/styles.css') ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,22 +18,10 @@
     <!--start header-->
     <header>
       <!--start logo-->
-      <div class="sixcol"> <a href="#" id="logo"><img src="<?php blink('patisserie/images/logo.png') ?>" width="303" height="120" alt=""></a> </div>
-      <!--end logo-->
+      <!--end width="350" height="256" alt="" class="cake" logo-->
       <!--start menu-->
-      <div class="sixcol last">
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us </a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="index.html">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
       <!--end menu-->
-      <img src="images/cake.png" width="350" height="256" alt="" class="cake">
+      <!--img src="<!-?php blink('patisserie/images/header2.jpg') ?>"-->
       <!--end header-->
     </header>
   </div>
@@ -43,10 +31,8 @@
   <div class="row">
     <section id="intro" class="onecol">
       <hgroup>
-        <h1>CAKES AND COOKIES SHOP</h1>
-        <h2>I made html5 patisserie template with 1140 css grid great for making a responsive design that is optimized to work on any device: iphone, ipad, small tablet, small phone. </h2>
+        <h1>Food Donation</h1>
       </hgroup>
-      <a href="#" class="button1">View our gallery of sweets</a> </section>
   </div>
 </div>
 <!--end intro-->
