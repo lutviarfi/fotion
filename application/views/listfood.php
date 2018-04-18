@@ -13,11 +13,11 @@
 <![endif]-->
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <!--start header-->
-    <header>
-      <img src="<?php blink('patisserie/images/header2.jpg') ?>" width="" height="" alt="" class="header">
+    <header >
+      <!--img src="<!?php blink('patisserie/images/header2.jpg') ?>" width="950px" height="" alt="" class="img-responsive">
       <!--end header-->
     </header>
   </div>

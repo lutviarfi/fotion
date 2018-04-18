@@ -37,9 +37,9 @@ html, body {
 }
 html, body {
 	font-family: Comfortaa_Regular;
-	font-size: 13px;
+	font-size: 15px;
 	background-color:#EBE4CF;
-	background-image:url(../images/bg.png);
+	background-image:url(../images/header1.jpg);
 	background-position:left top;
 	background-repeat:repeat-x;
 	color:#904E2B;
@@ -177,8 +177,8 @@ header {
 }
 /***************************************************
 				INTRO
-***************************************************/	
-	
+***************************************************/
+
 	#intro {
 	width: 98%;
 	position: relative;
@@ -192,7 +192,7 @@ header {
 }
 /***************************************************
 				   HOLDERS
-***************************************************/	
+***************************************************/
 
 .holder_content {
 	position: relative;
@@ -214,8 +214,8 @@ header {
 /***************************************************
 			        GALLERY
 ***************************************************/
-	 
-	 	 
+
+
 	 a.photo_hover3 {
 	position:relative;
 	float: left;
