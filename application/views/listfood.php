@@ -46,7 +46,12 @@
   <div class="container copyright">
     <div class="row">
       <div class="sixcol">
-        <div id="FooterTree"> &copy; 2018 Fotion Team</div>
+        <div id="FooterTree"> Created By </div>
+        <p>
+       <a href="#">
+         <span class="glyphicon glyphicon-user"></span>
+       </a>
+     </p>
       </div>
     </div>
   </div>
