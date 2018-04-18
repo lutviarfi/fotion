@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
-Version: 4.1.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Insert Data Buku</title>
+<title>Restaurant Registration</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -66,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-						<span class="username username-hide-mobile"><?php echo $nama; ?></span>
+						<span class="username username-hide-mobile">php echo $nama;</span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -86,43 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- END TOP NAVIGATION MENU -->
 		</div>
 	</div>
-	<!-- END HEADER TOP -->
-	<!-- BEGIN HEADER MENU -->
-	<div class="page-header-menu">
-		<div class="container">
-			<!-- BEGIN HEADER SEARCH BOX -->
-			<form class="search-form" action="extra_search.html" method="GET">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search" name="query">
-					<span class="input-group-btn">
-					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-					</span>
-				</div>
-			</form>
-			<!-- END HEADER SEARCH BOX -->
-			<!-- BEGIN MEGA MENU -->
-			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
-			<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
-			<div class="hor-menu ">
-				<ul class="nav navbar-nav">
-					<li>
-						<a href="<?php blink('CRUD') ?>">Home</a>
-					</li>
-					<li class="menu-dropdown mega-menu-dropdown active ">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
-						Tambah Data Buku <i class="fa fa-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu" style="min-width: 710px">
 
-						</ul>
-					</li>
-					</li>
-				</ul>
-			</div>
-			<!-- END MEGA MENU -->
-		</div>
-	</div>
-	<!-- END HEADER MENU -->
 </div>
 <!-- END HEADER -->
 <!-- BEGIN PAGE CONTAINER -->
@@ -131,9 +81,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-head">
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
-			<div class="page-title">
-				<h1>Insert<small>&nbsp Data Buku</small></h1>
-			</div>
+		
+				<h1>Restaurant Registration Form</h1>
+	
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
 			<div class="page-toolbar">
@@ -154,12 +104,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="portlet box green">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>Insert Buku
+											<i class="fa fa-gift"></i>Form Registration
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
-											</a>
-											<a href="#portlet-config" data-toggle="modal" class="config">
 											</a>
 											<a href="javascript:;" class="reload">
 											</a>
@@ -177,51 +125,36 @@ License: You must have a valid license purchased only from themeforest(the above
 										<form action="<?php blink('CRUD/InsertBuku')?>" method="post" class="form-horizontal">
 											<div class="form-body">
 												<div class="form-group">
-													<label class="col-md-3 control-label">Judul</label>
+													<label class="col-md-3 control-label">Username</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control input-circle" placeholder="Judul Buku" id="judul" name="judul">
+														<input type="text" class="form-control input-circle" placeholder="Username" id="username" name="username">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Penulis</label>
+													<label class="col-md-3 control-label">Email</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="penulis" id="penulis" placeholder="Penulis">
+															<input type="text" class="form-control input-circle" name="email" id="email" placeholder="domain@mail.com">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Penerbit</label>
+													<label class="col-md-3 control-label">Phone Number</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="penerbit" id="penerbit" placeholder="Penerbit">
+															<input type="text" class="form-control input-circle" name="penerbit" id="penerbit" placeholder="08XXXXXXXXXX">
 													</div>
 												</div>
-
-												<div class="row">
-												
-   											 <!-- <div class="<col-xs-4></col-xs-4> col-xs-offset-3 <col-sm-4></col-sm-4> col-sm-offset-5 col-lg-5 col-lg-offset-5"> -->
-   											 <div class="form-group" >
-												<label class="col-md-3 control-label">Tanggal Terbit</label>
-    										    		<div class="col-md-4">	
-	        								    		<div class="input-group date " data-date="" data-date-format="dd-mm-yyyy">
-	                									<input class="form-control" type="text" name="tglterbit">
-	                									<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-           												 </div>
-      												  </div>
-    												</div>
-    											</div>
-											</div>
-
 												<div class="form-group">
-													<label class="col-md-3 control-label">Sinopsis</label>
+													<label class="col-md-3 control-label">Password</label>
 													<div class="col-md-4">
-														<textarea class="form-control" rows="5" id="sinopsis" name="sinopsis"  placeholder="Sinopsis"></textarea>
+															<input type="text" class="form-control input-circle" name="password" id="password" placeholder="Password">
 													</div>
 												</div>
 
+												</div>
 											</div>
 											<div class="form-actions">
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
-														<button type="submit" class="btn btn-circle blue">Submit</button>
+														<button type="submit" class="btn btn-circle blue">Register Now</button>
 														<a href="<?php blink('CRUD') ?>" type="button" class="btn btn-circle default">Cancel</a>
 													</div>
 												</div>

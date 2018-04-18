@@ -11,7 +11,7 @@ class Restogister extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('restogister');
+		$this->load->view('Restogister');
 	}
 
 	public function authnodatabase(){
