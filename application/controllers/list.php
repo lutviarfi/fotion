@@ -11,7 +11,7 @@ class List extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('restogister');
+		$this->load->view('listfood');
 	}
 
 }
