@@ -38,11 +38,11 @@ html, body {
 html, body {
 	font-family: Comfortaa_Regular;
 	font-size: 15px;
-	background-color:#EBE4CF;
-	background-image:url(../images/header4.jpg);
+	background-color:	#DCDCDC;
+	background-image:url(../images/header2.jpg);
 	background-position:left top;
 	background-repeat:no-repeat;
-background-size: 1500px 420px;
+background-size: 1500px 480px;
 	color:#904E2B;
 	margin:0 0 1px;
 	height:100%;
@@ -183,11 +183,11 @@ header {
 	#intro {
 	width: 98%;
 	position: relative;
-	float: left;
+	float: center;
 	height:220px;
-	padding:10px;
+	padding:65px;
 	background:transparent;
-	margin-top:65px;
+	margin-top:45px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
