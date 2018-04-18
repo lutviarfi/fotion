@@ -266,13 +266,10 @@ a.photo_hover2:hover {
 
 footer {
 	position:relative;
-	height:200px;
+	height:100px;
 	clear:both;
 	width:100%;
-	background-image: url(../images/footer.png);
-	background-position:left top;
-	background-repeat:repeat-x;
-	background-color:transparent;
+	background-color:	#696969;
 }
 #FooterOne, #FooterTwo, #FooterTree {
 	padding:0 16px;
@@ -290,7 +287,7 @@ footer a, #FooterOne a, #FooterTwo a, #FooterTree a {
 }
 .copyright {
 	position: relative;
-	float: left;
+	float: center;
 	width: 100%;
 	padding:47px 0 10px 20px;
 }
