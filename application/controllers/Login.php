@@ -34,7 +34,7 @@ class Login extends CI_Controller {
 			$this->load->view('error');
 		}
 	}
-	
+
 	public function auth(){
 
 		$username = $this->input->post('username');
@@ -58,7 +58,7 @@ class Login extends CI_Controller {
 			redirect('CRUD');
 		}
 
-		
+
 	}
 
 	public function logout(){
