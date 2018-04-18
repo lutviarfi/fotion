@@ -50,18 +50,18 @@ class Restogister extends CI_Controller {
       {  
        // successfully sent mail to user email  
             $this->session->set_flashdata('msg','<div class="alert alert-success text-center">Please confirm the mail sent to your email id to complete the registration.</div>');  
-            redirect('CRUD');  
+            redirect('Restogister');  
       }  
       else  
       {  
        $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Please try again ...</div>');  
-            redirect('CRUD');  
+            redirect('Restogister');  
           }  
      }  
      else  
      {  
       $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Something Wrong. Please try again ...</div>');  
-            redirect('CRUD');  
+            redirect('Restogister');  
      }  
       }    
    function sendemail($email,$saltid){  
