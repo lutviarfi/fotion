@@ -5,12 +5,13 @@ class List extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+			$this->load->model('CRUDModel');
 	}
 
 
 	public function index()
 	{
-		$this->load->view('listfood');
+		$this->load->view('restogister');
 	}
 
 }
