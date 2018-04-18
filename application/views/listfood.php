@@ -6,6 +6,12 @@
 <link rel="stylesheet" type="text/css" href="<?php blink('patisserie/css/styles.css') ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="<?php blink('patisserie/css/1140.css') ?>" type="text/css" media="screen">
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+<link href="<?php blink('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')?>" rel="stylesheet" type="text/css">
+<link href="<?php blink('assets/global/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet" type="text/css">
+<link href="<?php blink('assets/global/plugins/uniform/css/uniform.default.css')?>" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
 <!--[if lte IE 9]>
 <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 <script src="js/html5.js"></script>
