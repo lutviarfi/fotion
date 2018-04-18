@@ -139,7 +139,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Phone Number</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="phone" id="phone" placeholder="08XXXXXXXXXX">
+														<input type="text" class="form-control input-circle" placeholder="08xxxxxxxx" id="phone" name="phone">
 													</div>
 												</div>
 												<div class="form-group">

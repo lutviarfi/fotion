@@ -70,7 +70,7 @@ class Restogister extends CI_Controller {
       $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name  
       $config['smtp_port'] = '465'; //smtp port number  
       $config['smtp_user'] = '1511503524@student.budiluhur.ac.id';  
-      $config['smtp_pass'] = '********'; //$from_email password  
+      $config['smtp_pass'] = 'ublbisa123'; //$from_email password  
       $config['mailtype'] = 'html';  
       $config['charset'] = 'iso-8859-1';  
       $config['wordwrap'] = TRUE;  
