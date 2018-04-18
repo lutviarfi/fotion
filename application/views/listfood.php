@@ -18,7 +18,7 @@
     <!--start header-->
     <header>
       <!--start logo-->
-      <div class="sixcol"> <a href="#" id="logo"><img src="images/logo.png" width="303" height="120" alt=""></a> </div>
+      <div class="sixcol"> <a href="#" id="logo"><img src="<?php blink('patisserie/images/logo.png') ?>" width="303" height="120" alt=""></a> </div>
       <!--end logo-->
       <!--start menu-->
       <div class="sixcol last">
