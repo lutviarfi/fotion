@@ -122,7 +122,7 @@
 									?>
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
-										<form action="<?php blink('CRUD/InsertBuku')?>" method="post" class="form-horizontal">
+										<form action="<?php blink('Restogister/InsertDaftar')?>" method="post" class="form-horizontal">
 											<div class="form-body">
 												<div class="form-group">
 													<label class="col-md-3 control-label">Username</label>
@@ -139,13 +139,13 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Phone Number</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="penerbit" id="penerbit" placeholder="08XXXXXXXXXX">
+															<input type="text" class="form-control input-circle" name="phone" id="phone" placeholder="08XXXXXXXXXX">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label">Password</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="password" id="password" placeholder="Password">
+															<input type="password" class="form-control input-circle" name="password" id="password" placeholder="Password">
 													</div>
 												</div>
 
@@ -155,7 +155,7 @@
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
 														<button type="submit" class="btn btn-circle blue">Register Now</button>
-														<a href="<?php blink('CRUD') ?>" type="button" class="btn btn-circle default">Cancel</a>
+														<a href="<?php blink('Restogister') ?>" type="button" class="btn btn-circle default">Cancel</a>
 													</div>
 												</div>
 											</div>
