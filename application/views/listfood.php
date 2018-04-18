@@ -17,11 +17,7 @@
   <div class="row">
     <!--start header-->
     <header>
-      <!--start logo-->
-      <!--end width="350" height="256" alt="" class="cake" logo-->
-      <!--start menu-->
-      <!--end menu-->
-      <!--img src="<!-?php blink('patisserie/images/header2.jpg') ?>"-->
+      <img src="<?php blink('patisserie/images/header2.jpg') ?>" width="" height="" alt="" class="header">
       <!--end header-->
     </header>
   </div>
