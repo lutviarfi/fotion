@@ -34,32 +34,24 @@ class CRUD extends CI_Controller {
 			redirect('');	
 		}
 
-		// $allBuku = $this->CRUDModel->getAllBuku();
-		// $data['buku'] = $allBuku;
+		$allFood = $this->CRUDModel->getAllFood();
+		$data['food'] = $allFood;
 
-		// $nama = $this->session->name;
-		// $data['nama'] = $nama;
-
-		// $auth = $this->session->auth;
-		// $data['auth'] = $auth;
-
-		// $this->load->view('ListBuku',$data);	
+		$this->load->view('ListFood',$data);	
 	}
 
 	public function FormDonation(){
 		$this->load->view('DonationFood');
 	}
-	// public function Detil($id) {
-	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();
 
-	// 	$nama = $this->session->name;
-	// 	$data['nama'] = $nama;
+	public function ListFood(){
+		$this->load->view('ListFood');
+	}
+	public function Detil($id) {
+		$data['food'] =  $this->CRUDModel->get_id($id)->result();
 
-	// 	$auth = $this->session->auth;
-	// 	$data['auth'] = $auth;
-		
-	// 	$this->load->view('Detil',$data);
-	// }
+		$this->load->view('ListFood',$data);
+	}
 
 	// public function edit($id) {
 	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();

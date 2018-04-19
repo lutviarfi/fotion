@@ -100,7 +100,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>List<small>&nbsp Buku</small></h1>
+				<h1>List Donations</h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -125,12 +125,10 @@
 											<i class="fa fa-gift"></i>List Food Donations
 										</div>
 										<div class="tools">
-											<a href="javascript:;" class="collapse">
-											</a>
+											
 											<a href="javascript:;" class="reload">
 											</a>
-											<a href="javascript:;" class="remove">
-											</a>
+											
 										</div>
 									</div>
 									<?php
@@ -144,18 +142,18 @@
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
 													<th>Name Food</th>
-													<th>halal</th>
+													<th>halal Description</th>
 													<th>Expire Date</th>
-													<th>status</th>
 													<th>Ingredients</th>
-													<th colspan="2"> Action</th>
 													</thead>
 
 												<?php foreach($food as $data){?>
 												<tr>
-													<td><a href="php blink('CRUD/Detil/'.$data->idbuku)?>" >php echo $data->judul;?></a></td>
-													<td>php echo $data->penulis;?></td>
-													<td>php echo $data->penerbit;?></td>
+													<td><a href="php blink('CRUD/Detil/'.$data->idfood)?>" ><?php echo $data->namefood;?></a></td>
+													<td><?php echo $data->halalnohalal;?></td>
+													<td><?php echo $data->expiry;?></td>
+													<td><?php echo $data->ingredients;?></td>
+													
 
 													<?php if($auth=="1" || $auth == "0") { ?>
 														<td width="20px;"><a href="<?php blink('CRUD/edit/'.$data->idbuku)?>" class="btn btn-warning" >Edit <span class="glyphicon glyphicon-edit"></span></a> </td>

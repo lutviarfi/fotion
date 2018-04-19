@@ -37,11 +37,11 @@ class CRUDModel extends CI_Model {
   // }
 
 
-	// //ambil data buku table
-	// public function getAllFood(){
-	// 	$result = $this->db->get('food');
-	// 	return $result->result();
-	// }
+	//ambil data food table
+	public function getAllFood(){
+		$result = $this->db->get('food');
+		return $result->result();
+	}
 
 	// //ambil data login table
 	// // public function getAllUser(){
