@@ -145,12 +145,13 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-													<th>Judul Buku</th>
-													<th>Penulis</th>
-													<th>Penerbit</th>
+													<th>Nama Restoran</th>
+													<th>Nama Makanan</th>
+													<th>Halal ?</th>
+													<th>Status</th>
 													<?php if($auth=="1" || $auth == "0") { ?>
 													<th colspan="2"> Action</th>
-													<?php }else { ?>                     
+													<?php }else { ?>
                        										 <?php } ?>
 												</thead>
 
@@ -162,14 +163,14 @@
 
 													<?php if($auth=="1" || $auth == "0") { ?>
 														<td width="20px;"><a href="<?php blink('CRUD/edit/'.$data->idbuku)?>" class="btn btn-warning" >Edit <span class="glyphicon glyphicon-edit"></span></a> </td>
-                                                    <?php }else { ?>                     
+                                                    <?php }else { ?>
                        										 <?php } ?>
-													
+
 													<?php if($auth == "0") { ?>
 														<td width="20px;"><a href="<?php blink('CRUD/hapus/'.$data->idbuku)?>" onclick="return konfirmasi()" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a> </td>
-													<?php }else { ?>                     
+													<?php }else { ?>
                        										 <?php } ?>
-												
+
 												</tr>
 												<?php } ?>
 												</table>
@@ -181,7 +182,7 @@
 
 														<?php if($auth=="1" || $auth == "0") { ?>
 														<a href="<?php blink('CRUD/input') ?>" class="btn btn-circle blue">Tambah Buku</a>
-														<?php }else { ?>                     
+														<?php }else { ?>
                        										 <?php } ?>
 													</div>
 												</div>
@@ -210,7 +211,7 @@
 			<div class="col-md-3 col-sm-6 col-xs12 footer-block">
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-			
+
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
 			</div>
