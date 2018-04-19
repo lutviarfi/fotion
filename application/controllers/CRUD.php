@@ -47,11 +47,11 @@ class CRUD extends CI_Controller {
 	public function ListFood(){
 		$this->load->view('ListFood');
 	}
-	public function Detil($id) {
-		$data['food'] =  $this->CRUDModel->get_id($id)->result();
+	// public function Detil($id) {
+	// 	$data['food'] =  $this->CRUDModel->get_id($id)->result();
 
-		$this->load->view('ListFood',$data);
-	}
+	// 	$this->load->view('ListFood',$data);
+	// }
 
 	// public function edit($id) {
 	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();
@@ -151,7 +151,7 @@ class CRUD extends CI_Controller {
 		if($result){
 			
 			$this->session->set_flashdata('Success','Send Success');
-			redirect('Restogister');
+			redirect('Daftarfood');
 		}else{
 			$this->session->set_flashdata('Failed','Send Failed');
 			redirect('CRUD/FormDonation');
