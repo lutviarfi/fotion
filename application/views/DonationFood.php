@@ -115,7 +115,7 @@
 									?>
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
-										<form action="<?php blink('Restogister/InsertDaftar')?>" method="post" class="form-horizontal">
+										<form action="<?php blink('CRUD/InsertFood')?>" method="post" class="form-horizontal">
 											<div class="form-body">
 												<div class="form-group">
 													<label class="col-md-3 control-label">Food name</label>
@@ -126,25 +126,25 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Halal Description</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="desc" id="desc" placeholder="Halal/Non Halal">
+															<input type="text" class="form-control input-circle" name="halalorno" id="desc" placeholder="Halal/Non Halal">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label">Expiret Date</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control input-circle" placeholder="dd-mm-yyyy" id="expiret" name="expire">
+														<input type="text" class="form-control input-circle" placeholder="dd-mm-yyyy" id="expiry" name="expiry">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label">Ingredience</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="ingredience" id="ingredience" placeholder="Ingrdience">
+															<input type="text" class="form-control input-circle" name="ingredients" id="ingredient" placeholder="Ingrdients">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-3 control-label">Food Picture</label>
 													<div class="col-md-4">
-													<input required data-placement="top" data-trigger="manual" type="file" name="picture">			
+													<input required data-placement="top" data-trigger="manual" type="file" name="photo">			
 												</div>
 												</div>
 
@@ -154,7 +154,7 @@
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
 														<button type="submit" class="btn btn-circle blue">Donation Now</button>
-														<a href="<?php blink('Restogister') ?>" type="button" class="btn btn-circle default">Cancel</a>
+														<a href="<?php blink('CRUD/FormDonation') ?>" type="button" class="btn btn-circle default">Cancel</a>
 													</div>
 												</div>
 											</div>

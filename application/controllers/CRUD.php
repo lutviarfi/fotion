@@ -31,16 +31,16 @@ class CRUD extends CI_Controller {
 			redirect('');	
 		}
 
-		$allBuku = $this->CRUDModel->getAllBuku();
-		$data['buku'] = $allBuku;
+		// $allBuku = $this->CRUDModel->getAllBuku();
+		// $data['buku'] = $allBuku;
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
+		// $nama = $this->session->name;
+		// $data['nama'] = $nama;
 
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+		// $auth = $this->session->auth;
+		// $data['auth'] = $auth;
 
-		$this->load->view('ListBuku',$data);	
+		// $this->load->view('ListBuku',$data);	
 	}
 
 	public function FormDonation(){
@@ -142,12 +142,12 @@ class CRUD extends CI_Controller {
 			}
 
 		$data = array(
-		'judul' => $judul,
-		'penulis'=> $penulis,
-		'penerbit'=> $penerbit,
-		'tglterbit' => $tglterbit,
-		'gambar' => $photo,
-		'sinopsis' => $sinopsis
+		'namefood' => $foodname,
+		'halalorno'=> $halal,
+		'expiry'=> $penerbit,
+		'status' => $status,
+		'ingredients' => $ingredient,
+		'photo' => $photo
 		);
 
 		$result = $this->CRUDModel->InsertFood($data);
@@ -161,7 +161,7 @@ class CRUD extends CI_Controller {
 			redirect('');
 		}
 
-		redirect('CRUD');
+		redirect('CRUD/FormDonation');
 	}
 	
 }
