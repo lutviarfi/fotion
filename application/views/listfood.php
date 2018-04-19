@@ -36,8 +36,9 @@
   <div class="row">
     <div class="twelevecol">
       <section class="group1">
-        <h5>MENU MAKANAN</h5>
-        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a> <a href="#"><span class="button">Read more</span></a> </section>
+        <h5>MENU MAKANAN</h5><br>
+        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a> &nbsp DESKRIPSI <br>
+         <a href="#"><span class="button">Read more</span></a> </section>
     </div>
   </div>
 </div>
