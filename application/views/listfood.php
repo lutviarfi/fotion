@@ -39,18 +39,27 @@
         <h5>MENU MAKANAN</h5><br>
         <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
         <div class="container">
-        <p>
-         Food Name : yoyo<br>
-         Halal  Description :  <br>
-         Expired : <br>
-         Ingredients : <br> </p>
-         <br>
-         <br>
-         <p>
-          Food Name : yoyo<br>
-          Halal  Description :  <br> </p>
+            <table style="width:70%">
+              <tr>
+                <td>Food Name : </td>
+                <td> Kue syalala</td>
+              </tr>
+              <tr>
+                <td>Halal Description : <br></td>
+                <td>Halal</td>
+              </tr>
+              <tr>
+                <td>Expired : </td>
+                <td>2 hari</td>
+              </tr>
+              <tr>
+                <td>Ingredients : </td>
+                <td>Flour,Strawberry,Cream Cheese,etc.
+                </td>
+              </tr>
+            </table>
       </div>
-         <a href="#"><span class="button">Read more</span></a> </section>
+         <a href="#"><span class="button">Pick up</span></a> </section>
     </div>
   </div>
 </div>
