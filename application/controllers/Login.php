@@ -41,9 +41,9 @@ class Login extends CI_Controller {
 		$password = $this->input->post('password');
 		if($checkUsername=$this->CRUDModel->readUser($username,$password)){
 			$this->load->view('ListBuku');
-		}else if($checkUsername=$this->CRUDModel->readUser1($username,$password){
+		}else if($checkUsername=$this->CRUDModel->readUser1($username,$password)){
 			$this->load->view('ListBuku');
-		}else if($checkUsername=$this->CRUDModel->readUser2($username,$password){
+		}else if($checkUsername=$this->CRUDModel->readUser2($username,$password)){
 			$this->load->view('ListBuku');
 		}else{
 			$this->load->view('Login');
