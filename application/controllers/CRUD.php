@@ -121,50 +121,50 @@ class CRUD extends CI_Controller {
 	// }
 
 	//add donation food
+
+
+
 	public function InsertFood(){
 
-		$this->load->helper(array('form', 'url'));
-		$nama_file = md5(uniqid(rand(), true));
-		$this->load->library('upload');
-		$config = [
-				'upload_path' => './assets/img/',
-				'allowed_types' => 'git|jpg|png|jpeg|bmp',
-				'file_name' => $nama_file
-		];
+		// $this->load->helper(array('form', 'url')); 
+		// $nama_file = md5(uniqid(rand(), true));
+		// $this->load->library('upload');
+		// $config = [
+		// 	'upload_path' => './assets/img/',
+		// 	'allowed_types' => 'gif|jpg|png|jpeg|bmp',
+		// 	'file_name' => $nama_file
+		// ];
 
-		$this->upload->initialize($config);
-			if(!$this->upload->do_upload('photo')){
-				$photo="";
-			}else{
-				$photo=$this->upload->file_name;
+		// $this->upload->initialize($config);
+		//   if(!$this->upload->do_upload('photo')){
+		//       $photo="";
+		//   }else{
+		// 		$photo=$this->upload->file_name;
 				$foodname = $this->input->post('namefood');
 				$halal = $this->input->post('halalorno');
 				$expiry = $this->input->post('expiry');
-				$status = $this->input->post('status');
 				$ingredient = $this->input->post('ingredients');
-			}
+			
 
 		$data = array(
 		'namefood' => $foodname,
 		'halalorno'=> $halal,
-		'expiry'=> $penerbit,
-		'status' => $status,
+		'expiry'=> $expiry,
 		'ingredients' => $ingredient,
-		'photo' => $photo
+		//'photo' => $photo
 		);
 
-		$result = $this->CRUDModel->InsertFood($data);
+		$result = $this->CRUDModel->Insertfood($data);
 		
 		if($result){
 			
 			$this->session->set_flashdata('Success','Send Success');
-			redirect('');
+			redirect('Restogister');
 		}else{
 			$this->session->set_flashdata('Failed','Send Failed');
-			redirect('');
-		}
+			redirect('CRUD/FormDonation');
+			}
 
-		redirect('CRUD/FormDonation');
+		}
 	}
-	
-}
+//}

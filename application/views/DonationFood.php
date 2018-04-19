@@ -120,7 +120,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Food name</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control input-circle" placeholder="Food Name" id="foodname" name="foodname">
+														<input type="text" class="form-control input-circle" placeholder="Food Name" id="foodname" name="namefood">
 													</div>
 												</div>
 												<div class="form-group">
