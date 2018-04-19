@@ -46,7 +46,7 @@
 	<h1 class="wthree">Restaurant Registration</h1>
 	<div class="login-section-agileits">
 		<h3 class="form-head">register online today, Its'free!</h3>
-		<form action="#" method="post">
+		<form action="<?php echo blink('Login/auth');?>" method="post">
 			<div class="w3ls-icon">
 				<input type="text" class="lock" name="username" placeholder="Username" required="" />
 			</div>
