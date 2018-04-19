@@ -79,7 +79,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 		
-				<h1>Donation Form</h1>
+				<h1>Donation Now</h1>
 	
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -144,8 +144,8 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Food Picture</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="ingredience" id="ingredience" placeholder="Ingrdience">
-													</div>
+													<input required data-placement="top" data-trigger="manual" type="file" name="picture">			
+												</div>
 												</div>
 
 												</div>

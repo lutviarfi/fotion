@@ -20,7 +20,7 @@ class CRUD extends CI_Controller {
 		  && $key!='RESERVER_KEY_HERE')$this->session->unset_userdata($key);
 		}
 		
-		$this->load->view('Restogister');
+		$this->load->view('Login2');
 
 	}
 
@@ -31,32 +31,27 @@ class CRUD extends CI_Controller {
 			redirect('');	
 		}
 
-		$allFood = $this->CRUDModel->getAllFood();
-		$data['food'] = $allFood;
+		$allBuku = $this->CRUDModel->getAllBuku();
+		$data['buku'] = $allBuku;
 
-		// $nama = $this->session->name;
-		// $data['nama'] = $nama;
+		$nama = $this->session->name;
+		$data['nama'] = $nama;
 
-		// $auth = $this->session->auth;
-		// $data['auth'] = $auth;
+		$auth = $this->session->auth;
+		$data['auth'] = $auth;
 
-		$this->load->view('ListFood',$data);	
+		$this->load->view('ListBuku',$data);	
 	
 	}
 
-	public function Tampil($food){
-		$this->load->view('ListFood');
-	}
-
-	public function FormDonation(){
-		$this->load->view('DonationFood');
-	}
-
 	public function Detil($id) {
-		$data['food'] =  $this->CRUDModel->get_id($id)->result();
+		$data['buku'] =  $this->CRUDModel->get_id($id)->result();
 
-		// $auth = $this->session->auth;
-		// $data['auth'] = $auth;
+		$nama = $this->session->name;
+		$data['nama'] = $nama;
+
+		$auth = $this->session->auth;
+		$data['auth'] = $auth;
 		
 		$this->load->view('Detil',$data);
 	}
@@ -121,19 +116,36 @@ class CRUD extends CI_Controller {
 	}
 
 	//tambah data buku
+	
 	public function InsertBuku(){
 
-		$judul = $this->input->post('judul');
-		$penulis = $this->input->post('penulis');
-		$penerbit = $this->input->post('penerbit');
-		$tglterbit = $this->input->post('tglterbit');
-		$sinopsis = $this->input->post('sinopsis');
+		$this->load->helper(array('form', 'url'));
+		$nama_file = md5(uniquid(rand(), true));
+		$this->load->library('upload');
+		$config = [
+				'upload_path' => './assets/img/',
+				'allowed_types' => 'git|jpg|png|jpeg|bmp',
+				'file_name' => $nama_file
+		];
+
+		$this->upload->initialize($config);
+			if(!$this->upload->do_upload('photo')){
+				$photo="";
+			}else{
+				$photo=$this->upload->file_name;
+				$judul = $this->input->post('judul');
+				$penulis = $this->input->post('penulis');
+				$penerbit = $this->input->post('penerbit');
+				$tglterbit = $this->input->post('tglterbit');
+				$sinopsis = $this->input->post('sinopsis');
+			}
 
 		$data = array(
-		'judul' =>$judul,
+		'judul' => $judul,
 		'penulis'=> $penulis,
-		'penerbit'=>$penerbit,
-		'tglterbit' =>$tglterbit,
+		'penerbit'=> $penerbit,
+		'tglterbit' => $tglterbit,
+		'gambar' => $photo,
 		'sinopsis' => $sinopsis
 		);
 
