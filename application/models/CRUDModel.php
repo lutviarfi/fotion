@@ -38,8 +38,8 @@ class CRUDModel extends CI_Model {
 
 
 	//ambil data buku table
-	public function getAllBuku(){
-		$result = $this->db->get('');
+	public function getAllFood(){
+		$result = $this->db->get('food');
 		return $result->result();
 	}
 

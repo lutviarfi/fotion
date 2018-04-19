@@ -122,12 +122,10 @@
 								<div class="portlet box green">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>List Buku Perpustakaan
+											<i class="fa fa-gift"></i>List Food Donations
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
-											</a>
-											<a href="#portlet-config" data-toggle="modal" class="config">
 											</a>
 											<a href="javascript:;" class="reload">
 											</a>
@@ -145,17 +143,19 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-													<th>Judul Buku</th>
-													<th>Penulis</th>
-													<th>Penerbit</th>
+													<th>Name Food</th>
+													<th>halal</th>
+													<th>Expire Date</th>
+													<th>status</th>
+													<th>Ingredients</th>
 													<th colspan="2"> Action</th>
 													</thead>
 
-												<?php foreach($buku as $data){?>
+												<?php foreach($food as $data){?>
 												<tr>
-													<td><a href="<?php blink('CRUD/Detil/'.$data->idbuku)?>" ><?php echo $data->judul;?></a></td>
-													<td><?php echo $data->penulis;?></td>
-													<td><?php echo $data->penerbit;?></td>
+													<td><a href="php blink('CRUD/Detil/'.$data->idbuku)?>" >php echo $data->judul;?></a></td>
+													<td>php echo $data->penulis;?></td>
+													<td>php echo $data->penerbit;?></td>
 
 													<?php if($auth=="1" || $auth == "0") { ?>
 														<td width="20px;"><a href="<?php blink('CRUD/edit/'.$data->idbuku)?>" class="btn btn-warning" >Edit <span class="glyphicon glyphicon-edit"></span></a> </td>
@@ -176,10 +176,8 @@
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
 
-														<?php if($auth=="1" || $auth == "0") { ?>
-														<a href="<?php blink('CRUD/input') ?>" class="btn btn-circle blue">Tambah Buku</a>
-														<?php }else { ?>                     
-                       										 <?php } ?>
+															<a href="<?php blink('CRUD/input') ?>" class="btn btn-circle blue">Tambah Buku</a>
+														
 													</div>
 												</div>
 											</div>

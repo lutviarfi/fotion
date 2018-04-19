@@ -20,7 +20,7 @@ class CRUD extends CI_Controller {
 		  && $key!='RESERVER_KEY_HERE')$this->session->unset_userdata($key);
 		}
 		
-		$this->load->view('Login2');
+		$this->load->view('Restogister');
 
 	}
 
@@ -31,31 +31,28 @@ class CRUD extends CI_Controller {
 			redirect('');	
 		}
 
-		$allBuku = $this->CRUDModel->getAllBuku();
-		$data['buku'] = $allBuku;
+		$allFood = $this->CRUDModel->getAllFood();
+		$data['food'] = $allFood;
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
+		// $nama = $this->session->name;
+		// $data['nama'] = $nama;
 
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+		// $auth = $this->session->auth;
+		// $data['auth'] = $auth;
 
 		$this->load->view('ListFood',$data);	
 	
 	}
 
-	public function tampil(){
+	public function tampil($food){
 		$this->load->view('ListFood');
 	}
 
 	public function Detil($id) {
-		$data['buku'] =  $this->CRUDModel->get_id($id)->result();
+		$data['food'] =  $this->CRUDModel->get_id($id)->result();
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
-
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+		// $auth = $this->session->auth;
+		// $data['auth'] = $auth;
 		
 		$this->load->view('Detil',$data);
 	}
