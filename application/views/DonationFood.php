@@ -42,12 +42,9 @@
 	<!-- BEGIN HEADER TOP -->
 	<div class="page-header-top">
 		<div class="container">
-
-
 			<!-- BEGIN TOP NAVIGATION MENU -->
 			<div class="top-menu">
 				<ul class="nav navbar-nav pull-right">
-
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">

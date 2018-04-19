@@ -44,10 +44,10 @@ class CRUDModel extends CI_Model {
 	}
 
 	//ambil data login table
-	public function getAllUser(){
-		$result = $this->db->get('restogistration');
-		return $result->result();
-	}
+	// public function getAllUser(){
+	// 	$result = $this->db->get('restogistration');
+	// 	return $result->result();
+	// }
 
     //update data buku
     function updateBuku($data,$where,$table)
