@@ -41,9 +41,11 @@ class CRUD extends CI_Controller {
 		$data['auth'] = $auth;
 
 		$this->load->view('ListBuku',$data);	
-	
 	}
 
+	public function FormDonation(){
+		$this->load->view('DonationFood');
+	}
 	// public function Detil($id) {
 	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();
 
