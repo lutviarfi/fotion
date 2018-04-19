@@ -79,7 +79,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 		
-				<h1>Restaurant Registration Form</h1>
+				<h1>Donation Form</h1>
 	
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -101,7 +101,7 @@
 								<div class="portlet box green">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>Form Registration
+											<i class="fa fa-gift"></i>Form Donation
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -122,27 +122,27 @@
 										<form action="<?php blink('Restogister/InsertDaftar')?>" method="post" class="form-horizontal">
 											<div class="form-body">
 												<div class="form-group">
-													<label class="col-md-3 control-label">Username</label>
+													<label class="col-md-3 control-label">Food name</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control input-circle" placeholder="Username" id="username" name="username">
+														<input type="text" class="form-control input-circle" placeholder="Food Name" id="foodname" name="foodname">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Email</label>
+													<label class="col-md-3 control-label">Halal Description</label>
 													<div class="col-md-4">
-															<input type="text" class="form-control input-circle" name="email" id="email" placeholder="domain@mail.com">
+															<input type="text" class="form-control input-circle" name="desc" id="desc" placeholder="Halal/Non Halal">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Phone Number</label>
+													<label class="col-md-3 control-label">Expiret Date</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control input-circle" placeholder="08xxxxxxxx" id="phone" name="phone">
+														<input type="text" class="form-control input-circle" placeholder="dd-mm-yyyy" id="expiret" name="expire">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Password</label>
+													<label class="col-md-3 control-label">Ingredience</label>
 													<div class="col-md-4">
-															<input type="password" class="form-control input-circle" name="password" id="password" placeholder="Password">
+															<input type="text" class="form-control input-circle" name="ingredience" id="ingredience" placeholder="Ingrdience">
 													</div>
 												</div>
 
@@ -194,7 +194,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="container">
-		 2018 &copy; lutvi 
+		 2018 &copy; Budiluhur 
 	</div>
 </div>
 <div class="scroll-to-top">

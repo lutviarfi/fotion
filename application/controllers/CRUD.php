@@ -44,8 +44,12 @@ class CRUD extends CI_Controller {
 	
 	}
 
-	public function tampil($food){
+	public function Tampil($food){
 		$this->load->view('ListFood');
+	}
+
+	public function FormDonation(){
+		$this->load->view('DonationFood');
 	}
 
 	public function Detil($id) {
