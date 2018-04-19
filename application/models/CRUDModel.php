@@ -19,7 +19,7 @@ class CRUDModel extends CI_Model {
 		}
 		return $checkinsert;
   }
-	
+
 	//insert data buku table
   public function InsertBuku($data){
 
@@ -35,7 +35,7 @@ class CRUDModel extends CI_Model {
 
   //read data login table
 	public function readUser($username,$password){
-		$result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',md5($password))->limit(1)->get('login');
+		$result = $this->db->where('UPPER(id_admin)', strtoupper($username))->where('password',$password)->limit(1)->get('admin');
 		return $result->row();
 
 	}
@@ -72,17 +72,17 @@ class CRUDModel extends CI_Model {
     //Delete data buku
     public function deleteBuku($idbuku){
 			$checkupdate = false;
-		
+
 			try{
 				$this->db->where('idbuku',$idbuku);
 				$this->db->delete('buku');
 				$checkupdate = true;
 			}catch (Exception $ex) {
-				
+
 				$checkupdate = false;
 			}
-			
-			return $checkupdate; 
-			
+
+			return $checkupdate;
+
 		}
 }
