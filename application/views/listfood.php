@@ -41,27 +41,29 @@
         <div class="container">
             <table style="width:70%">
               <tr>
-                <td>Food Name : </td>
+                <td>Food Name</td>
                 <td> Kue syalala</td>
               </tr>
               <tr>
-                <td>Halal Description : <br></td>
+                <td>Halal Description<br></td>
                 <td>Halal</td>
               </tr>
               <tr>
-                <td>Expired : </td>
+                <td>Expired</td>
                 <td>2 hari</td>
               </tr>
               <tr>
-                <td>Ingredients : </td>
+                <td>Ingredients</td>
                 <td>Flour,Strawberry,Cream Cheese,etc.
                 </td>
               </tr>
-              <br>
-              <br>
               <tr>
                 <td>Restaurant Name</td>
                 <td>Keefci</td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td>Bintaro</td>
               </tr>
             </table>
       </div>
