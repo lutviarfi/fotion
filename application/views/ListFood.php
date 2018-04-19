@@ -43,7 +43,7 @@
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-						<span class="username username-hide-mobile"><?php echo $nama; ?></span>
+						<span class="username username-hide-mobile">php echo $nama; </span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -100,7 +100,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>List<small>&nbsp Buku</small></h1>
+				<h1>List Donations</h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -122,17 +122,13 @@
 								<div class="portlet box green">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>List Buku Perpustakaan
+											<i class="fa fa-gift"></i>List Food Donations
 										</div>
 										<div class="tools">
-											<a href="javascript:;" class="collapse">
-											</a>
-											<a href="#portlet-config" data-toggle="modal" class="config">
-											</a>
+											
 											<a href="javascript:;" class="reload">
 											</a>
-											<a href="javascript:;" class="remove">
-											</a>
+											
 										</div>
 									</div>
 									<?php
@@ -145,6 +141,7 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
+<<<<<<< HEAD:application/views/ListBuku.php
 													<th>Nama Restoran</th>
 													<th>Nama Makanan</th>
 													<th>Halal ?</th>
@@ -154,12 +151,21 @@
 													<?php }else { ?>
                        										 <?php } ?>
 												</thead>
+=======
+													<th>Name Food</th>
+													<th>halal Description</th>
+													<th>Expire Date</th>
+													<th>Ingredients</th>
+													</thead>
+>>>>>>> aldis:application/views/ListFood.php
 
-												<?php foreach($buku as $data){?>
+												<?php foreach($food as $data){?>
 												<tr>
-													<td><a href="<?php blink('CRUD/Detil/'.$data->idbuku)?>" ><?php echo $data->judul;?></a></td>
-													<td><?php echo $data->penulis;?></td>
-													<td><?php echo $data->penerbit;?></td>
+													<td><a href="php blink('CRUD/Detil/'.$data->idfood)?>" ><?php echo $data->namefood;?></a></td>
+													<td><?php echo $data->halalnohalal;?></td>
+													<td><?php echo $data->expiry;?></td>
+													<td><?php echo $data->ingredients;?></td>
+													
 
 													<?php if($auth=="1" || $auth == "0") { ?>
 														<td width="20px;"><a href="<?php blink('CRUD/edit/'.$data->idbuku)?>" class="btn btn-warning" >Edit <span class="glyphicon glyphicon-edit"></span></a> </td>
@@ -180,10 +186,15 @@
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
 
+<<<<<<< HEAD:application/views/ListBuku.php
 														<?php if($auth=="1" || $auth == "0") { ?>
 														<a href="<?php blink('CRUD/input') ?>" class="btn btn-circle blue">Tambah Buku</a>
 														<?php }else { ?>
                        										 <?php } ?>
+=======
+															<a href="<?php blink('CRUD/input') ?>" class="btn btn-circle blue">Tambah Buku</a>
+														
+>>>>>>> aldis:application/views/ListFood.php
 													</div>
 												</div>
 											</div>

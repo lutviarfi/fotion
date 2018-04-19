@@ -37,11 +37,12 @@ html, body {
 }
 html, body {
 	font-family: Comfortaa_Regular;
-	font-size: 13px;
-	background-color:#EBE4CF;
-	background-image:url(../images/bg.png);
+	font-size: 15px;
+	background-color:	#DCDCDC;
+	background-image:url(../images/header2.jpg);
 	background-position:left top;
-	background-repeat:repeat-x;
+	background-repeat:no-repeat;
+background-size: 1500px 420px;
 	color:#904E2B;
 	margin:0 0 1px;
 	height:100%;
@@ -177,22 +178,23 @@ header {
 }
 /***************************************************
 				INTRO
-***************************************************/	
-	
+***************************************************/
+
 	#intro {
 	width: 98%;
 	position: relative;
-	float: left;
+	float: center;
 	height:220px;
-	padding:10px;
+	padding:65px;
 	background:transparent;
-	margin-top:65px;
+	margin-top:10px;
+	margin-left:40px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 /***************************************************
 				   HOLDERS
-***************************************************/	
+***************************************************/
 
 .holder_content {
 	position: relative;
@@ -214,8 +216,8 @@ header {
 /***************************************************
 			        GALLERY
 ***************************************************/
-	 
-	 	 
+
+
 	 a.photo_hover3 {
 	position:relative;
 	float: left;
@@ -265,13 +267,10 @@ a.photo_hover2:hover {
 
 footer {
 	position:relative;
-	height:200px;
+	height:100px;
 	clear:both;
 	width:100%;
-	background-image: url(../images/footer.png);
-	background-position:left top;
-	background-repeat:repeat-x;
-	background-color:transparent;
+	background-color:	#696969;
 }
 #FooterOne, #FooterTwo, #FooterTree {
 	padding:0 16px;
@@ -289,7 +288,7 @@ footer a, #FooterOne a, #FooterTwo a, #FooterTree a {
 }
 .copyright {
 	position: relative;
-	float: left;
+	float: center;
 	width: 100%;
 	padding:47px 0 10px 20px;
 }

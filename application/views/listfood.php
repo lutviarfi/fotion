@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>P&acirc;tisserie</title>
+<title>FOTION</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<?php blink('patisserie/css/styles.css') ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,27 +13,11 @@
 <![endif]-->
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <!--start header-->
-    <header>
-      <!--start logo-->
-      <div class="sixcol"> <a href="#" id="logo"><img src="<?php blink('patisserie/images/logo.png') ?>" width="303" height="120" alt=""></a> </div>
-      <!--end logo-->
-      <!--start menu-->
-      <div class="sixcol last">
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us </a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="index.html">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!--end menu-->
-      <img src="images/cake.png" width="350" height="256" alt="" class="cake">
+    <header >
+      <!--img src="<!?php blink('patisserie/images/header2.jpg') ?>" width="950px" height="" alt="" class="img-responsive">
       <!--end header-->
     </header>
   </div>
@@ -43,45 +27,47 @@
   <div class="row">
     <section id="intro" class="onecol">
       <hgroup>
-        <h1>CAKES AND COOKIES SHOP</h1>
-        <h2>I made html5 patisserie template with 1140 css grid great for making a responsive design that is optimized to work on any device: iphone, ipad, small tablet, small phone. </h2>
+        <h1>Food Donation</h1>
       </hgroup>
-      <a href="#" class="button1">View our gallery of sweets</a> </section>
   </div>
 </div>
 <!--end intro-->
 <div class="container">
   <div class="row">
-    <div class="holder_content1">
-      <section class="group4">
-        <h3>Latest news</h3>
-        <article>
-          <h4>10.12.2011 - New cakes <span>Cras quis libero, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut </span></h4>
-        </article>
-      </section>
-    </div>
-    <!--end holder-->
-  </div>
-</div>
-<div class="container">
-  <div class="row">
     <div class="twelevecol">
       <section class="group1">
-        <h5>About us</h5>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
-        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a> <a href="#"><span class="button">Read more</span></a> </section>
-    </div>
-    <div class="fourcol">
-      <section class="group2">
-        <h5>Products</h5>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
-        <a class="photo_hover3" href="#"><img src="images/picture2.jpg" width="215" height="137" alt=""></a> <a href="#"><span class="button">Read more</span></a> </section>
-    </div>
-    <div class="fourcol last">
-      <section class="group3">
-        <h5>Gallery</h5>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. </p>
-        <a class="photo_hover3" href="#"><img src="images/picture3.jpg" width="215" height="137" alt=""></a> <a href="#"><span class="button">Read more</span></a> </section>
+        <h5>MENU MAKANAN</h5><br>
+        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
+        <div class="container">
+            <table style="width:70%">
+              <tr>
+                <td>Food Name</td>
+                <td> Kue syalala</td>
+              </tr>
+              <tr>
+                <td>Halal Description<br></td>
+                <td>Halal</td>
+              </tr>
+              <tr>
+                <td>Expired</td>
+                <td>2 hari</td>
+              </tr>
+              <tr>
+                <td>Ingredients</td>
+                <td>Flour,Strawberry,Cream Cheese,etc.
+                </td>
+              </tr>
+              <tr>
+                <td>Restaurant Name</td>
+                <td>Keefci</td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td>Bintaro</td>
+              </tr>
+            </table>
+      </div>
+         <a href="#"><span class="button">Pick up</span></a> </section>
     </div>
   </div>
 </div>
@@ -90,10 +76,12 @@
   <div class="container copyright">
     <div class="row">
       <div class="sixcol">
-        <div id="FooterTree"> &copy; 2012 chez Lulu </div>
-      </div>
-      <div class="sixcol last">
-        <div id="FooterTwo">Website Template By <a target="_blank" href="http://www.marijazaric.com">marija zaric</a></div>
+        <div id="FooterTree"> Created By </div>
+        <p>
+       <a href="#">
+         <span class="glyphicon glyphicon-user"></span>
+       </a>
+     </p>
       </div>
     </div>
   </div>
