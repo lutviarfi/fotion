@@ -36,22 +36,17 @@ class Login extends CI_Controller {
 	}
 
 	public function auth(){
-
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-
-		$checkUsername = $this->CRUDModel->readUser($username,$password);
-
-		if($checkUsername==NULL){
-
-			$this->load->view('Login2');
-
-		}else{
-
+		if($checkUsername=$this->CRUDModel->readUser($username,$password)){
 			$this->load->view('ListBuku');
+		}else if($checkUsername=$this->CRUDModel->readUser1($username,$password){
+			$this->load->view('ListBuku');
+		}else if($checkUsername=$this->CRUDModel->readUser2($username,$password){
+			$this->load->view('ListBuku');
+		}else{
+			$this->load->view('Login');
 		}
-
-
 	}
 
 	public function logout(){

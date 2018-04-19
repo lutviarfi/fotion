@@ -40,6 +40,17 @@ class CRUDModel extends CI_Model {
 
 	}
 
+  public function readUser1($username,$password){
+		$result = $this->db->where('UPPER(email)', strtoupper($username))->where('pass',$password)->limit(1)->get('footpicker');
+		return $result->row();
+
+	}
+
+  public function readUser2($username,$password){
+		$result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',$password)->limit(1)->get('restauran');
+		return $result->row();
+
+	}
 	//ambil id buku buat update
   function get_id($idbuku)
   {
