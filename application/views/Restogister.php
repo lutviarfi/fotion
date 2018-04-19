@@ -107,11 +107,7 @@
 											<i class="fa fa-gift"></i>Form Registration
 										</div>
 										<div class="tools">
-											<a href="javascript:;" class="collapse">
-											</a>
 											<a href="javascript:;" class="reload">
-											</a>
-											<a href="javascript:;" class="remove">
 											</a>
 										</div>
 									</div>
@@ -197,7 +193,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="container">
-		 2018 &copy; lutvi 
+		 2018 &copy; Budiluhur 
 	</div>
 </div>
 <div class="scroll-to-top">
