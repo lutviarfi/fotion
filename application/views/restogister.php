@@ -5,7 +5,7 @@
 	<title>FOTION</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Appraise Register Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates, 
+	<meta name="keywords" content="Appraise Register Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates,
  Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
@@ -48,18 +48,12 @@
 		<h3 class="form-head">register online today, Its'free!</h3>
 		<form action="#" method="post">
 			<div class="w3ls-icon">
-				<span class="fa fa-user" aria-hidden="true"></span>
 				<input type="text" class="lock" name="username" placeholder="Username" required="" />
 			</div>
 			<div class="w3ls-icon">
-				<span class="fa fa-envelope" aria-hidden="true"></span>
-				<input type="email" class="user" name="email" placeholder="Email" required="" />
+				<input type="password" class="user" name="password" placeholder="password" required="" />
 			</div>
-			<div class="w3ls-icon">
-				<span class="fa fa-lock" aria-hidden="true"></span>
-				<input type="text" class="user" id="phone" name="phone" placeholder="Phone Number" required="" />
-			</div>
-			<input type="submit" value="register now">
+			<input type="submit" value="Login">
 		</form>
 	</div>
 	<p class="footer-agile">UBL © 2018</a>
