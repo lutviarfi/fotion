@@ -11,7 +11,7 @@ class ModelPicker extends CI_Model {
 
 		$checkinsert = false;
 		try{
-			$this->db->insert('nama',$data);
+			$this->db->insert('foodpicker',$data);
 			$checkinsert = true;
 		}catch (Exception $ex) {
 			$checkinsert = false;
