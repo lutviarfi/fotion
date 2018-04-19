@@ -82,7 +82,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 		
-				<h1>Restaurant Registration Form</h1>
+				<h1>Restaurant Registration</h1>
 	
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
