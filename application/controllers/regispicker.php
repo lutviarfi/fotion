@@ -5,7 +5,8 @@ class regispicker extends CI_Controller {
 
 	 
 	public function __construct() {
-		parent::__construct();	
+		parent::__construct();
+		$this->load->model('ModelPicker');	
 			
 	}
 	
@@ -32,7 +33,7 @@ class regispicker extends CI_Controller {
 		'password' => md5($password)
 		);
 
-		$result = $this->CRUDModel->InsertPicker($data);
+		$result = $this->ModelPicker->InsertPicker($data);
 		$data = NULL;
 		if($result){
 
