@@ -37,7 +37,15 @@
     <div class="twelevecol">
       <section class="group1">
         <h5>MENU MAKANAN</h5><br>
-        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a> &nbsp DESKRIPSI <br>
+        <a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
+        <div class="container">
+        <p>
+         Food Name : yoyo<br>
+         Halal  Description :  <br>
+         Expired : <br>
+         Ingredients : <br> </p>
+
+      </div>
          <a href="#"><span class="button">Read more</span></a> </section>
     </div>
   </div>
