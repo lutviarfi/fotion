@@ -42,7 +42,7 @@ html, body {
 	background-image:url(../images/header2.jpg);
 	background-position:left top;
 	background-repeat:no-repeat;
-background-size: 1500px 480px;
+background-size: 1500px 420px;
 	color:#904E2B;
 	margin:0 0 1px;
 	height:100%;
@@ -187,7 +187,8 @@ header {
 	height:220px;
 	padding:65px;
 	background:transparent;
-	margin-top:45px;
+	margin-top:10px;
+	margin-left:40px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
