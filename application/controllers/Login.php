@@ -34,7 +34,7 @@ class Login extends CI_Controller {
 			$this->load->view('error');
 		}
 	}
-	
+
 	public function auth(){
 
 		$username = $this->input->post('username');
@@ -48,17 +48,10 @@ class Login extends CI_Controller {
 
 		}else{
 
-			$newdata = array(
-				'username'  => $checkUsername->username,
-				'name'  => $checkUsername->nama,
-				'auth'  => $checkUsername->auth
-			  );
-			//set seassion
-			$this->session->set_userdata($newdata);
-			redirect('CRUD');
+			$this->load->view('ListBuku');
 		}
 
-		
+
 	}
 
 	public function logout(){
