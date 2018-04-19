@@ -7,6 +7,9 @@ class CRUD extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('CRUDModel');
+		$this->load->helper('url');
+		$this->load->helper('form');
+		$this->load->library('upload');
 	}
 
 	// //logout
@@ -121,7 +124,7 @@ class CRUD extends CI_Controller {
 	public function InsertFood(){
 
 		$this->load->helper(array('form', 'url'));
-		$nama_file = md5(uniquid(rand(), true));
+		$nama_file = md5(uniqid(rand(), true));
 		$this->load->library('upload');
 		$config = [
 				'upload_path' => './assets/img/',
