@@ -9,20 +9,20 @@ class CRUD extends CI_Controller {
 		$this->load->model('CRUDModel');
 	}
 
-	//logout
-	public function logout() {
+	// //logout
+	// public function logout() {
 
-		$sess_array = $this->session->all_userdata();
+	// 	$sess_array = $this->session->all_userdata();
 		
-		foreach($sess_array as $key =>$val){
-		if($key!='username'
-		  && $key!='name'    
-		  && $key!='RESERVER_KEY_HERE')$this->session->unset_userdata($key);
-		}
+	// 	foreach($sess_array as $key =>$val){
+	// 	if($key!='username'
+	// 	  && $key!='name'    
+	// 	  && $key!='RESERVER_KEY_HERE')$this->session->unset_userdata($key);
+	// 	}
 		
-		$this->load->view('Login2');
+	// 	$this->load->view('Login2');
 
-	}
+	// }
 
 	// tampil list buku dan get session
 	public function index()
@@ -44,80 +44,79 @@ class CRUD extends CI_Controller {
 	
 	}
 
-	public function Detil($id) {
-		$data['buku'] =  $this->CRUDModel->get_id($id)->result();
+	// public function Detil($id) {
+	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
+	// 	$nama = $this->session->name;
+	// 	$data['nama'] = $nama;
 
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+	// 	$auth = $this->session->auth;
+	// 	$data['auth'] = $auth;
 		
-		$this->load->view('Detil',$data);
-	}
+	// 	$this->load->view('Detil',$data);
+	// }
 
-	public function edit($id) {
-		$data['buku'] =  $this->CRUDModel->get_id($id)->result();
+	// public function edit($id) {
+	// 	$data['buku'] =  $this->CRUDModel->get_id($id)->result();
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
+	// 	$nama = $this->session->name;
+	// 	$data['nama'] = $nama;
 
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+	// 	$auth = $this->session->auth;
+	// 	$data['auth'] = $auth;
 		
-		$this->load->view('Update',$data);
-	}
+	// 	$this->load->view('Update',$data);
+	// }
 
-	public function hapus($id) {
-		$this->CRUDModel->deleteBuku($id);
-		redirect('CRUD');
-	}
+	// public function hapus($id) {
+	// 	$this->CRUDModel->deleteBuku($id);
+	// 	redirect('CRUD');
+	// }
 
-	public function update($id) {
-		$judul = $this->input->post('judul');
-		$penulis = $this->input->post('penulis');
-		$penerbit = $this->input->post('penerbit');
-		$tglterbit = $this->input->post('tglterbit');
-		$sinopsis = $this->input->post('sinopsis');
+	// public function update($id) {
+	// 	$judul = $this->input->post('judul');
+	// 	$penulis = $this->input->post('penulis');
+	// 	$penerbit = $this->input->post('penerbit');
+	// 	$tglterbit = $this->input->post('tglterbit');
+	// 	$sinopsis = $this->input->post('sinopsis');
 
-		$data = array(
-		'judul' =>$judul,
-		'penulis'=> $penulis,
-		'penerbit'=>$penerbit,
-		'tglterbit' =>$tglterbit,
-		'sinopsis' => $sinopsis
-		);
+	// 	$data = array(
+	// 	'judul' =>$judul,
+	// 	'penulis'=> $penulis,
+	// 	'penerbit'=>$penerbit,
+	// 	'tglterbit' =>$tglterbit,
+	// 	'sinopsis' => $sinopsis
+	// 	);
 
-		$where = array(
-			'idbuku' => $id
-		);
+	// 	$where = array(
+	// 		'idbuku' => $id
+	// 	);
 
-		$result = $this->CRUDModel->updateBuku($data,$where,'buku');
-		$data = null;
+	// 	$result = $this->CRUDModel->updateBuku($data,$where,'buku');
+	// 	$data = null;
 
-		if(!$result){
-			$data['result'] = "Sukses";
-		}else{
-			$data['result'] = "Gagal";
-		}
-		redirect('CRUD');
-	}
+	// 	if(!$result){
+	// 		$data['result'] = "Sukses";
+	// 	}else{
+	// 		$data['result'] = "Gagal";
+	// 	}
+	// 	redirect('CRUD');
+	// }
 
-	// tampil form input
-	public function input(){
+	// // tampil form input
+	// public function input(){
 
-		$nama = $this->session->name;
-		$data['nama'] = $nama;
+	// 	$nama = $this->session->name;
+	// 	$data['nama'] = $nama;
 
-		$auth = $this->session->auth;
-		$data['auth'] = $auth;
+	// 	$auth = $this->session->auth;
+	// 	$data['auth'] = $auth;
 
-		$this->load->view('InsertBuku',$data);
-	}
+	// 	$this->load->view('InsertBuku',$data);
+	// }
 
-	//tambah data buku
-	
-	public function InsertBuku(){
+	//add donation food
+	public function InsertFood(){
 
 		$this->load->helper(array('form', 'url'));
 		$nama_file = md5(uniquid(rand(), true));
@@ -133,11 +132,11 @@ class CRUD extends CI_Controller {
 				$photo="";
 			}else{
 				$photo=$this->upload->file_name;
-				$judul = $this->input->post('judul');
-				$penulis = $this->input->post('penulis');
-				$penerbit = $this->input->post('penerbit');
-				$tglterbit = $this->input->post('tglterbit');
-				$sinopsis = $this->input->post('sinopsis');
+				$foodname = $this->input->post('namefood');
+				$halal = $this->input->post('halalorno');
+				$expiry = $this->input->post('expiry');
+				$status = $this->input->post('status');
+				$ingredient = $this->input->post('ingredients');
 			}
 
 		$data = array(
@@ -149,14 +148,15 @@ class CRUD extends CI_Controller {
 		'sinopsis' => $sinopsis
 		);
 
-		$result = $this->CRUDModel->InsertBuku($data);
-		$data = NULL;
+		$result = $this->CRUDModel->InsertFood($data);
+		
 		if($result){
-
-			$data['result'] = "Sukses";
+			
+			$this->session->set_flashdata('Success','Send Success');
+			redirect('');
 		}else{
-
-			$data['result'] = "Gagal";
+			$this->session->set_flashdata('Failed','Send Failed');
+			redirect('');
 		}
 
 		redirect('CRUD');
