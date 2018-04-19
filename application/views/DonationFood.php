@@ -104,11 +104,7 @@
 											<i class="fa fa-gift"></i>Form Donation
 										</div>
 										<div class="tools">
-											<a href="javascript:;" class="collapse">
-											</a>
 											<a href="javascript:;" class="reload">
-											</a>
-											<a href="javascript:;" class="remove">
 											</a>
 										</div>
 									</div>
@@ -145,13 +141,19 @@
 															<input type="text" class="form-control input-circle" name="ingredience" id="ingredience" placeholder="Ingrdience">
 													</div>
 												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Food Picture</label>
+													<div class="col-md-4">
+															<input type="text" class="form-control input-circle" name="ingredience" id="ingredience" placeholder="Ingrdience">
+													</div>
+												</div>
 
 												</div>
 											</div>
 											<div class="form-actions">
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
-														<button type="submit" class="btn btn-circle blue">Register Now</button>
+														<button type="submit" class="btn btn-circle blue">Donation Now</button>
 														<a href="<?php blink('Restogister') ?>" type="button" class="btn btn-circle default">Cancel</a>
 													</div>
 												</div>
