@@ -57,6 +57,12 @@
                 <td>Flour,Strawberry,Cream Cheese,etc.
                 </td>
               </tr>
+              <br>
+              <br>
+              <tr>
+                <td>Restaurant Name</td>
+                <td>Keefci</td>
+              </tr>
             </table>
       </div>
          <a href="#"><span class="button">Pick up</span></a> </section>
