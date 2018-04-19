@@ -17,9 +17,9 @@ class Loginfotion extends CI_Controller {
 		$password = $this->input->post('password');
 		if($checkUsername=$this->CRUDModelfotion->readUser($username,$password)){
 			$this->load->view('ListBuku');
-		}else if($checkUsername=$this->CRUDModelfotion->readUser1($username,$password){
+		}else if($checkUsername=$this->CRUDModelfotion->readUser1($username,$password)){
 			$this->load->view('ListRequest');
-		}else if($checkUsername=$this->CRUDModelfotion->readUser2($username,$password){
+		}else if($checkUsername=$this->CRUDModelfotion->readUser2($username,$password)){
 			$this->load->view('ListBuku');
 		}else{
 			$this->load->view('Login');
