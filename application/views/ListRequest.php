@@ -157,7 +157,7 @@
                                                             	<td align="center">#</td>
                                                                 <td align="center">Nama Makanan</td>
                                                                 <td align="center">Nama Restoran</td>
-                                                                <td align="center">Halal?</td>
+                                                                <td align="center">Halal atau TIdak</td>
                                                                 <td align="center">Status</td>
                                                              </tr>
                                                          </thead>
@@ -170,7 +170,7 @@
                                                                 <td align="center"><?php echo $data->nama_makanan;?></td>
                                                                 <td align="center"><?php echo $data->username;?></td>
                                                                 <td align="center"><?php echo $data->halal;?></td>
-                                                                <td align="center"><?php echo $data->status;?></td> 
+                                                                <td align="center"><?php echo $data->status;?></td>
                                                              </tr>
                                                              <?php $x = $x+1; ?>
                                                              <?php } ?>
