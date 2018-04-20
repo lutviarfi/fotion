@@ -36,7 +36,6 @@ class ListRequestModel extends CI_Model {
 		$result = $this->db->get('login');
 		return $result->result();
 	}
-
     //update data request
     function updateBuku($data,$where,$table)
     {
