@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8"/>
-<title>List Buku</title>
+<title>List Request</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -48,8 +48,6 @@
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src="<?php blink('assets/admin/layout3/img/avatar9.jpg')?>">
-						<span class="username username-hide-mobile"><?php echo $nama; ?></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -76,10 +74,36 @@
 			<!-- BEGIN HEADER SEARCH BOX -->
 			<form class="search-form" action="extra_search.html" method="GET">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search" name="query">
-					<span class="input-group-btn">
-					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-					</span>
+          <table class="table table-hover">
+            <thead>
+                                          <tr>
+                                              <td align="center">#</td>
+                                                <td align="center">Nama Makanan</td>
+                                                <td align="center">Nama Restaurant</td>
+                                                <td align="center">Halal</td>
+                                                <td align="center">Status</td>
+                                             </tr>
+                                         </thead>
+                                         <?php if(isset($datauser)){?>
+                                         <tbody>
+                                           <?php $x = 1; ?>
+                                           <?php foreach($datauser as $data){ ?>
+                                             <tr>
+                                                <td align="center"><?php echo $x;?></td>
+                                                <td align="center"><?php echo $data->nama_makanan;?></td>
+                                             </tr>
+                                             <?php $x = $x+1; ?>
+                                             <?php } ?>
+                                         </tbody>
+                                         <?php }else { ?>
+                                         <tbody>
+                                          <tr>
+                                              <td>No data </td>
+                                            </tr>
+                                         </tbody>
+                                         <?php } ?>
+                             </table>
+
 				</div>
 			</form>
 			<!-- END HEADER SEARCH BOX -->
@@ -91,19 +115,6 @@
 					<li>
 						<a href="<?php blink('CRUD')?>">Data Dosen</a>
 					</li>
-					<li>
-						<a href="<?php blink('CRUDSiswa')?>">Data Mahasiswa</a>
-					</li>
-                    <li class="active">
-                    	<a href="<?php blink('CRUDAdmin')?>">Data Admin</a>
-                    </li>
-                    <li>
-						<a href="<?php blink('CRUDMatkul')?>">Data Matakuliah</a>
-					</li>
-
-                    <li>
-                    	<a href="<?php blink('CRUDPengajar')?>">Pengajar</a>
-                    </li>
 				</ul>
 			</div>
 			<!-- END MEGA MENU -->
@@ -125,7 +136,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-cogs font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp bold uppercase">List Username</span>
+								<span class="caption-subject font-green-sharp bold uppercase">List Request</span>
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -136,7 +147,7 @@
 						</div>
 						<div class="portlet-body form">
                         <?php if(isset($result)) { ?><center><?php echo $result; ?></center> <?php } ?>
-                        	<a href="<?php blink('CRUDSiswa/Add')?>" class="btn btn-success" name="btnadd" id="btnadd">Add</a>
+                        	<a href="<?php blink('ListRequestCrud/Add')?>" class="btn btn-success" name="btnadd" id="btnadd">Add</a>
 							<form role="form">
 										<div class="portlet-body">
 												<div class="table-scrollable">
@@ -144,8 +155,10 @@
 														<thead>
                                                         	<tr>
                                                             	<td align="center">#</td>
-                                                                <td align="center">Name</td>
-                                                                <td align="center">Action</td>
+                                                                <td align="center">Nama Makanan</td>
+                                                                <td align="center">Nama Restoran</td>
+                                                                <td align="center">Halal?</td>
+                                                                <td align="center">Status</td>
                                                              </tr>
                                                          </thead>
                                                          <?php if(isset($datauser)){?>
@@ -154,8 +167,10 @@
                                                          	 <?php foreach($datauser as $data){ ?>
                                                              <tr>
                                                                 <td align="center"><?php echo $x;?></td>
-                                                                <td align="center"><?php echo $data->nama;?></td>
-                                                                <td align="center"><a href="<?php blink('CRUDSiswa/edit/'.$data->nim.'')?>" class="btn btn-warning" name="btnadd" id="btnadd">Update</a> | <a href="<?php blink('CRUDSiswa/DeleteData/'.$data->nim.'')?>" class="btn btn-danger" name="btnadd" id="btnadd">Delete</a></td>
+                                                                <td align="center"><?php echo $data->nama_makanan;?></td>
+                                                                <td align="center"><?php echo $data->username;?></td>
+                                                                <td align="center"><?php echo $data->halal;?></td>
+                                                                <td align="center"><?php echo $data->status;?></td> 
                                                              </tr>
                                                              <?php $x = $x+1; ?>
                                                              <?php } ?>
@@ -205,6 +220,7 @@
 					</form>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </div>
