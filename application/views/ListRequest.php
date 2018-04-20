@@ -72,40 +72,7 @@
 	<div class="page-header-menu">
 		<div class="container">
 			<!-- BEGIN HEADER SEARCH BOX -->
-			<form class="search-form" action="extra_search.html" method="GET">
-				<div class="input-group">
-          <table class="table table-hover">
-            <thead>
-                                          <tr>
-                                              <td align="center">#</td>
-                                                <td align="center">Nama Makanan</td>
-                                                <td align="center">Nama Restaurant</td>
-                                                <td align="center">Halal</td>
-                                                <td align="center">Status</td>
-                                             </tr>
-                                         </thead>
-                                         <?php if(isset($datauser)){?>
-                                         <tbody>
-                                           <?php $x = 1; ?>
-                                           <?php foreach($datauser as $data){ ?>
-                                             <tr>
-                                                <td align="center"><?php echo $x;?></td>
-                                                <td align="center"><?php echo $data->nama_makanan;?></td>
-                                             </tr>
-                                             <?php $x = $x+1; ?>
-                                             <?php } ?>
-                                         </tbody>
-                                         <?php }else { ?>
-                                         <tbody>
-                                          <tr>
-                                              <td>No data </td>
-                                            </tr>
-                                         </tbody>
-                                         <?php } ?>
-                             </table>
-
-				</div>
-			</form>
+			
 			<!-- END HEADER SEARCH BOX -->
 			<!-- BEGIN MEGA MENU -->
 			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -113,7 +80,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="<?php blink('CRUD')?>">Data Dosen</a>
+						<a href="<?php blink('CRUD')?>">Data Request List</a>
 					</li>
 				</ul>
 			</div>
@@ -147,7 +114,7 @@
 						</div>
 						<div class="portlet-body form">
                         <?php if(isset($result)) { ?><center><?php echo $result; ?></center> <?php } ?>
-                        	<a href="<?php blink('ListRequestCrud/Add')?>" class="btn btn-success" name="btnadd" id="btnadd">Add</a>
+
 							<form role="form">
 										<div class="portlet-body">
 												<div class="table-scrollable">
@@ -197,38 +164,13 @@
 	<!-- END PAGE CONTENT -->
 </div>
 <!-- END PAGE CONTAINER -->
-<!-- BEGIN PRE-FOOTER -->
-<div class="page-prefooter">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-				<h2>About</h2>
-				<p>
-					 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam dolore.
-				</p>
-			</div>
-			<div class="col-md-3 col-sm-6 col-xs12 footer-block">
-				<h2>Subscribe Email</h2>
-				<div class="subscribe-form">
-					<form action="javascript:;">
-						<div class="input-group">
-							<input type="text" placeholder="mail@email.com" class="form-control">
-							<span class="input-group-btn">
-							<button class="btn" type="submit">Submit</button>
-							</span>
-						</div>
-					</form>
-				</div>
-			</div>
 
-		</div>
-	</div>
-</div>
+<!-- START PRE-FOOTER -->
 <!-- END PRE-FOOTER -->
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="container">
-		 2014 &copy; Metronic by keenthemes. <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+		 2018 &copy; Fotion<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
 	</div>
 </div>
 <div class="scroll-to-top">
