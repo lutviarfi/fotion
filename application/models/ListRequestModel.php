@@ -37,13 +37,10 @@ class ListRequestModel extends CI_Model {
 		return $result->result();
 	}
 
-    //update data buku
+    //update data request
     function updateBuku($data,$where,$table)
     {
       $this->db->where($where);
       $this->db->update($table,$data);
     }
-
-    //Delete data buku
-
 }
