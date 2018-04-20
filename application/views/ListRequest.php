@@ -35,9 +35,7 @@
 	<div class="page-header-top">
 		<div class="container">
 			<!-- BEGIN LOGO -->
-			<div class="page-logo">
-				<a href="index.html"><img src="<?php blink('assets/admin/layout3/img/logo-default.png')?>" alt="logo" class="logo-default"></a>
-			</div>
+
 			<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 			<a href="javascript:;" class="menu-toggler"></a>
@@ -72,7 +70,7 @@
 	<div class="page-header-menu">
 		<div class="container">
 			<!-- BEGIN HEADER SEARCH BOX -->
-			
+
 			<!-- END HEADER SEARCH BOX -->
 			<!-- BEGIN MEGA MENU -->
 			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -170,7 +168,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="container">
-		 2018 &copy; Fotion<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+		 2018 &copy; Fotion<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank"></a>
 	</div>
 </div>
 <div class="scroll-to-top">
