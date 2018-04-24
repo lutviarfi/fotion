@@ -187,6 +187,11 @@
 									                   <td style="text-transform:capitalize;"><?php echo $data->idmakanan ?></td>
 									                 </tr>
 													 <tr>
+									                   <td>Nama Picker</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->username ?></td>
+									                 </tr
+													 <tr>
 									                   <td>Halal</td>
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><?php echo $data->halal ?></td>
