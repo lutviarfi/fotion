@@ -77,7 +77,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li class="active">
-						<a href="<?php blink('CRUD') ?>">List Picker</a>
+						<a href="<?php blink('Home') ?>">List Picker</a>
 					</li>
 
 				</ul>
@@ -213,7 +213,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Profile Picker</h4>
+          <h4 class="modal-title">Approve</h4>
         </div>
         <div class="modal-body">
 		<table class="table table-responsive" border="0">
@@ -241,7 +241,7 @@
                              <tr>
                                <td>Photo</td>
                                <td>:</td>
-                               <td><img src="" width="200px"></td>
+                               <td><img src="<?php blink('assets/img/'.$data->gambar.'');?>" width="200px"></td>
                              </tr>
                            </tbody>
                          </table>
@@ -292,7 +292,7 @@
                              <tr>
                                <td>Photo</td>
                                <td>:</td>
-                               <td><img src="" width="200px"></td>
+                               <td><img src="<?php blink('assets/img/'.$data->gambar.'');?>" width="200px"></td>
                              </tr>
                            </tbody>
                          </table>

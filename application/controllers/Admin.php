@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 
-		$allAdmin = $this->AdminModel->getAllPicker();
+		$allAdmin = $this->AdminModel->getAllPicker('picker');
         $data['picker'] = $allAdmin;
         
         $this->load->view('ApproveAdmin',$data);	

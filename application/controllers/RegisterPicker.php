@@ -43,7 +43,7 @@ class RegisterPicker extends CI_Controller {
 			'password' => $password,
 			'kondisi' => $kondisi,
 			'alamat' => $alamat,
-			'photo' => $gambar,
+			'gambar' => $gambar,
 			'active' => "pending"
 		);
 
