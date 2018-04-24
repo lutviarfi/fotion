@@ -1,4 +1,4 @@
-
+<!-- <?php ?> -->
 <!--news-->
 	<div class="content-top-top">
 		<div class="container">
