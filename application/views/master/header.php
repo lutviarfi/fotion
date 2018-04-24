@@ -52,10 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="toggle-menu">
 						<li><a class="active" href="<?php echo('DaftarFood')?>">Home</a></li>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
-<<<<<<< HEAD
 						<li><a href="#">Restaurant Registration</a></li>
-=======
->>>>>>> 0ef1cdc747a16c762747d15d23a31b6571570a71
 						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
@@ -78,8 +75,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 </div>
 <!--content-->
-<<<<<<< HEAD
-=======
 
 <div class="content" id="content-down">
 
