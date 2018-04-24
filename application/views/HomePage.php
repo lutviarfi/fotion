@@ -8,8 +8,8 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-			<!-- <div class="news-bottom">
-				<div class="news-bot">
+			<div class="news-bottom">
+				<!-- <div class="news-bot">
 					<div class="col-md-6 news-bottom1 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
 						<a href="single.html">
 							<div class="content-item">
@@ -73,37 +73,105 @@
 							</div>
 						</a>
 					</div> -->
-					<a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
-        <div class="container">
-            <table style="width:70%">
-              <tr>
-                <td>Food Name</td>
-                <td> Kue syalala</td>
-              </tr>
-              <tr>
-                <td>Halal Description<br></td>
-                <td>Halal</td>
-              </tr>
-              <tr>
-                <td>Expired</td>
-                <td>2 hari</td>
-              </tr>
-              <tr>
-                <td>Ingredients</td>
-                <td>Flour,Strawberry,Cream Cheese,etc.
-                </td>
-              </tr>
-              <tr>
-                <td>Restaurant Name</td>
-                <td>Keefci</td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>Bintaro</td>
-              </tr>
-            </table>
-      </div>
-         <a href="#" class="btn btn-primary">Pick up</a>
+        	<div class="col-md-6" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
+						<div class="container"><br>
+							<table style="width:70%">
+	              <tr>
+	                <td>Food Name</td>
+	                <td> Kue syalala</td>
+	              </tr>
+	              <tr>
+	                <td>Halal Description<br></td>
+	                <td>Halal</td>
+	              </tr>
+	              <tr>
+	                <td>Expired</td>
+	                <td>2 hari</td>
+	              </tr>
+	              <tr>
+	                <td>Ingredients</td>
+	                <td>Flour,Strawberry,Cream Cheese,etc.
+	                </td>
+	              </tr>
+	              <tr>
+	                <td>Restaurant Name</td>
+	                <td>Keefci</td>
+	              </tr>
+	              <tr>
+	                <td>Location</td>
+	                <td>Bintaro</td>
+	              </tr>
+	            </table>
+						</div>
+						<a href="#" class="btn btn-primary">Pick up</a>
+      		</div>
+					<div class="col-md-6" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
+						<div class="container"><br>
+							<table style="width:70%">
+	              <tr>
+	                <td>Food Name</td>
+	                <td> Kue syalala</td>
+	              </tr>
+	              <tr>
+	                <td>Halal Description<br></td>
+	                <td>Halal</td>
+	              </tr>
+	              <tr>
+	                <td>Expired</td>
+	                <td>2 hari</td>
+	              </tr>
+	              <tr>
+	                <td>Ingredients</td>
+	                <td>Flour,Strawberry,Cream Cheese,etc.
+	                </td>
+	              </tr>
+	              <tr>
+	                <td>Restaurant Name</td>
+	                <td>Keefci</td>
+	              </tr>
+	              <tr>
+	                <td>Location</td>
+	                <td>Bintaro</td>
+	              </tr>
+	            </table>
+						</div>
+						<a href="#" class="btn btn-primary">Pick up</a>
+      		</div>
+					<div class="col-md-6" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<a class="photo_hover3" href="#"><img src="<?php blink('patisserie/images/picture1.jpg') ?>" width="215" height="137" alt=""></a>
+						<div class="container"><br>
+							<table style="width:70%">
+	              <tr>
+	                <td>Food Name</td>
+	                <td> Kue syalala</td>
+	              </tr>
+	              <tr>
+	                <td>Halal Description<br></td>
+	                <td>Halal</td>
+	              </tr>
+	              <tr>
+	                <td>Expired</td>
+	                <td>2 hari</td>
+	              </tr>
+	              <tr>
+	                <td>Ingredients</td>
+	                <td>Flour,Strawberry,Cream Cheese,etc.
+	                </td>
+	              </tr>
+	              <tr>
+	                <td>Restaurant Name</td>
+	                <td>Keefci</td>
+	              </tr>
+	              <tr>
+	                <td>Location</td>
+	                <td>Bintaro</td>
+	              </tr>
+	            </table>
+						</div>
+						<a href="#" class="btn btn-primary">Pick up</a>
+      		</div>
 					<div class="clearfix"> </div>
 				</div>
 
