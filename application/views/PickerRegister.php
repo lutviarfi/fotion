@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
           <ul class="toggle-menu">
 						<li><a href="<?php echo('DaftarFood')?>">Home</a></li>
-						<li><a class="active" href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a class="active" href="<?php echo('PickerRegister')?>">Picker Registration</a></li>
 					</ul>
 				</div>
 			<script>
@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
         </div>
         <div class="portlet-body form">
-          <form role="form" action="<?php blink('RegisterPicker/InsertPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
+          <form role="form" action="<?php blink('PickerRegisters/InsertPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Nama</label>
@@ -132,7 +132,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </div>
             </div>
           </form>
-
         </div>
       </div>
 			</div>
