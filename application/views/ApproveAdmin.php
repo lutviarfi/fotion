@@ -8,6 +8,11 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta content="" name="description"/>
 <meta content="" name="author"/>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="<?php blink('cooking/bootstrap.min.css')?>">
+ <script src="<?php blink('cooking/jquery.min.js')?>"></script>
+ <script src="<?php blink('cooking/bootstrap.min.js')?>"></script>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
 <link href="<?php blink('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')?>" rel="stylesheet" type="text/css">
@@ -42,7 +47,7 @@
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-                        <span class="username username-hide-mobile"><?php echo $status; ?></span>
+                        <span class="username username-hide-mobile">username</span>
 						
 					</a>
 						<ul class="dropdown-menu dropdown-menu-default">
@@ -51,7 +56,7 @@
 								<i class="icon-user"></i> My Profile </a>
 							</li>
 							<li>
-								<a href="<?php blink('CRUD/logout')?>">
+								<a href="<?php blink('')?>">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>
@@ -131,21 +136,21 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-													<th>ID User</th>
+												
 													<th>Username</th>
-													<th>Status</th>
+													<th>Active Status</th>
                                                     <th colspan="3">Action</th>
 												</thead>
 
-												<?php foreach($user as $data){?>
+												<?php foreach($picker as $data){?>
 												<tr>
-													<td><?php echo $data->id;?></td>
-													<td><?php echo $data->namauser;?></td>
-                                                    <td><?php echo $data->status;?></td>
+													
+													<td><?php echo $data->username;?></td>
+                                                    <td><?php echo $data->active;?></td>
 
-                                                         <td width="20px;"><a href="" class="btn btn-info" >View </a> </td>                      
-                                                    	<?php if($data->status=="waiting") { ?>
-                                                            <td width="20px;"><a href="" class="btn btn-warning" >Approve </a> </td>                      
+                                                         <td width="20px;"> <a href="#myModal<?php echo $data->username?>" class="btn btn-info" data-toggle="modal">View Profil</a> </td>                      
+                                                    	<?php if($data->active=="0") {  ?>
+                                                            <td width="20px;"><a href="#myModalUpdate<?php echo $data->username?>" class="btn btn-warning" data-toggle="modal">Approve </a> </td>                      
                                                     <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
                                                               <?php }else { ?>                     
                        										 <?php } ?>
@@ -200,6 +205,108 @@
 <div class="scroll-to-top">
 	<i class="icon-arrow-up"></i>
 </div>
+
+<!-- modal update -->
+<?php foreach($picker as $data){?>
+		<div class="modal fade" id="myModalUpdate<?php echo $data->username?>" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Profile Picker</h4>
+        </div>
+        <div class="modal-body">
+		<table class="table table-responsive" border="0">
+                           <tbody>
+                             <tr>
+                               <td>Name</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->nama?></td>
+                             </tr>
+                             <tr>
+                               <td>Username</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->username?></td>
+                             </tr>
+                             <tr>
+                               <td>Family Conditions</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->kondisi?></td>
+                             </tr>
+                             <tr>
+                               <td>Address</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->alamat?></td>
+                             </tr>
+                             <tr>
+                               <td>Photo</td>
+                               <td>:</td>
+                               <td><img src="" width="200px"></td>
+                             </tr>
+                           </tbody>
+                         </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  <a href="" class="btn btn-primary"><i class="fa fa-save"></i> Approve Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php }?>
+
+			   <!-- akhir modal update -->
+
+      <!-- Modal content-->
+	  <?php foreach($picker as $data){?>
+		<div class="modal fade" id="myModal<?php echo $data->username?>" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Profile Picker</h4>
+        </div>
+        <div class="modal-body">
+		<table class="table table-responsive" border="0">
+                           <tbody>
+                             <tr>
+                               <td>Name</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->nama?></td>
+                             </tr>
+                             <tr>
+                               <td>Username</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->username?></td>
+                             </tr>
+                             <tr>
+                               <td>Family Conditions</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->kondisi?></td>
+                             </tr>
+                             <tr>
+                               <td>Address</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->alamat?></td>
+                             </tr>
+                             <tr>
+                               <td>Photo</td>
+                               <td>:</td>
+                               <td><img src="" width="200px"></td>
+                             </tr>
+                           </tbody>
+                         </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <?php }?>
+  <!-- akhir modal detil -->
+
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
