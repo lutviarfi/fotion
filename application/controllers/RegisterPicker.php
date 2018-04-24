@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Daftarfood extends CI_Controller {
+class RegisterPicker extends CI_Controller {
 
 
 	public function index()
 	{
-	 $this->load->view('DaftarMakanan');
+	 $this->load->view('RegistrasiPicker');
 		}
 }
