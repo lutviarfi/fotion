@@ -52,6 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="toggle-menu">
 						<li><a class="active" href="<?php echo('DaftarFood')?>">Home</a></li>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
 			<script>
@@ -68,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="banner">
 			<p class="animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">Satu Donasi untuk Satu Kebaikan</p>
 			<label></label>
-			<h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Donation Now</h4>
+			<h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Let's Donation Now</h4>
 			<a class="scroll down" href="#content-down"><img src="images/down.png" alt=""></a>
 		</div>
 </div>
@@ -77,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="content" id="content-down">
 
 <!--services-->
-<div class="services">
+<!-- <div class="services">
 	<div class="container">
 		<div class="services-top">
 			<div class="col-md-8 services-right animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
@@ -155,19 +156,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!--//services-->
 <!--news-->
 	<div class="content-top-top">
 		<div class="container">
 			<div class="content-top">
 				<div class="col-md-4 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<h3>News</h3>
-					<label><i class="glyphicon glyphicon-menu-up"></i></label>
-					<span>There are many variations</span>
-				</div>
-				<div class="col-md-8 content-right animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour , or randomised words which don't look even slightly believable.There are many variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour , or randomised words</p>
+					<h3>Menu</h3>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -250,9 +246,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="footer-head">
 				<div class="col-md-8 footer-top animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<ul class=" in">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="blog.html">Blog</a></li>
+						<li><a href="<?php  ?>">Home</a></li>
+						<li><a href="menu.html">Picker Registration</a></li>
+						<li><a href="blog.html">Login</a></li>
 						<li><a href="events.html">Events</a></li>
 						<li><a href="contact.html">Contact</a></li>
 						<li><a href="login_3.html">Login</a></li>
