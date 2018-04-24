@@ -44,15 +44,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <div class="header">
 	<div class="container">
 		<div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<h1><a href="<?php echo('DaftarFood')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
+			<h1><a href="<?php echo('Home')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
 		</div>
 		<div class="nav-icon">
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
 					<ul class="toggle-menu">
-						<li><a class="active" href="<?php echo('DaftarFood')?>">Home</a></li>
+						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+<<<<<<< HEAD
 						<li><a href="#">Restaurant Registration</a></li>
+=======
+						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
+>>>>>>> a65ea96fbe5f9fc36e8a333c5f5b939db6d2daba
 						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
@@ -94,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="service-top">
 			<div class="col-md-5 service-top animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<div class=" service-grid">
+				<div class=" ser	vice-grid">
 					<div class="col-md-6 service-grid1">
 						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
 							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-leaf"></a>
