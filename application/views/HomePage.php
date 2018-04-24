@@ -1,4 +1,4 @@
-<!-- <?php ?> -->
+<?php include"application/views/master/header.php" ?>
 <!--news-->
 	<div class="content-top-top">
 		<div class="container">
@@ -81,3 +81,4 @@
 	</div>
 <!--//news-->
 </div>
+<?php include"application/views/master/footer.php" ?>
