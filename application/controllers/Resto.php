@@ -14,9 +14,10 @@ class Resto extends CI_Controller {
 	public function index()
 	{
 
-		$allFood = $this->ListModel->getAllUser();
+		$allFood = $this->ListModel->getmerge();
         $data['idpesan'] = $allFood;
-        
+		//$nama = $this->ListModel->getmerge();
+		//$data['nama_m'] = $nama;
 		$status = $this->session->status;
 		$data['status'] = $status;
 
@@ -24,6 +25,13 @@ class Resto extends CI_Controller {
 	
 	}
 
+	public function merge(){
+		$detail = $this->ListModel->getMerge();
+				
+
+		$this->load->view('ApproveResto',$data);	
+	
+	}
 
 	// public function update() {
 	// 	$id=$this->input->post('id');

@@ -160,7 +160,7 @@
 
 	<!-- modal view buku -->
     <?php foreach($idpesan as $data){?>
-									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idpesan?>" aria-hidden="true">
+									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idmakanan?>" aria-hidden="true">
 									     <div class="modal-dialog">
 									       <div class="modal-content">
 									         <div class="modal-header">
@@ -186,12 +186,21 @@
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><?php echo $data->idmakanan ?></td>
 									                 </tr>
-									                 <tr>
-									                   <td>status</td>
+													 <tr>
+									                   <td>Halal</td>
 									                   <td>:</td>
-									                   <td style="text-transform:capitalize;"><?php echo $data->status ?></td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->halal ?></td>
 									                 </tr>
-															
+									                 <tr>
+									                   <td>Nama Makanan</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->nama_m ?></td>
+									                 </tr>
+													 <tr>
+									                   <td>Available</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->available ?></td>
+									                 </tr>
 									               </tbody>
 									             </table>
 									           </form>

@@ -9,9 +9,14 @@ class ListModel extends CI_Model {
 	//ambil data login table
 	public function getAllUser(){
 		$result = $this->db->get('pesan');
+		$result = $this->db->query("SELECT * from food,pesan WHERE food.idmakanan = pesan.idpesan");
 		return $result->result();
 	}
 
+	public function getmerge(){
+		$result = $this->db->query("SELECT * from food,pesan WHERE food.idmakanan = pesan.idpesan");
+		return $result->result();
+	}
 	// function updateStatus($id,$data)
     // {
 	// 	$check = false ;
