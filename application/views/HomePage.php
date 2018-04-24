@@ -193,7 +193,7 @@
 	                <td><?php echo $data->lokasi;?></td>
 	              </tr>
 	            </table>
-							<a href="#" class="btn btn-primary" role="submit">Pick up</a><br>
+							<a href="<?php blink('Home/pick/'.$data->idmakanan.'') ?>" class="btn btn-primary">Pick up</a><br>
 						</div>
       		</div>
 				<?php } ?>
