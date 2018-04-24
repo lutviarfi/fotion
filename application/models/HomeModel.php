@@ -10,4 +10,16 @@ class HomeModel extends CI_Model {
       $result = $this->db->get('food');
     return $result->result();
   }
+
+  public function insertpesan($data)
+  {
+    $checkinsert = false;
+    try{
+      $this->db->insert('pesan',$data);
+      $checkinsert = true;
+    }catch (Exception $ex) {
+      $checkinsert = false;
+    }
+    return $checkinsert;
+  }
 }
