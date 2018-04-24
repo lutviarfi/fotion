@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class RegisterPicker extends CI_Controller {
+class PickerRegisters extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -11,7 +11,7 @@ class RegisterPicker extends CI_Controller {
 
 	public function index()
 	{
-	 $this->load->view('RegistrasiPicker');
+	 $this->load->view('PickerRegister');
 		}
 
 	public function InsertPicker(){
@@ -51,10 +51,10 @@ class RegisterPicker extends CI_Controller {
 
 		$data = null;
 		if($result){
-			Redirect('RegisterPicker');
+			Redirect('PickerRegisters');
 		}else{
 			$data['result']= "gagal";
-			$this->load->view('RegistrasiPicker',$data);
+			$this->load->view('PickerRegister',$data);
 		}
 	}
 }

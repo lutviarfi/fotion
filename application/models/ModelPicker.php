@@ -7,11 +7,11 @@ class ModelPicker extends CI_Model {
 	}
 
 	//insert data buku table
-  public function InsertPicker($data){
+  public function InsertPickers($data){
 
 		$checkinsert = false;
 		try{
-			$this->db->insert('foodpicker',$data);
+			$this->db->insert('picker',$data);
 			$checkinsert = true;
 		}catch (Exception $ex) {
 			$checkinsert = false;
@@ -19,5 +19,5 @@ class ModelPicker extends CI_Model {
 		return $checkinsert;
 	}
 
-  
+
 }
