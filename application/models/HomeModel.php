@@ -11,6 +11,12 @@ class HomeModel extends CI_Model {
     return $result->result();
   }
 
+  public function getIdMakanan($idmakanan)
+  {
+    $kode = $this->db->where('idmakanan',$idmakanan)->get('food');
+    return $kode->row();
+  }
+
   public function insertpesan($data)
   {
     $checkinsert = false;

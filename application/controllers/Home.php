@@ -18,13 +18,13 @@ class Home extends CI_Controller {
 	 $this->load->view('Homepage',$data);
 	}
 
-  public function pick()
+  public function pick($idmakanan)
 	{
-
-		$kode = $this->input->post('idmakanan');
+    // $kode = $this->HomeModel->getIdMakanan($idmakanan);
+    $kode = $this->input->post('idmakanan');
 
 		$data = array(
-		'idmakanan'=>$kode,
+		'idmakanan'=>$kode
 		);
 
 		$result = $this->HomeModel->insertpesan($data);
