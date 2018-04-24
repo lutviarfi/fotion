@@ -12,18 +12,18 @@ class ListModel extends CI_Model {
 		return $result->result();
 	}
 
-	function updateStatus($id,$data)
-    {
-		$check = false ;
-		try{
-			$this->db->where('nama',$id);
-			$this->db->update('pesan',$data);
-			$check = true;
-		} catch (Exception $ex) {
-			$check = false;
-		}
-		return $check;
+	// function updateStatus($id,$data)
+    // {
+	// 	$check = false ;
+	// 	try{
+	// 		$this->db->where('idpesan',$id);
+	// 		$this->db->update('pesan',$data);
+	// 		$check = true;
+	// 	} catch (Exception $ex) {
+	// 		$check = false;
+	// 	}
+	// 	return $check;
       
-    }
+    // }
 
 }

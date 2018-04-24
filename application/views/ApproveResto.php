@@ -131,34 +131,36 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-													<th>Nama</th>
-													<th>Pesanan</th>
-													<th>Status</th>
+													<th>Id Pesan</th>
+													<th>Id Makanan</th>
+													<th>Username</th>
+                                                    <th>Status</th>
                                                     <th colspan="3">Action</th>
 												</thead>
 
 												<?php 
 												
-												foreach($nama as $data){
-													if($data->status=="P") {
+												foreach($idpesan as $data){
+													if($data->status=="0") {
 													?>
 												<tr>
-													<td><?php echo $data->nama;?></td>
-													<td><?php echo $data->pesanan;?></td>
+													<td><?php echo $data->idpesan;?></td>
+													<td><?php echo $data->idmakanan;?></td>
+                                                    <td><?php echo $data->username;?></td>
                                                     <td><?php echo $data->status;?></td>
 
-                                                         <td width="20px;"><a href="#modalviewpesan<?php echo $data->nama ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
-                                                            <td width="20px;"><a href="<?php blink('Resto/update/'.$data->nama.'')?>" class="btn btn-warning" >Approve </a> </td>                      
+                                                         <td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
+                                                            <td width="20px;"><a href="<?php blink('Resto/update/'.$data->idpesan.'')?>" class="btn btn-warning" >Approve </a> </td>                      
                                                     <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
                                                               
                                 </tr>
-								<input type="hidden" name="id" id="id" value="<?php echo $data->nama;?>">
+								<!-- <input type="hidden" name="id" id="id" value="<?php echo $data->idpesan;?>"> -->
 												<?php }} ?>
 												</table>
 
 	<!-- modal view buku -->
-    <?php foreach($nama as $data){?>
-									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->nama?>" aria-hidden="true">
+    <?php foreach($idpesan as $data){?>
+									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idpesan?>" aria-hidden="true">
 									     <div class="modal-dialog">
 									       <div class="modal-content">
 									         <div class="modal-header">
@@ -175,14 +177,14 @@
 									               </thead>
 									               <tbody>
 									                 <tr>
-									                   <td>Nama</td>
+									                   <td>Id pesan</td>
 									                   <td>:</td>
-									                   <td style="text-transform:capitalize;"><b><?php echo $data->nama  ?></b></td>
+									                   <td style="text-transform:capitalize;"><b><?php echo $data->idpesan  ?></b></td>
 									                 </tr>
 									                 <tr>
-									                   <td>pesanan</td>
+									                   <td>Id Makanan</td>
 									                   <td>:</td>
-									                   <td style="text-transform:capitalize;"><?php echo $data->pesanan ?></td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->idmakanan ?></td>
 									                 </tr>
 									                 <tr>
 									                   <td>status</td>

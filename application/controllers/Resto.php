@@ -6,8 +6,7 @@ class Resto extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('AdminModel');
-		$this->load->model('RestoModel');
+		$this->load->model('ListModel');
 		
 	}
 
@@ -15,8 +14,8 @@ class Resto extends CI_Controller {
 	public function index()
 	{
 
-		$allAdmin = $this->AdminModel->getAllUser();
-        $data['nama'] = $allAdmin;
+		$allFood = $this->ListModel->getAllUser();
+        $data['idpesan'] = $allFood;
         
 		$status = $this->session->status;
 		$data['status'] = $status;
@@ -26,22 +25,22 @@ class Resto extends CI_Controller {
 	}
 
 
-	public function update() {
-		$id=$this->input->post('id');
+	// public function update() {
+	// 	$id=$this->input->post('id');
 
-		$data = array(
-		'status' => "Deliv",
-		'nama' => $id
-		);
-		$result = $this->RestoModel->updateStatus($id, $data);
-		$data = null;
+	// 	$data = array(
+	// 	'status' => "Deliv",
+	// 	'nama' => $id
+	// 	);
+	// 	$result = $this->ListModel->updateStatus($id, $data);
+	// 	$data = null;
 
-		if(!$result){
-			$data['result'] = "Sukses";
-		}else{
-			$data['result'] = "Gagal";
-		}
-		redirect('Resto');
-	}
+	// 	if(!$result){
+	// 		$data['result'] = "Sukses";
+	// 	}else{
+	// 		$data['result'] = "Gagal";
+	// 	}
+	// 	redirect('Resto');
+	// }
 
 }
