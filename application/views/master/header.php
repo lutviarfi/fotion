@@ -44,18 +44,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <div class="header">
 	<div class="container">
 		<div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<h1><a href="<?php echo('DaftarFood')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
+			<h1><a href="<?php echo('Home')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
 		</div>
 		<div class="nav-icon">
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
 					<ul class="toggle-menu">
-						<li><a class="active" href="<?php echo('DaftarFood')?>">Home</a></li>
+						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
-<<<<<<< HEAD
-						<li><a href="#">Restaurant Registration</a></li>
-=======
->>>>>>> 0ef1cdc747a16c762747d15d23a31b6571570a71
+						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
 						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
@@ -78,8 +75,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 </div>
 <!--content-->
-<<<<<<< HEAD
-=======
 
 <div class="content" id="content-down">
 
@@ -99,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="service-top">
 			<div class="col-md-5 service-top animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<div class=" service-grid">
+				<div class=" ser	vice-grid">
 					<div class="col-md-6 service-grid1">
 						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
 							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-leaf"></a>
@@ -164,4 +159,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div> -->
 <!--//services-->
->>>>>>> 0ef1cdc747a16c762747d15d23a31b6571570a71
