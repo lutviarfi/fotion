@@ -104,8 +104,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  					  <div class="bottom bottom2"></div>
  					</div>
  				</div>
- 			</a> 
-    
+ 			</a>
+
 				<div class="clearfix"></div>
 			</div>
 		</div>
