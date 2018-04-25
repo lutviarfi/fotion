@@ -70,44 +70,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <form role="form" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Email</label>
+                <label class="col-md-2 control-label" for="form_control_1">Nama Makanan</label>
                 <div class="col-md-10">
-                  <input type="email" class="form-control" name="email" id="form_control_1" placeholder="Enter your Email">
+                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Nama Menu Makanan">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Password</label>
-                <div class="col-md-10">
-                  <input type="password" class="form-control" name="password" id="form_control_1" placeholder="Enter your password">
-                  <div class="form-control-focus">
-                  </div>
-                </div>
-              </div>  <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
-                  <div class="col-md-10">
-                    <input type="file" class="form-control" name="gambar" id="form_control_1" placeholder="Enter your name">
-                    <div class="form-control-focus">
+                    <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
+                    <div class="col-md-10">
+                      <input type="file" class="form-control" name="gambar" id="form_control_1" placeholder="Masukkan Foto Makanan">
+                      <div class="form-control-focus">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Kondisi</label>
-                  <div class="col-md-10">
-                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your kondisi">
-                    <div class="form-control-focus">
-                    </div>
-                  </div>
-                </div>
-              <div class="form-group form-md-line-input has-success">
-                <label class="col-md-2 control-label" for="form_control_1">Alamat</label>
+              <div class="form-group form-md-line-input">
+                <label class="col-md-2 control-label" for="form_control_1">Expired</label>
                 <div class="col-md-10">
-                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter About your address"></textarea>
+                  <input type="text" class="form-control" name="expired" id="form_control_1" placeholder="Tanggal Expired Makanan">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
+              <div class="form-group form-md-line-input">
+                <label class="col-md-2 control-label" for="form_control_1">Status Halal</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" name="halal" id="form_control_1" placeholder="Apakah makanan yang anda input halal?">
+                  <div class="form-control-focus">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-md-line-input">
+                <label class="col-md-2 control-label" for="form_control_1">Jumlah Tersedia</label>
+                <div class="col-md-10">
+                  <input type="number" class="form-control" name="available" id="form_control_1" placeholder="Jumlah makanan tersedia">
+                  <div class="form-control-focus">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-md-line-input">
+                <label class="col-md-2 control-label" for="form_control_1">Ingredients</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" name="ingredients" id="form_control_1" placeholder="Komposisi Menu Makanan">
+                  <div class="form-control-focus">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-md-line-input">
+                <label class="col-md-2 control-label" for="form_control_1">Lokasi</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" name="lokasi" id="form_control_1" placeholder="Masukkan Lokasi Anda">
+                  <div class="form-control-focus">
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="form-actions">
               <div class="row">
