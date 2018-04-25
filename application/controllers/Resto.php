@@ -14,16 +14,33 @@ class Resto extends CI_Controller {
 	public function index()
 	{
 
-		$allFood = $this->ListModel->getAllUser();
+		$allFood = $this->ListModel->getmerge();
         $data['idpesan'] = $allFood;
-        
+		//$nama = $this->ListModel->getmerge();
+		//$data['nama_m'] = $nama;
 		$status = $this->session->status;
 		$data['status'] = $status;
-
-        $this->load->view('ApproveResto',$data);	
+		$this->load->view('ApproveResto',$data);	
 	
 	}
 
+	public function update($idpesan){
+	
+		$update = $this->ListModel->update($idpesan);
+		$data['idpesan'] = $update; 
+
+        redirect('Resto',$data);
+	
+	}
+
+
+	public function merge(){
+		$detail = $this->ListModel->getMerge();
+				
+
+		$this->load->view('ApproveResto',$data);	
+	
+	}
 
 	// public function update() {
 	// 	$id=$this->input->post('id');
