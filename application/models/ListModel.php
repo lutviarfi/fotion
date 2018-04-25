@@ -16,6 +16,11 @@ class ListModel extends CI_Model {
 	public function getmerge(){
 		$result = $this->db->query("SELECT * from food,pesan WHERE food.idmakanan = pesan.idpesan");
 		return $result->result();
+
+	}
+	public function update($idpesan){
+		$result = $this->db->set('status','1')->where('idpesan',$idpesan)->update('pesan');
+		return $result;
 	}
 	// function updateStatus($id,$data)
     // {

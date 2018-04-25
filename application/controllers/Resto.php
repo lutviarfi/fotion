@@ -20,10 +20,19 @@ class Resto extends CI_Controller {
 		//$data['nama_m'] = $nama;
 		$status = $this->session->status;
 		$data['status'] = $status;
-
-        $this->load->view('ApproveResto',$data);	
+		$this->load->view('ApproveResto',$data);	
 	
 	}
+
+	public function update($idpesan){
+	
+		$update = $this->ListModel->update($idpesan);
+		$data['idpesan'] = $update; 
+
+        redirect('Resto',$data);
+	
+	}
+
 
 	public function merge(){
 		$detail = $this->ListModel->getMerge();

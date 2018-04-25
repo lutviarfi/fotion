@@ -150,7 +150,7 @@
                                                     <td><?php echo $data->status;?></td>
 
                                                          <td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
-                                                            <td width="20px;"><a href="<?php blink('Resto/update/'.$data->idpesan.'')?>" class="btn btn-warning" >Approve </a> </td>                      
+                                                            <td width="20px;"><a href="<?php blink('Resto/update/'.$data->idpesan."")?>" class="btn btn-warning" >Approve </a> </td>                      
                                                     <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
                                                               
                                 </tr>
