@@ -69,7 +69,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-body form">
 
           <!--Form-->
-          <form role="form" action="<?php blink('InsertMakananController/InsetData')?>" method="post">
+
+
             <div class="form-body">
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Nama Makanan</label>

@@ -6,7 +6,6 @@ class InsertMakananController extends CI_Controller {
   public function __construct() {
 		parent::__construct();
 		$this->load->model('InsertMakananModel');
-
 	}
 
 	public function index()
@@ -14,8 +13,26 @@ class InsertMakananController extends CI_Controller {
 	 $this->load->view('InsertMakanan');
 	}
 
+//copy
+
+
   public function InsetData(){
-  		$kode = $this->input->post('idmakanan');
+
+      $this->load->helper(array('form', 'url'));
+      $nama_file = md5(uniqid(rand(), true));
+      $this->load->library('upload');
+  		$config = [
+  			'upload_path' => './assets/img/',
+  			'allowed_types' => 'gif|jpg|png|jpeg|bmp',
+        'file_name' => $nama_file
+  		];
+
+      $this->upload->initialize($config);
+  		  if(!$this->upload->do_upload('gambar')){
+  		      $gambar="";
+  		  }else{
+  		$gambar=$this->upload->file_name;
+      $kode = $this->input->post('idmakanan');
   		$nama = $this->input->post('nama');
   		$expire = $this->input->post('expire');
   		$halal = $this->input->post('halal');
@@ -25,6 +42,7 @@ class InsertMakananController extends CI_Controller {
 
   		$data = array(
   		'idmakanan'=>$kode,
+      'gambar' => $gambar,
   		'nama' => $nama,
   		'expire' => $expire,
   		'halal' => $halal,
@@ -47,5 +65,6 @@ class InsertMakananController extends CI_Controller {
   			$this->load->view('InsertMakanan',$data);
   		}
   	}
+  }
 
 }
