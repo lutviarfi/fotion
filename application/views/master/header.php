@@ -6,6 +6,9 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
 <!-- Custom Theme files -->
+<!-- buat modal -->
+<script src="<?php blink('assets/global/plugins/bootstrap/js/bootstrap.js')?>" type="text/javascript"></script>
+<script src="<?php blink('assets/global/plugins/jquery.min.js')?>" type="text/javascript"></script>
 <!--theme-style-->
 <link href="<?php blink('cooking/css/style.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
