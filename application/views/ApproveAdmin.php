@@ -248,7 +248,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		  <a href="" class="btn btn-primary"><i class="fa fa-save"></i> Approve Now</a>
+		  <a href="<?php blink('Admin/update/'.$data->username."")?>" class="btn btn-primary"><i class="fa fa-save"></i> Approve Now</a>
         </div>
       </div>
     </div>
@@ -288,6 +288,11 @@
                                <td>Address</td>
                                <td>:</td>
                                <td style="text-transform:capitalize;"><?php echo $data->alamat?></td>
+                             </tr>
+														 <tr>
+                               <td>Active Status</td>
+                               <td>:</td>
+                               <td style="text-transform:capitalize;"><?php echo $data->active?></td>
                              </tr>
                              <tr>
                                <td>Photo</td>

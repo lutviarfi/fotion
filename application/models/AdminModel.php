@@ -21,4 +21,9 @@ class AdminModel extends CI_Model {
         
 	}
 
+	public function update($username){
+		$result = $this->db->set('active','1')->where('username',$username)->update('picker');
+		return $result;
+	}
+
 }

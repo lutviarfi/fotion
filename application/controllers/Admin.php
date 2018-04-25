@@ -19,16 +19,21 @@ class Admin extends CI_Controller {
 	
 	}
 
-	public function getPicker()
-	{
+	public function update($username){
+	
+		$update = $this->AdminModel->update($username);
+		$data['username'] = $update; 
 
-		$allPicker = $this->AdminModel->getAllPicker();
-		$data['picker']= $allPicker;
+        redirect('Admin',$data);
+	
+	}
 
-		$username = $this->session->status;
-		$data['username'] = $username;
 
-        $this->load->view('ApproveAdmin',$data);	
+	public function merge(){
+		$detail = $this->ListModel->getMerge();
+				
+
+		$this->load->view('ApproveResto',$data);	
 	
 	}
 }
