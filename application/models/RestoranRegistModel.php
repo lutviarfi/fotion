@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class RestoranRegisterModel extends CI_Model {
+class RestoranRegistModel extends CI_Model {
     public function __construct(){
 		parent::__construct();
 	}
@@ -14,3 +14,4 @@ class RestoranRegisterModel extends CI_Model {
 		}
 		return $checkinsert;
 	}
+}
