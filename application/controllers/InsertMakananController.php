@@ -33,12 +33,12 @@ class InsertMakananController extends CI_Controller {
       'lokasi' => $lokasi
   		);
 
-  		$result = $this->CRUDModel->InsertUsername($data);
+  		$result = $this->InsertMakananModel->InsertUsername($data);
 
   		$data = NULL;
   		if($result){
 
-  			redirect('CRUD');
+  			redirect('InsertMakananController');
   		}else{
 
   			$nama = $this->session->nama;

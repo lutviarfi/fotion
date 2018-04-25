@@ -7,7 +7,7 @@ class InsertMakananModel extends CI_Model {
   public function InsertUsername($data){
     $checkinsert = false;
     try{
-      $this->db->insert('buku',$data);
+      $this->db->insert('food',$data);
       $checkinsert = true;
     }catch (Exception $ex) {
       $checkinsert = false;
