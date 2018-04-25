@@ -53,6 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
 						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
+						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>
 						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
@@ -70,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="banner">
 			<p class="animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">Satu Donasi untuk Satu Kebaikan</p>
 			<label></label>
-			<h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Let's Donation Now</h4>
+			<h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Let's Donate Now</h4>
 			<a class="scroll down" href="#content-down"><img src="images/down.png" alt=""></a>
 		</div>
 </div>
