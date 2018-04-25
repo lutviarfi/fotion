@@ -5,7 +5,7 @@ class InsertMakananController extends CI_Controller {
 
   public function __construct() {
 		parent::__construct();
-		$this->load->model('ModelInsertMakanan');
+		$this->load->model('InsertMakananModel');
 
 	}
 

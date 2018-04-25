@@ -67,12 +67,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
         </div>
         <div class="portlet-body form">
-          <form role="form" method="post" class="form-horizontal">
+
+          <!--Form-->
+          <form role="form" action="<?php blink('InsertMakananController/InsetData')?>" method="post">
             <div class="form-body">
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Nama Makanan</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Nama Menu Makanan">
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Menu Makanan">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -80,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                     <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
                     <div class="col-md-10">
-                      <input type="file" class="form-control" name="gambar" id="form_control_1" placeholder="Masukkan Foto Makanan">
+                      <input type="file" class="form-control" name="gambar" id="gambar" placeholder="Masukkan Foto Makanan">
                       <div class="form-control-focus">
                       </div>
                     </div>
@@ -88,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Expired</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="expired" id="form_control_1" placeholder="Tanggal Expired Makanan">
+                  <input type="text" class="form-control" name="expire" id="expire" placeholder="Tanggal Expired Makanan">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -96,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Status Halal</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="halal" id="form_control_1" placeholder="Apakah makanan yang anda input halal?">
+                  <input type="text" class="form-control" name="halal" id="halal" placeholder="Apakah makanan yang anda input halal?">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -104,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Jumlah Tersedia</label>
                 <div class="col-md-10">
-                  <input type="number" class="form-control" name="available" id="form_control_1" placeholder="Jumlah makanan tersedia">
+                  <input type="number" class="form-control" name="available" id="available" placeholder="Jumlah makanan tersedia">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -112,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Ingredients</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="ingredients" id="form_control_1" placeholder="Komposisi Menu Makanan">
+                  <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Komposisi Menu Makanan">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -120,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Lokasi</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="lokasi" id="form_control_1" placeholder="Masukkan Lokasi Anda">
+                  <input type="text" class="form-control" name="lokasi" id="lokasi" placeholder="Masukkan Lokasi Anda">
                   <div class="form-control-focus">
                   </div>
                 </div>
