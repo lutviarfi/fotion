@@ -14,4 +14,17 @@ class RestoranRegistModel extends CI_Model {
 		}
 		return $checkinsert;
 	}
+
+	function changeActiveState($key)
+	{
+		$this->load->database();
+	 	$data = array(
+			'active'=>"ACTIVE"
+	 	);
+
+		$this->db->where('md5(username)', $key);
+		$this->db->update('resto', $data);
+
+		return true;
+	}
 }
