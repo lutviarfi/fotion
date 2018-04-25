@@ -54,6 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
 						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
 						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>
+						<li><a href="<?php echo('Resto')?>">List Food for Approve</a></li>
 						<li><a href="#"</a>Login</li>
 					</ul>
 				</div>
