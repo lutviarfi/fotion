@@ -106,7 +106,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									?>
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
-										<form action="<?php blink('regispicker/InsertPicker')?>" method="post" class="form-horizontal">
+										<form action="<?php blink('RestoranRegistController/InsertData')?>" method="post" class="form-horizontal">
 											<div class="form-body">
 												<div class="form-group">
 													<label class="col-md-3 control-label">Username</label>

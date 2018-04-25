@@ -14,7 +14,7 @@ class RestoranRegistController extends CI_Controller {
     $this->load->view('RegisterResto');
   }
 
-  public function InsetData(){
+  public function InsertData(){
 
     $username = $this->input->post('username');
     $email = $this->input->post('email');
@@ -28,11 +28,11 @@ class RestoranRegistController extends CI_Controller {
 		'email'=>$email,
 		'phone'=>$phone,
 		'password'=> md5($password),
-		'point'=>$point,
-		'active'=>$active
+		'point'=> 0,
+		'active'=>"PENDING"
 		);
 
-		$result = $this->RestoranRegisterModel->InsertUsername($data);
+		$result = $this->RestoranRegistModel->InsertUsername($data);
 
 		$data = NULL;
 		if($result){
