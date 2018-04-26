@@ -1,107 +1,45 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-			$this->load->model('CRUDModel');
+		$this->load->helper('url');
+		$this->load->model('LoginModel');
 	}
 
 
-	public function index()
+	public function index(){
+		$this->load->view('Login');
+	}
+	public function auth()
 	{
-		$this->load->view('restogister');
-	}
-
-	public function authnodatabase(){
-
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
-		$newdata = array('username'  => $username);
+		$checkUsername = $this->LoginModel->readPicker($username,$password);
 
-		$this->session->set_userdata($newdata);
-		$data['login'] = $username;
+		if($checkUsername==NULL){
 
-		//kondsi if
-		if($username=="admin"){
-
-			$this->load->view('Result',$data);
+			echo "<script type='text/javascript'>
+               alert ('Maaf Username Dan Password Anda Salah !');
+               window.location.replace('index');
+      			</script>";
 
 		}else{
-
-			$this->load->view('error');
+			$newdata = array(
+				'username'  => $checkUsername->username,
+				'name'  => $checkUsername->nama
+			  );
+			//set seassion
+			$this->session->set_userdata($newdata);
+			redirect('HomeLogin');
 		}
 	}
 
-
-	public function auth(){
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		if($checkUsername=$this->CRUDModel->readUser($username,$password)){
-			$this->load->view('ListBuku');
-		}else if($checkUsername=$this->CRUDModel->readUser1($username,$password)){
-			$this->load->view('ListBuku');
-		}else if($checkUsername=$this->CRUDModel->readUser2($username,$password)){
-			$this->load->view('ListBuku');
-		}else{
-			$this->load->view('Login');
-		}
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('Home');
 	}
-
-	public function logout(){
-
-		$this->load->view('Login2');
-
-
-	}
-
-	public function ShowSession(){
-
-		$username = $this->session->username;
-
-		$data['username'] = $username;
-
-		$this->load->view('ShowSession',$data);
-	}
-
-
-	public function InsertDaftar(){
-
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		$nama = $this->input->post('nama');
-		$authuser = $this->input->post('auth');
-
-		$data = array(
-		'username' =>$username,
-		'password'=> md5($password),
-		'nama'=>$nama,
-		'auth' => $authuser
-
-		);
-
-		$result = $this->CRUDModel->InsertDaftar($data);
-
-		$data = NULL;
-		if($result){
-
-			$data['result'] = "Sukses";
-		}else{
-
-			$data['result'] = "Gagal";
-		}
-
-		$newdata = array(
-			'username'  => $checkUsername->username,
-			'name'  => $checkUsername->nama,
-			'auth'  => $checkUsername->auth
-		  );
-		//set seassion
-		$this->session->set_userdata($newdata);
-		//$this->load->view('Insert',$data);
-		redirect('CRUD');
-	}
-
 }

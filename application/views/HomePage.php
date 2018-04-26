@@ -89,10 +89,17 @@
 		<div class="container">
 			<div class="content-top">
 				<div class="col-md-4 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<h3>Availabe Food</h3>
+					<h3>Availabe Food</h3>  
 				</div>
+				<?php if($username!=NULL){
+					?>
+				<div class="col-md-8 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+					<h4>Hi, <?php echo $username; ?>  <a href="<?php blink('Login/logout'); ?>" class="btn btn-danger">Logout</a></h4> 
+				</div>
+				<?php }else{
 
-
+				}?>
+	
 
 				<div class="clearfix"> </div>
 			</div>

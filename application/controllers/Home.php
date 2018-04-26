@@ -12,6 +12,8 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$username = $this->session->username;
+		$data['username']=$username;
 		$ambilFood = $this->HomeModel->getFood();
 		$data['getFood']=$ambilFood;
 
