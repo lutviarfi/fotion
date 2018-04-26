@@ -32,8 +32,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		</script>
 	<!-- start-smoth-scrolling -->
-<link href="<?php blink('cooking/css/styles.css')?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php blink('cooking/css/component.css')?>" />
+		<link href="<?php blink('cooking/css/styles.css')?>" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="<?php blink('cooking/css/component.css')?>" />
 	<!-- animation-effect -->
 <link href="<?php blink('cooking/css/animate.min.css')?>" rel="stylesheet">
 <script src="<?php blink('cooking/js/wow.min.js')?>"></script>
@@ -54,11 +54,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
 					<ul class="toggle-menu">
 						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
+						<?php if($username==NULL){?>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+							<?php }else{}?>
+						<?php if($username==NULL){?>
 						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
+							<?php }else{}?>
+						<?php if($username!=NULL){?>
 						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>
+							<?php }else{}?>
+						<?php if($username!=NULL){?>
 						<li><a href="<?php echo('Resto')?>">List Food for Approve</a></li>
+							<?php }else{}?>
+						<?php if($username==NULL){?>
 						<li><a href="<?php echo('Login')?>"</a>Login</li>
+							<?php }else{}?>
+						<?php if($username!=NULL){?>
+						<li><a href="<?php blink('Login/logout'); ?>"</a>Logout</li>
+							<?php }else{}?>
 					</ul>
 				</div>
 			<script>
@@ -80,9 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 </div>
 <!--content-->
-
 <div class="content" id="content-down">
-
 <!--services-->
 <!-- <div class="services">
 	<div class="container">

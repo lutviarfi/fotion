@@ -94,7 +94,7 @@
 				<?php if($username!=NULL){
 					?>
 				<div class="col-md-8 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<h4>Hi, <?php echo $username; ?>  <a href="<?php blink('Login/logout'); ?>" class="btn btn-danger">Logout</a></h4> 
+					<h4>Hi, <?php echo $username; ?></h4> 
 				</div>
 				<?php }else{
 
@@ -199,8 +199,8 @@
 	                <td>Location</td>
 	                <td><?php echo $data->lokasi;?></td>
 	              </tr> -->
-	            </table>
-							<a href="#" class="btn btn-primary" role="submit">Pick up</a>|
+							</table>		
+							<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
 							<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
 						</div>
       		</div>

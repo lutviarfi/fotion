@@ -8,10 +8,10 @@ class Login extends CI_Controller {
 		$this->load->model('LoginModel');
 	}
 
-
 	public function index(){
 		$this->load->view('Login');
 	}
+
 	public function auth()
 	{
 		$username = $this->input->post('username');

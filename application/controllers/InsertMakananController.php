@@ -13,7 +13,6 @@ class InsertMakananController extends CI_Controller {
 	 $this->load->view('InsertMakanan');
 	}
 
-//copy
   public function InsetData(){
 
       $this->load->helper(array('form', 'url'));

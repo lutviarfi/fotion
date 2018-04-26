@@ -9,8 +9,6 @@ class HomeLogin extends CI_Controller {
         $this->load->model('HomeModel');
  }
 
-
-
 	public function index()
 	{
 		$username = $this->session->username;
