@@ -26,4 +26,12 @@ class AdminModel extends CI_Model {
 		return $result;
 	}
 
+	public function getAllResto(){
+    
+		$result = $this->db->get('resto');
+		//$result = $this->db->query("SELECT COUNT(idmakanan) from food where ('username',$data)");
+        return $result->result();
+        
+	}
+
 }
