@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2018 at 01:34 PM
+-- Generation Time: Apr 29, 2018 at 12:07 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -64,12 +64,11 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`idmakanan`, `nama`, `expire`, `halal`, `available`, `gambar`, `ingredients`, `lokasi`, `username`) VALUES
-(2, 'buah', 'no', 'halal', 1, 'f00e1f58c06c043ceb57d27775e1f329.jpg', 'rujak', 'jakarta', NULL),
-(3, 'gurame kipas', '2 days', 'halal', 3, '84dc52158278550b3c18969922661df5.jpg', 'ikan gurame, tepung tapioka, penyedap makanan, maizena', 'jakarta', 'serba sambal'),
-(4, 'ayam bakar', '2 days', 'halal', 7, '0f52c96737731c95858e8897af7037ea.jpg', 'ayam, kecap, penyedap makanan', 'jakarta', 'pecelele'),
-(5, 'nasi goreng', '1 days', 'halal', 5, '2cef981c49d8a3086d115dd8e65200cd.jpg', 'nasi, bumbu penyedap, sambal', 'tangerang', 'nasi goreng gila'),
-(7, 'sup iga', '3 days', 'halal', 3, 'fd3e7202ab963668b62e4b806a32ff5f.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'bekasi', NULL),
-(8, 'sapo tahu', '1 day', 'halal', 12, '4ae87322b02d975b85b522da34a3e2a1.jpg', 'sapo, bumbu penyedap, seafood', 'jakarta', NULL);
+(10, 'nasi goreng', '1 day', 'halal', 10, '4042c3422b34c556bb342f35f101b34a.jpg', 'nasi, bumbu penyedap, sambal', 'jakarta', 'mcd'),
+(11, 'sup iga', '2 days', 'halal', 2, 'a4b1438bb189c1f20e68b1b0c79aed9d.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'bandung', 'mcd'),
+(12, 'gurame kipas', '1 day', 'halal', 8, '3101e9841cdcd71c31f5b122c58720d4.jpg', 'ikan gurame, tepung tapioka, penyedap makanan, maizena', 'bekasi', 'mcd'),
+(13, 'sapo tahu', '2 days', 'halal', 1, 'bac1d81e96a49aa6df43c306d1be984e.jpg', 'sapo, bumbu penyedap, seafood', 'tangerang', 'mcd'),
+(14, 'nasi goreng', '12-12-12', 'halal', 3, '6c9bf454beddb22d2e81210fcaff7b42.jpg', 'nasi, bumbu penyedap, sambal', 'jakarta', 'mcd');
 
 -- --------------------------------------------------------
 
@@ -81,8 +80,18 @@ CREATE TABLE `pesan` (
   `idpesan` int(5) NOT NULL,
   `idmakanan` int(15) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL,
-  `status` int(5) DEFAULT NULL
+  `status` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pesan`
+--
+
+INSERT INTO `pesan` (`idpesan`, `idmakanan`, `username`, `status`) VALUES
+(6, 10, 'gumilar', 'APPROVE'),
+(11, 11, 'gumilar', 'Pending'),
+(12, 10, 'gumilar', 'Pending'),
+(13, 11, 'lutviarfi', 'APPROVE');
 
 -- --------------------------------------------------------
 
@@ -97,7 +106,7 @@ CREATE TABLE `picker` (
   `kondisi` varchar(100) DEFAULT NULL,
   `gambar` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `active` int(5) NOT NULL
+  `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -105,9 +114,8 @@ CREATE TABLE `picker` (
 --
 
 INSERT INTO `picker` (`username`, `nama`, `alamat`, `kondisi`, `gambar`, `password`, `active`) VALUES
-('andyndy', 'andi', 'cipadu', 'sehat kok', 'b50f7d2983b83e27c73661a13041a47a.jpg', 'admin', 0),
-('habibi', 'iqra', 'bogor', 'lagi lapar', '39df4e580884b2bda0b2ce1695eed143.jpeg', 'admin', 0),
-('lutviarfi', 'lutvi', 'jakarta', 'sejahtera', 'f2f2511ba7d5e4c7028214e89031fdb4.jpg', 'admin', 0);
+('gumilar', 'gugum', 'parung', 'baik', '64ac17d359e05d8d44e656d8c0c802df.jpg', '21232f297a57a5a743894a0e4a801fc3', 'ACTIVE'),
+('lutviarfi', 'lutvi', 'jakarta', 'sehat', '099130643677fc20a9a4c539b82092e0.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet');
 
 -- --------------------------------------------------------
 
@@ -121,7 +129,7 @@ CREATE TABLE `resto` (
   `phone` varchar(15) NOT NULL,
   `password` varchar(100) NOT NULL,
   `point` int(5) DEFAULT NULL,
-  `active` int(5) DEFAULT NULL
+  `active` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -129,9 +137,7 @@ CREATE TABLE `resto` (
 --
 
 INSERT INTO `resto` (`username`, `email`, `phone`, `password`, `point`, `active`) VALUES
-('nasi goreng gila', 'nasgorgil@gmail.com', 'jakarta', '21232f297a57a5a743894a0e4a801fc3', 0, 0),
-('pecelele', 'pecel@gmail.com', '0897654', '21232f297a57a5a743894a0e4a801fc3', 0, 0),
-('serba sambal', 'ss123@gmail.com', '0897654', '21232f297a57a5a743894a0e4a801fc3', 0, 0);
+('mcd', 'lutvi04@gmail.com', '0987654', '21232f297a57a5a743894a0e4a801fc3', 0, 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -148,15 +154,15 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`idmakanan`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD KEY `username` (`username`) USING BTREE;
 
 --
 -- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`idpesan`),
-  ADD UNIQUE KEY `idmakanan` (`idmakanan`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD KEY `idmakanan` (`idmakanan`) USING BTREE,
+  ADD KEY `username` (`username`) USING BTREE;
 
 --
 -- Indexes for table `picker`
@@ -178,13 +184,13 @@ ALTER TABLE `resto`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
