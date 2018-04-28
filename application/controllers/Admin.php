@@ -36,4 +36,12 @@ class Admin extends CI_Controller {
 		$this->load->view('ApproveResto',$data);	
 	
 	}
+
+	public function getAllResto(){
+	
+		$point = $this->AdminModel->getAllResto('resto');
+		$data['resto'] = $point; 
+        $this->load->view('PointResto',$data);
+	
+	}
 }
