@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
           <ul class="toggle-menu">
 						<li><a href="<?php blink('Home')?>">Home</a></li>
-						<li><a class="active" href="<?php blink('loginPicker')?>">Login Here</a></li>
+						<li><a class="active" href="<?php blink('Login/loginPicker')?>">Login Here</a></li>
 					</ul>
 				</div>
 			<script>
@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
         </div>
         <div class="portlet-body form">
-          <form role="form" action="<?php blink('Login/authResto')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
+          <form role="form" action="<?php blink('Login/authPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Username</label>

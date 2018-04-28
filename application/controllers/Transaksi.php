@@ -5,23 +5,29 @@ class Transaksi extends CI_Controller {
 		public function __construct() {
 		parent::__construct();
 		$this->load->model('TransaksiModel');
-	}
-    
+    }
+
+  
     public function pesan($idmakanan){
         
-        $kode = $this->input->post('idmakanan');
-		$username = $this->session->username;
-  
+        $user = $this->session->user;
+		
+		if($this->session->user==null){
+            echo "<script type='text/javascript'>
+            alert ('Sending Failed, silahkan Login dulu !');
+            window.location.replace('index');
+            </script>";
+        }else{
             $data = array(
-            'idmakanan'=>$kode,
-            'username' => $username,
-            'status' => "0"
+            'idmakanan'=>$idmakanan,
+            'username'=>$this->session->user,
+            'status' => "Pending"
             );
   
             $result = $this->TransaksiModel->pesan($data);
   
             $data = NULL;
-            if($result){
+        }if($result){
                 echo "<script type='text/javascript'>
                 alert ('Sending Request !');
                 window.location.replace('index');

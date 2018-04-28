@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>REGISTRATION<small>&nbsp PICKER</small></h1>
+				<h1>REGISTRATION<small>&nbsp Resto</small></h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -139,6 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div class="col-md-offset-3 col-md-9">
 														<button type="submit" class="btn btn-circle blue">Submit</button>
 														<a href="<?php blink('regispicker') ?>" type="button" class="btn btn-circle default">Cancel</a>
+														you have account ?<a href="<?php blink('Login') ?>" type="button" class="btn btn-circle default">Login Now</a>
 													</div>
 												</div>
 											</div>

@@ -42,7 +42,7 @@
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-                        <span class="username username-hide-mobile"><?php echo $status; ?></span>
+                        <span class="username username-hide-mobile"><?php echo $username; ?></span>
 						
 					</a>
 						<ul class="dropdown-menu dropdown-menu-default">
@@ -51,7 +51,7 @@
 								<i class="icon-user"></i> My Profile </a>
 							</li>
 							<li>
-								<a href="<?php blink('CRUD/logout')?>">
+								<a href="<?php blink('Login/logout')?>">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>
@@ -72,7 +72,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li class="active">
-						<a href="<?php blink('CRUD') ?>">List Picker</a>
+						<a href="<?php blink('Resto') ?>">List Picker</a>
 					</li>
 
 				</ul>
@@ -143,8 +143,6 @@
 
 												foreach($idpesan as $data){
 													
-													  if($data->status=="0") {
-														$data->status = "Waiting";
 													?>
 												<tr>
 													<td><?php echo $data->idpesan;?></td>
@@ -154,16 +152,15 @@
 											
                                                          <td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
                                                             <td width="20px;"><a href="<?php blink('Resto/update/'.$data->idpesan."")?>" class="btn btn-warning" >Approve </a> </td>                      
-                                                    <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
-                                                              
-                                </tr>
-								<!-- <input type="hidden" name="id" id="id" value="<?php echo $data->idpesan;?>"> -->
-													<?php }}?>
+                                                    <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>                                      
+                         					       </tr>
+									<!-- <input type="hidden" name="id" id="id" value="<?php echo $data->idpesan;?>"> -->
+													<?php }?>
 												</table>
 
-	<!-- modal view buku -->
-    <?php foreach($idpesan as $data){?>
-									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idmakanan?>" aria-hidden="true">
+									<!-- modal view buku -->
+  									  <?php foreach($idpesan as $data){?>
+									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idpesan?>" aria-hidden="true">
 									     <div class="modal-dialog">
 									       <div class="modal-content">
 									         <div class="modal-header">

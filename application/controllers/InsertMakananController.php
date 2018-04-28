@@ -10,11 +10,16 @@ class InsertMakananController extends CI_Controller {
 
 	public function index()
 	{
-	 $this->load->view('InsertMakanan');
+			$username = $this->session->username;
+  		$data['username'] = $username;
+
+	 $this->load->view('InsertMakanan',$data);
 	}
 
   public function InsetData(){
 
+		$username = $this->session->username;
+  	
       $this->load->helper(array('form', 'url'));
       $nama_file = md5(uniqid(rand(), true));
       $this->load->library('upload');
@@ -44,9 +49,10 @@ class InsertMakananController extends CI_Controller {
   		'expire' => $expire,
   		'halal' => $halal,
   		'available' => $available,
-  		'ingredients' => $ingredients,
-      'lokasi' => $lokasi
-  		);
+			'ingredients' => $ingredients,
+			'username'=>$this->session->username,
+			'lokasi' => $lokasi
+			);
 
   		$result = $this->InsertMakananModel->InsertUsername($data);
 
@@ -56,12 +62,27 @@ class InsertMakananController extends CI_Controller {
   			redirect('InsertMakananController');
   		}else{
 
-  			$nama = $this->session->nama;
-  			$data['nama'] = $nama;
+  			$username = $this->session->username;
+  			$data['username'] = $username;
   			$data['result'] = "Gagal";
   			$this->load->view('InsertMakanan',$data);
   		}
   	}
   }
+
+	
+	public function updatePoin($username){
+	
+		$point = $this->ListModel->getUserResto($point);
+		$data['point'] = $point;
+		
+		// for ($point>=0){	
+		// 	$point = $point + 1;
+		// 	$data['point'] = $point;
+	
+
+        redirect('Resto',$data);
+		// }
+	}
 
 }

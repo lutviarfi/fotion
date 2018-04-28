@@ -12,12 +12,13 @@ class HomeLogin extends CI_Controller {
 	public function index()
 	{
 		$username = $this->session->username;
-		if($username == null)
+		$user = $this->session->user;
+		if($user == null && $username == null)
 		{
 			redirect('Home');
 		} else {
-            $data['username'] = $username;
-
+			$data['username'] = $username;
+			$data['user'] = $user;
             $ambilFood = $this->HomeModel->getFood();
 	    	$data['getFood']=$ambilFood;
 

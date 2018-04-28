@@ -54,22 +54,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
 					<ul class="toggle-menu">
 						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
-						<?php if($username==NULL){?>
+						<?php if($username==NULL && $user==NULL){?>
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
 							<?php }else{}?>
-						<?php if($username==NULL){?>
-						<li><a href="<?php echo('RestoranRegistController')?>">Restaurant Registration</a></li>
+						<?php if($username==NULL && $user==NULL){?>
+						<li><a href="<?php echo('RestoranRegistController')?>">Donation Now</a></li>
 							<?php }else{}?>
-						<?php if($username!=NULL){?>
+						<?php if($username!=NULL && $user==NULL){?>
 						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>
 							<?php }else{}?>
-						<?php if($username!=NULL){?>
+						<?php if($username!=NULL && $user==NULL){?>
 						<li><a href="<?php echo('Resto')?>">List Food for Approve</a></li>
 							<?php }else{}?>
-						<?php if($username==NULL){?>
-						<li><a href="<?php echo('Login')?>"</a>Login</li>
+						<?php if($user!=NULL){?>
+						<li><a href="<?php echo('Picker')?>">List Request Food</a></li>
 							<?php }else{}?>
-						<?php if($username!=NULL){?>
+								<?php if($username==NULL && $user==NULL){?>
+						<li><a href="<?php echo('Login/loginPicker')?>"</a>Login</li>
+							<?php }else{}?>
+						<?php if($username!=NULL || $user!=NULL){?>
 						<li><a href="<?php blink('Login/logout'); ?>"</a>Logout</li>
 							<?php }else{}?>
 					</ul>
@@ -94,84 +97,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--content-->
 <div class="content" id="content-down">
-<!--services-->
-<!-- <div class="services">
-	<div class="container">
-		<div class="services-top">
-			<div class="col-md-8 services-right animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour , or randomised words which don't look even slightly believable.There are many variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour , or randomised words</p>
-			</div>
-			<div class="col-md-4 services-left animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<h3>Services</h3>
-				<label><i class="glyphicon glyphicon-menu-up"></i></label>
-				<span>There are many variations</span>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="service-top">
-			<div class="col-md-5 service-top animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<div class=" ser	vice-grid">
-					<div class="col-md-6 service-grid1">
-						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
-							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-leaf"></a>
-						</div>
-					</div>
-					<div class="col-md-6 service-grid1">
-						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
-							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-star-empty"></a>
-						</div>
-						</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class=" service-grid">
-					<div class="col-md-6 service-grid1">
-						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
-							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-folder-open"></a>
-						</div>
-						</div>
-					<div class="col-md-6 service-grid1">
-						<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
-							<a href="#" class="hi-icon hi-icon-mobile glyphicon glyphicon-home"></a>
-						</div>
-						</div>
-					<div class="clearfix"> </div>
-				</div>
-
-			</div>
-			<div class="col-md-7 service-bottom animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<div class=" service-bottom1">
-					<div class=" ser-bottom">
-						<img src="images/sa.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="ser-top ">
-						<h5>Beautiful &amp; enjoyable designs</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class=" service-bottom1">
-					<div class=" ser-bottom">
-						<img src="images/sa1.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="ser-top ">
-						<h5>Beautiful &amp; enjoyable designs</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class=" service-bottom1">
-					<div class=" ser-bottom">
-						<img src="images/sa2.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="ser-top ">
-						<h5>Beautiful &amp; enjoyable designs</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div> -->
-<!--//services-->
