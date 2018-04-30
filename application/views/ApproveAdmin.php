@@ -48,7 +48,7 @@
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
                         <span class="username username-hide-mobile"></span>
-						
+
 					</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -120,10 +120,10 @@
 											<i class="fa fa-gift"></i>List Approve
 										</div>
 										<div class="tools">
-									
+
 											<a href="javascript:;" class="reload">
 											</a>
-										
+
 										</div>
 									</div>
 									<?php
@@ -136,7 +136,7 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-												
+
 													<th>Username</th>
 													<th>Active Status</th>
                                                     <th colspan="3">Action</th>
@@ -144,15 +144,15 @@
 
 												<?php foreach($picker as $data){?>
 												<tr>
-													
+
 													<td><?php echo $data->username;?></td>
                                                     <td><?php echo $data->active;?></td>
 
-                                                         <td width="20px;"> <a href="#myModal<?php echo $data->username?>" class="btn btn-info" data-toggle="modal">View Profil</a> </td>                      
+                                                         <td width="20px;"> <a href="#myModal<?php echo $data->username?>" class="btn btn-info" data-toggle="modal">View Profil</a> </td>
                                                     	<?php if($data->active=="Not Yet") {  ?>
-                                                            <td width="20px;"><a href="#myModalUpdate<?php echo $data->username?>" class="btn btn-warning" data-toggle="modal">Approve </a> </td>                      
+                                                            <td width="20px;"><a href="#myModalUpdate<?php echo $data->username?>" class="btn btn-warning" data-toggle="modal">Approve </a> </td>
                                                     <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
-                                                              <?php }else { ?>                     
+                                                              <?php }else { ?>
                        										 <?php } ?>
 
                                                     	</tr>
@@ -162,7 +162,7 @@
 											</div>
 											<div class="form-actions">
 												<div class="row">
-													
+
 												</div>
 											</div>
 										<!-- </form> -->
@@ -189,7 +189,7 @@
 			<div class="col-md-3 col-sm-6 col-xs12 footer-block">
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-			
+
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
 			</div>
