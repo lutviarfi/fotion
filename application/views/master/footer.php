@@ -40,11 +40,7 @@
 			<div class="clearfix"> </div>
 
 			</div>
-<<<<<<< HEAD
 			<p class="footer-class animated wow bounce" data-wow-duration="1000ms" data-wow-delay="500ms">&copy; 2018 Fotion . All Rights Reserved | Design by Team Fotion </p>
-=======
-			<p class="footer-class animated wow bounce" data-wow-duration="1000ms" data-wow-delay="500ms">&copy; 2016 Cookery . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
->>>>>>> 0ef1cdc747a16c762747d15d23a31b6571570a71
 		</div>
 	</div>
 	<!--//footer-->
