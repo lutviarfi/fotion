@@ -5,18 +5,18 @@
 		<div class="container">
 			<div class="content-top">
 				<div class="col-md-4 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<h3>Availabe Food</h3>  
+					<h3>Availabe Food</h3>
 				</div>
-				
+
 				<div class="col-md-8 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
 				<?php if($this->session->username!=NULL){?>
-				<h4>Hi, <?php echo $this->session->username; ?></h4> 
+				<h4>Hi, <?php echo $this->session->username; ?></h4>
 					<?php }else if($this->session->user!=NULL){?>
-						<h4>Hi, <?php echo $this->session->user; ?></h4> 
+						<h4>Hi, <?php echo $this->session->user; ?></h4>
 					<?php }else{}?>
 
 				</div>
-				
+
 
 				<div class="clearfix"> </div>
 			</div>
@@ -52,8 +52,8 @@
 	                <td>Location</td>
 	                <td><?php echo $data->lokasi;?></td>
 	              </tr> -->
-							</table>		
-								<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|	
+							</table>
+								<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
 							<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
 						</div>
       		</div>
@@ -82,7 +82,7 @@
 									        <td style="text-transform:capitalize;"><b><?php echo $data->idbuku  ?></b></td>
 									      </tr> -->
 									      <tr>
-									      	<td>Nama Makanan</td>
+									      	<td>Food Name</td>
 									        <td>:</td>
 									        <td style="text-transform:capitalize;"><?php echo $data->nama ?></td>
 									      </tr>
