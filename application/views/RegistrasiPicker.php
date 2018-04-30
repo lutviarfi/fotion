@@ -75,9 +75,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <form role="form" action="<?php blink('RegisterPicker/InsertPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Nama</label>
+                <label class="col-md-2 control-label" for="form_control_1">Picker Name</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Enter your Nama">
+                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Enter your Name">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -99,7 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
               </div>  <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
+                  <label class="col-md-2 control-label" for="form_control_1">Condition Picture</label>
                   <div class="col-md-10">
                     <input type="file" class="form-control" name="gambar" id="form_control_1" placeholder="Enter your name">
                     <div class="form-control-focus">
@@ -107,15 +107,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
                 <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Kondisi</label>
+                  <label class="col-md-2 control-label" for="form_control_1">Condition</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your kondisi">
+                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your condition">
                     <div class="form-control-focus">
                     </div>
                   </div>
                 </div>
               <div class="form-group form-md-line-input has-success">
-                <label class="col-md-2 control-label" for="form_control_1">Alamat</label>
+                <label class="col-md-2 control-label" for="form_control_1">Address</label>
                 <div class="col-md-10">
                   <textarea class="form-control" name="alamat" rows="3" placeholder="Enter About your address"></textarea>
                   <div class="form-control-focus">
@@ -127,16 +127,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
                   <button type="button" class="btn default">Cancel</button>
-                  <button type="submit" name="simpan" class="btn blue">Submit</button>
+                  <button type="submit" name="simpan" class="btn blue">Proceed</button>
                 </div>
               </div>
             </div>
           </form>
-
         </div>
       </div>
 			</div>
-
 	</div>
 </div>
 <!--//content-->
