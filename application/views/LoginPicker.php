@@ -96,8 +96,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
-                  <button type="button" class="btn default">Cancel</button>
-                  <button type="submit" name="simpan" class="btn blue">Submit</button>
+                  <!-- <button type="button" class="btn default">Cancel</button> -->
+                  <button type="submit" name="simpan" class="btn btn-primary">Login</button>
                 </div>
               </div>
             </div>
