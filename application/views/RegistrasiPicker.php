@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input has-success">
                 <label class="col-md-2 control-label" for="form_control_1">Address</label>
                 <div class="col-md-10">
-                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter About your address"></textarea>
+                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter your address"></textarea>
                   <div class="form-control-focus">
                   </div>
                 </div>
