@@ -78,11 +78,6 @@
 									      <td width="60%" ></td>
 									    </thead>
 									    <tbody>
-									    	<!-- <tr>
-									      	<td>ID Buku</td>
-									        <td>:</td>
-									        <td style="text-transform:capitalize;"><b><?php echo $data->idbuku  ?></b></td>
-									      </tr> -->
 									      <tr>
 									      	<td>Food Name</td>
 									        <td>:</td>
