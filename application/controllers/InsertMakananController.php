@@ -6,6 +6,7 @@ class InsertMakananController extends CI_Controller {
   public function __construct() {
 		parent::__construct();
 		$this->load->model('InsertMakananModel');
+		$this->load->model('AdminModel');
 	}
 
 	public function index()
@@ -19,7 +20,7 @@ class InsertMakananController extends CI_Controller {
   public function InsetData(){
 
 		$username = $this->session->username;
-  	
+		
       $this->load->helper(array('form', 'url'));
       $nama_file = md5(uniqid(rand(), true));
       $this->load->library('upload');
@@ -55,11 +56,17 @@ class InsertMakananController extends CI_Controller {
 			);
 
   		$result = $this->InsertMakananModel->InsertUsername($data);
-
-  		$data = NULL;
+			$data = NULL;
   		if($result){
-
-  			redirect('InsertMakananController');
+			//ambil point
+			// $point = $this->AdminModel->getAllResto($username);
+			// $p = ['point'];
+			// $data = array(
+			// 		'point'=>$p+1
+			// 	);		
+			// 	//update disini
+			// 	$result = $this->AdminModel->updatePoint($username);
+  		 	redirect('HomeLogin');
   		}else{
 
   			$username = $this->session->username;
