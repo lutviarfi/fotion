@@ -53,8 +53,10 @@
 	                <td><?php echo $data->lokasi;?></td>
 	              </tr> -->
 							</table>
+							<?php if($user!=NULL):?>
 								<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
-							<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
+							<?php endif;?>
+								<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
 						</div>
       		</div>
 				<?php } ?>
@@ -104,7 +106,7 @@
 									      <tr>
 									      	<td>Restaurant Name</td>
 									        <td>:</td>
-									        <td style="text-transform:capitalize;"><?php echo $username ?></td>
+									        <td style="text-transform:capitalize;"><?php echo $data->username ?></td>
 									      </tr>
 												<tr>
 									      	<td>Location</td>

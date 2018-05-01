@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert Makanan</title>
+<title>Donations Food</title>
 <link href="<?php blink('cooking/css/bootstrap.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
                   <!-- <button type="button" class="btn default">Cancel</button> -->
-                  <button type="submit" name="simpan" class="btn btn-primary">Save</button>
+                  <button type="submit" name="simpan" class="btn btn-primary">Donate</button>
                 </div>
               </div>
             </div>

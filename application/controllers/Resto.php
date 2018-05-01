@@ -13,11 +13,11 @@ class Resto extends CI_Controller {
 	// tampil list picker dan get session
 	public function index()
 	{
-
-		$allFood = $this->ListModel->getmerge();
-        $data['idpesan'] = $allFood;
-		$username = $this->session->status;
+		$username = $this->session->username;
 		$data['username'] = $username;
+
+		$allFood = $this->ListModel->getmerge($username);
+        $data['idpesan'] = $allFood;
 		$this->load->view('ApproveResto',$data);	
 	
 	}
@@ -35,27 +35,8 @@ class Resto extends CI_Controller {
 	public function merge(){
 		$detail = $this->ListModel->getMerge();
 				
-
 		$this->load->view('ApproveResto',$data);	
 	
 	}
-
-	// public function update() {
-	// 	$id=$this->input->post('id');
-
-	// 	$data = array(
-	// 	'status' => "Deliv",
-	// 	'nama' => $id
-	// 	);
-	// 	$result = $this->ListModel->updateStatus($id, $data);
-	// 	$data = null;
-
-	// 	if(!$result){
-	// 		$data['result'] = "Sukses";
-	// 	}else{
-	// 		$data['result'] = "Gagal";
-	// 	}
-	// 	redirect('Resto');
-	// }
 
 }

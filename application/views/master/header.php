@@ -47,30 +47,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <div class="header">
 	<div class="container">
 		<div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<h1><a href="<?php echo('Home')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
+			<h1><a href="<?php blink('Home')?>"><span>Fotion</span><img src="<?php blink('cooking/images/oo.png')?>" alt=""><img src="images/oo.png" alt=""></a></h1>
 		</div>
 		<div class="nav-icon">
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
 					<ul class="toggle-menu">
-						<li><a class="active" href="<?php echo('Home')?>">Home</a></li>
+						<li><a class="active" href="<?php blink('Home')?>">Home</a></li>
 						<?php if($username==NULL && $user==NULL){?>
-						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 							<?php }else{}?>
 						<?php if($username==NULL && $user==NULL){?>
-						<li><a href="<?php echo('Login')?>">Donation Now</a></li>
+						<li><a href="<?php blink('Login')?>">Donation Now</a></li>
 							<?php }else{}?>
 						<?php if($username!=NULL && $user==NULL){?>
-						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>
+						<li><a href="<?php blink('InsertMakananController')?>">Insert Donate Food</a></li>
 							<?php }else{}?>
 						<?php if($username!=NULL && $user==NULL){?>
-						<li><a href="<?php echo('Resto')?>">List Food for Approve</a></li>
+						<li><a href="<?php blink('Resto')?>">List Food for Approve</a></li>
 							<?php }else{}?>
 						<?php if($user!=NULL){?>
-						<li><a href="<?php echo('Picker')?>">List Request Food</a></li>
+						<li><a href="<?php blink('Picker')?>">List Request Food</a></li>
 							<?php }else{}?>
 								<?php if($username==NULL && $user==NULL){?>
-						<li><a href="<?php echo('Login/loginPicker')?>"</a>Login</li>
+						<li><a href="<?php blink('Login/loginPicker')?>"</a>Login</li>
 							<?php }else{}?>
 						<?php if($username!=NULL || $user!=NULL){?>
 						<li><a href="<?php blink('Login/logout'); ?>"</a>Logout</li>
