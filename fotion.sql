@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2018 at 12:07 AM
+-- Generation Time: May 01, 2018 at 09:26 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -64,11 +64,12 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`idmakanan`, `nama`, `expire`, `halal`, `available`, `gambar`, `ingredients`, `lokasi`, `username`) VALUES
-(10, 'nasi goreng', '1 day', 'halal', 10, '4042c3422b34c556bb342f35f101b34a.jpg', 'nasi, bumbu penyedap, sambal', 'jakarta', 'mcd'),
-(11, 'sup iga', '2 days', 'halal', 2, 'a4b1438bb189c1f20e68b1b0c79aed9d.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'bandung', 'mcd'),
-(12, 'gurame kipas', '1 day', 'halal', 8, '3101e9841cdcd71c31f5b122c58720d4.jpg', 'ikan gurame, tepung tapioka, penyedap makanan, maizena', 'bekasi', 'mcd'),
-(13, 'sapo tahu', '2 days', 'halal', 1, 'bac1d81e96a49aa6df43c306d1be984e.jpg', 'sapo, bumbu penyedap, seafood', 'tangerang', 'mcd'),
-(14, 'nasi goreng', '12-12-12', 'halal', 3, '6c9bf454beddb22d2e81210fcaff7b42.jpg', 'nasi, bumbu penyedap, sambal', 'jakarta', 'mcd');
+(28, 'nasi goreng', '2 days', 'halal', 2, '59b7210333d9e6d08f6b4b8cd30a8d5d.jpg', 'nasi, bumbu penyedap, sambal', 'tangerang', 'ss'),
+(29, 'sup iga', '3 days', 'halal', 5, '2ef9add6a33c766f1ec45d13a0dbb631.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'priuk', 'ss'),
+(30, 'buah apel', 'no', 'halal', 2, '02fb6ff2ddf9aa0c5761fa7353488e05.jpg', 'rujak', 'tangerang', 'ss'),
+(31, 'nasi pecel', '2 days', 'halal', 20, 'e31e10275a56415dab2b6bc22d23ee73.jpg', 'nasi, bumbu penyedap, sambal', 'bekasi', 'mcd'),
+(32, 'gurame kipas', '1 day', 'halal', 7, '0313ac8872d36228c4aced713a27fc7c.jpg', 'ikan gurame, tepung tapioka, penyedap makanan, maizena', 'bandung', 'mcd'),
+(33, 'nasi uduk', '1 day', 'halal', 4, '631761e2d4c41a0fbfda0b81cb45e633.jpg', 'nasi, bumbu penyedap, sambal', 'priuk', 'mcd');
 
 -- --------------------------------------------------------
 
@@ -88,10 +89,11 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`idpesan`, `idmakanan`, `username`, `status`) VALUES
-(6, 10, 'gumilar', 'APPROVE'),
-(11, 11, 'gumilar', 'Pending'),
-(12, 10, 'gumilar', 'Pending'),
-(13, 11, 'lutviarfi', 'APPROVE');
+(33, 29, 'lutviarfi', 'APPROVE'),
+(34, 30, 'lutviarfi', 'APPROVE'),
+(35, 31, 'lutviarfi', 'APPROVE'),
+(36, 30, 'lutviarfi', 'Pending'),
+(37, 29, 'andyndy', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -114,8 +116,9 @@ CREATE TABLE `picker` (
 --
 
 INSERT INTO `picker` (`username`, `nama`, `alamat`, `kondisi`, `gambar`, `password`, `active`) VALUES
-('gumilar', 'gugum', 'parung', 'baik', '64ac17d359e05d8d44e656d8c0c802df.jpg', '21232f297a57a5a743894a0e4a801fc3', 'ACTIVE'),
-('lutviarfi', 'lutvi', 'jakarta', 'sehat', '099130643677fc20a9a4c539b82092e0.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet');
+('aldis', 'aldis', 'pamulang', 'biasa', '40ce05c2e5cd61ef9c0116561c65e5d0.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet'),
+('andyndy', 'andi', 'cipadu\r\n', 'biasa', '70a45feac2be84bebb6f62fe11f77b1d.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet'),
+('lutviarfi', 'lutvi', 'jakarta\r\n', 'biasa aja', '45d9d99f3b0e224523b403cd9b92c9d7.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet');
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,8 @@ CREATE TABLE `resto` (
 --
 
 INSERT INTO `resto` (`username`, `email`, `phone`, `password`, `point`, `active`) VALUES
-('mcd', 'lutvi04@gmail.com', '0987654', '21232f297a57a5a743894a0e4a801fc3', 0, 'ACTIVE');
+('mcd', 'lutvi04@gmail.com', '0987654', '21232f297a57a5a743894a0e4a801fc3', 0, 'ACTIVE'),
+('ss', 'lutvi04@gmail.com', '0897654', '21232f297a57a5a743894a0e4a801fc3', 0, 'PENDING');
 
 --
 -- Indexes for dumped tables
@@ -184,13 +188,13 @@ ALTER TABLE `resto`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables
