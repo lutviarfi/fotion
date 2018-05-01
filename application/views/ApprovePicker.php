@@ -47,11 +47,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  new WOW().init();
 </script>
 <!-- //animation-effect -->
-
 </head>
 <body>
 <!-- BEGIN HEADER -->
-
 <div class="header head">
 	<div class="container">
 		<div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
@@ -62,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
           <ul class="toggle-menu">
 						<li><a href="<?php echo('Home')?>">Home</a></li>
-						<li><a class="active" href="<?php blink('Resto')?>">List Approve</a></li>
+						<li><a class="active" href="<?php blink('Picker')?>">List Request</a></li>
 					</ul>
 				</div>
 			<script>
@@ -78,10 +76,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- start search-->
 
 </div>
+
 	<!-- END HEADER TOP -->
 	<!-- BEGIN HEADER MENU -->
 	<div class="page-header-menu">
 		<div class="container">
+			<!-- BEGIN MEGA MENU -->
 			<!-- END MEGA MENU -->
 		</div>
 	</div>
@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>List Approve Food</h1>
+				<h1>List Request Food</h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -132,35 +132,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										}
 									?>
 									<div class="portlet-body form">
-										<!-- BEGIN FORM--> 					
+										<!-- BEGIN FORM-->
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-												
-													<th>Request Id</th>
-													<th>Food Id</th>
+													<th>Id Pesan</th>
+													<th>Id Makanan</th>
 													<th>Username</th>
-													<th>Family Conditions</th>
-													<th>Status</th>
-                                                    <th colspan="3">Action</th>
-												
+                                                    <th>Status</th>
+                                                    <th>Action</th>
 												</thead>
 
-												<?php foreach($idpesan as $data){ ?>
-													<tr>
+												<?php foreach($idpesan as $data){
+													if($data->username==$this->session->user){?>
+												<tr>
 													<td><?php echo $data->idpesan;?></td>
 													<td><?php echo $data->idmakanan;?></td>
-													<td><?php echo $data->username;?></td>
-													<td></td>
+                                                    <td><?php echo $data->username;?></td>
                                                     <td><?php echo $data->status;?></td>
 											
-                                                	<td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
-                                                    <td width="20px;"><a href="<?php blink('Resto/update/'.$data->idpesan."")?>" class="btn btn-warning" >Approve </a> </td>                      
-                                                    <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>                                      
-													</tr>
-									<!-- <input type="hidden" name="id" id="id" value="<?php echo $data->idpesan;?>"> -->
-													
-									<?php }?> 
+                                                         <td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                      
+                                                    </tr>
+                                                         <?php }}?>
 												</table>
 
 									<!-- modal view buku -->
@@ -170,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									       <div class="modal-content">
 									         <div class="modal-header">
 									           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-									           <h3 id="myModalLabel">Detail</h3>
+									           <h3 id="myModalLabel">Detail Pesan</h3>
 									         </div>
 									         <div class="modal-body">
 									           <form method="POST" action="" enctype="multipart/form-data">
@@ -182,29 +175,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									               </thead>
 									               <tbody>
 									                 <tr>
-									                   <td>Request Id</td>
+									                   <td>Id pesan</td>
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><b><?php echo $data->idpesan  ?></b></td>
 									                 </tr>
 									                 <tr>
-									                   <td>Food Id</td>
+									                   <td>Id Makanan</td>
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><?php echo $data->idmakanan ?></td>
 									                 </tr>
 													 <tr>
-									                   <td>Picker Name</td>
+									                   <td>Nama Picker</td>
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><?php echo $data->username ?></td>
-									                 </tr>
+									                 </tr
 													 <tr>
-									                   <td>Food Name</td>
-									                   <td>:</td>
-									                   <td style="text-transform:capitalize;"><?php echo $data->nama ?></td>
-									                 </tr>
-													 <tr>
-									                   <td>Halal Description</td>
+									                   <td>Halal</td>
 									                   <td>:</td>
 									                   <td style="text-transform:capitalize;"><?php echo $data->halal ?></td>
+									                 </tr>
+									                 <tr>
+									                   <td>Nama Makanan</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->nama ?></td>
 									                 </tr>
 													 <tr>
 									                   <td>Available</td>
@@ -246,7 +239,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- END PAGE CONTENT -->
 </div>
 <!-- END PAGE CONTAINER -->
-
 <!--footer-->
 <div class="footer">
 		<div class="container">
@@ -281,7 +273,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!--//footer-->
-
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>

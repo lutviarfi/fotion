@@ -11,6 +11,12 @@ class LoginModel extends CI_Model {
  	   $result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',($password))->limit(1)->get('picker');
 		return $result->row();
     }
-    
+		
+		
+	public function readResto($username,$password)
+		{
+		$result = $this->db->where('UPPER(username)', strtoupper($username))->where('password',($password))->limit(1)->get('resto');
+		return $result->row();
+		}
 }
 

@@ -33,7 +33,7 @@ class RegisterPicker extends CI_Controller {
 
 		$username = $this->input->post('username');
 		$nama = $this->input->post('nama');
-		$password = $this->input->post('password');
+		$password = md5 ($this->input->post('password'));
 		$kondisi = $this->input->post('kondisi');
 		$alamat = $this->input->post('alamat');
 
@@ -44,14 +44,14 @@ class RegisterPicker extends CI_Controller {
 			'kondisi' => $kondisi,
 			'alamat' => $alamat,
 			'gambar' => $gambar,
-			'active' => "pending"
+			'active' => "Not Yet"
 		);
 
 		$result = $this->ModelPicker->InsertPickers($data);
 
 		$data = null;
 		if($result){
-			Redirect('RegisterPicker');
+			Redirect('Login/loginPicker');
 		}else{
 			$data['result']= "gagal";
 			$this->load->view('RegistrasiPicker',$data);

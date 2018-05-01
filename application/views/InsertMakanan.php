@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Insert Makanan</title>
+<title>Donations Food</title>
 <link href="<?php blink('cooking/css/bootstrap.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
@@ -37,9 +37,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
           <ul class="toggle-menu">
-						<li><a href="<?php echo('DaftarFood')?>">Home</a></li>
-						<li><a class="active" href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
-            <li><a class="active" href="<?php echo('RegisterPicker')?>">Insert Makanan</a></li>
+						<li><a href="<?php echo('HomeLogin')?>">Home</a></li>
+						<li><a class="" href="<?php echo('Resto')?>">List Approve</a></li>
+            <li><a class="active" href="<?php echo('InsertMakananController')?>">Insert Makanan</a></li>
 					</ul>
 				</div>
 			<script>
@@ -63,51 +63,51 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Insert Makanan</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Insert Food</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">
 
           <!--Form-->
 
-          <form role="form" action="<?php blink('InsertMakananController/InsetData')?>" method="post" enctype="multipart/form-data">
+          <form role="form" action="<?php blink('InsertMakananController/InsetData')?>" method="post" enctype="multipart/form-data" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Nama Makanan</label>
+                <label class="col-md-2 control-label" for="form_control_1">Food Name</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Menu Makanan">
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="The Name of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
               <div class="form-group form-md-line-input">
-                    <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
+                    <label class="col-md-2 control-label" for="form_control_1">Food Image</label>
                     <div class="col-md-10">
-                      <input type="file" class="form-control" name="gambar" id="gambar" placeholder="Masukkan Foto Makanan">
+                      <input type="file" class="form-control" name="gambar" id="gambar" placeholder="Insert Food Image">
                       <div class="form-control-focus">
                       </div>
                     </div>
                   </div>
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Expired</label>
+                <label class="col-md-2 control-label" for="form_control_1">Expired Date</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="expire" id="expire" placeholder="Tanggal Expired Makanan">
+                  <input type="text" class="form-control" name="expire" id="expire" placeholder="Expired Date of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Status Halal</label>
+                <label class="col-md-2 control-label" for="form_control_1">Halal Status</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="halal" id="halal" placeholder="Apakah makanan yang anda input halal?">
+                  <input type="text" class="form-control" name="halal" id="halal" placeholder="Is Your Food Halal?">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Jumlah Tersedia</label>
+                <label class="col-md-2 control-label" for="form_control_1">Available Portion</label>
                 <div class="col-md-10">
-                  <input type="number" class="form-control" name="available" id="available" placeholder="Jumlah makanan tersedia">
+                  <input type="number" class="form-control" name="available" id="available" placeholder="Amount of Available Portion">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -115,15 +115,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Ingredients</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Komposisi Menu Makanan">
+                  <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Ingredients of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
               </div>
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Lokasi</label>
+                <label class="col-md-2 control-label" for="form_control_1">Location To Pickup</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="lokasi" id="lokasi" placeholder="Masukkan Lokasi Anda">
+                  <input type="text" class="form-control" name="lokasi" id="lokasi" placeholder="Input your pickup location">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -132,8 +132,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
-                  <button type="button" class="btn default">Cancel</button>
-                  <button type="submit" name="simpan" class="btn blue">Submit</button>
+                  <!-- <button type="button" class="btn default">Cancel</button> -->
+                  <button type="submit" name="simpan" class="btn btn-primary">Donate</button>
                 </div>
               </div>
             </div>

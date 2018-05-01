@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Restaurant Login</title>
+<title>Picker Login</title>
 <link href="<?php blink('cooking/css/bootstrap.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
           <ul class="toggle-menu">
 						<li><a href="<?php blink('Home')?>">Home</a></li>
-						<li><a class="active" href="<?php blink('Login')?>">Login Here</a></li>
+						<li><a class="active" href="<?php blink('Login/loginPicker')?>">Login Here</a></li>
 					</ul>
 				</div>
 			<script>
@@ -68,11 +68,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Restaurant Login</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Picker Login</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">
-          <form role="form" action="<?php blink('Login/authResto')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
+          <form role="form" action="<?php blink('Login/authPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Username</label>
@@ -96,12 +96,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
-								
-									<a href="<?php blink('RestoranRegistController')?>" class="btn btn-success">Register Now</a>
+                  <!-- <button type="button" class="btn default">Cancel</button> -->
+
+                  <a href="<?php blink('RegisterPicker')?>" class="btn btn-success">Register Now</a>
 									<button type="submit" name="simpan" class="btn btn-primary">Login</button>
 									<button type="button"  class="btn btn-danger">Cancel</button>
-								
-								</div>
+									
+							  </div>
               </div>
             </div>
           </form>

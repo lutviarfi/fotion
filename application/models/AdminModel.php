@@ -22,7 +22,19 @@ class AdminModel extends CI_Model {
 	}
 
 	public function update($username){
-		$result = $this->db->set('active','1')->where('username',$username)->update('picker');
+		$result = $this->db->set('active','ACTIVE')->where('username',$username)->update('picker');
+		return $result;
+	}
+
+	public function getAllResto($username){
+
+		$result = $this->db->get('resto');
+		//$result = $this->db->query("SELECT COUNT(idmakanan) from food where ('username',$data)");
+        return $result->result();
+	}
+
+	public function updatePoint($username){
+		$result = $this->db->set('point')->where('username',$username)->update('resto');
 		return $result;
 	}
 

@@ -14,4 +14,9 @@ class InsertMakananModel extends CI_Model {
     }
     return $checkinsert;
   }
+  public function getPoint()
+  {
+    $this->db->where('point', $point);
+    $this->db->get('resto');
+  }
 }

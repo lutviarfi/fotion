@@ -43,8 +43,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
           <ul class="toggle-menu">
-						<li><a href="<?php echo('Home')?>">Home</a></li>
-						<li><a class="active" href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a href="<?php blink('Home')?>">Home</a></li>
+						<li><a href="<?php blink('Login/loginPicker')?>">Login</a></li>
+            <li><a class="active" href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 					</ul>
 				</div>
 			<script>
@@ -68,16 +69,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Registration</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Picker Registration</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">
           <form role="form" action="<?php blink('RegisterPicker/InsertPicker')?>" enctype="multipart/form-data" method="post" class="form-horizontal">
             <div class="form-body">
               <div class="form-group form-md-line-input">
-                <label class="col-md-2 control-label" for="form_control_1">Nama</label>
+                <label class="col-md-2 control-label" for="form_control_1">Picker Name</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Enter your Nama">
+                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Enter your Name">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -99,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
               </div>  <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Gambar</label>
+                  <label class="col-md-2 control-label" for="form_control_1">Condition Picture</label>
                   <div class="col-md-10">
                     <input type="file" class="form-control" name="gambar" id="form_control_1" placeholder="Enter your name">
                     <div class="form-control-focus">
@@ -107,17 +108,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
                 <div class="form-group form-md-line-input">
-                  <label class="col-md-2 control-label" for="form_control_1">Kondisi</label>
+                  <label class="col-md-2 control-label" for="form_control_1">Condition</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your kondisi">
+                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your condition">
                     <div class="form-control-focus">
                     </div>
                   </div>
                 </div>
               <div class="form-group form-md-line-input has-success">
-                <label class="col-md-2 control-label" for="form_control_1">Alamat</label>
+                <label class="col-md-2 control-label" for="form_control_1">Address</label>
                 <div class="col-md-10">
-                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter About your address"></textarea>
+                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter your address"></textarea>
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -126,17 +127,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-actions">
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
-                  <button type="button" class="btn default">Cancel</button>
-                  <button type="submit" name="simpan" class="btn blue">Submit</button>
+                  <!-- <button type="button" class="btn default">Cancel</button> -->
+                  <button type="submit" name="simpan" class="btn btn-primary">Proceed</button>
                 </div>
               </div>
             </div>
           </form>
-
         </div>
       </div>
 			</div>
-
 	</div>
 </div>
 <!--//content-->

@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>List Approve Picker</title>
+<title>List Approve Food</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta content="" name="description"/>
 <meta content="" name="author"/>
-
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="<?php blink('cooking/bootstrap.min.css')?>">
- <script src="<?php blink('cooking/jquery.min.js')?>"></script>
- <script src="<?php blink('cooking/bootstrap.min.js')?>"></script>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
 <link href="<?php blink('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')?>" rel="stylesheet" type="text/css">
@@ -47,8 +42,8 @@
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-                        <span class="username username-hide-mobile"></span>
-
+                        <!-- <span class="username username-hide-mobile"><?php echo $status; ?></span> -->
+						
 					</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
@@ -56,7 +51,7 @@
 								<i class="icon-user"></i> My Profile </a>
 							</li>
 							<li>
-								<a href="<?php blink('Login/logout')?>">
+								<a href="<?php blink('CRUD/logout')?>">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>
@@ -77,7 +72,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li class="active">
-						<a href="<?php blink('Home') ?>">List Picker</a>
+						<a href="<?php blink('CRUD') ?>">List Picker</a>
 					</li>
 
 				</ul>
@@ -95,7 +90,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>List<small> Approve</small> Picker</h1>
+				<h1>List<small> Approve</small> Food</h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -117,13 +112,13 @@
 								<div class="portlet box green">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>List Approve
+											<i class="fa fa-gift"></i>List Point 
 										</div>
 										<div class="tools">
-
+									
 											<a href="javascript:;" class="reload">
 											</a>
-
+										
 										</div>
 									</div>
 									<?php
@@ -136,33 +131,94 @@
 											<div class="form-body">
 												<table id="tableuser" class="table table-bordered" name="tableuser" border="1">
 												<thead>
-
 													<th>Username</th>
-													<th>Active Status</th>
+													<th>Point</th>
                                                     <th colspan="3">Action</th>
 												</thead>
 
-												<?php foreach($picker as $data){?>
+												<?php 
+												
+
+												foreach($resto as $data){
+													?>
 												<tr>
-
 													<td><?php echo $data->username;?></td>
-                                                    <td><?php echo $data->active;?></td>
-
-                                                         <td width="20px;"> <a href="#myModal<?php echo $data->username?>" class="btn btn-info" data-toggle="modal">View Profil</a> </td>
-                                                    	<?php if($data->active=="Not Yet") {  ?>
-                                                            <td width="20px;"><a href="#myModalUpdate<?php echo $data->username?>" class="btn btn-warning" data-toggle="modal">Approve </a> </td>
-                                                    <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td>
-                                                              <?php }else { ?>
-                       										 <?php } ?>
-
-                                                    	</tr>
-												<?php } ?>
+													<td><?php echo $data->point;?></td>
+                                                         <!-- <td width="20px;"><a href="#modalviewpesan<?php echo $data->idpesan ?>" data-toggle="modal" class="btn btn-info" >View </a> </td>                       -->
+                                                            <!-- <td width="20px;"><a href="<?php blink('Admin/getAllResto/'.$data->idmakanan."")?>" class="btn btn-warning" >Approve </a> </td>                       -->
+                                                    <!-- <td width="20px;"><a href="" class="btn btn-danger" >Reject </a> </td> -->
+                                                              
+                                </tr>
+								<!-- <input type="hidden" name="id" id="id" value="<?php echo $data->idpesan;?>"> -->
+													<?php }?>
 												</table>
+
+	<!-- modal view buku -->
+    <!-- <?php foreach($idpesan as $data){?>
+									   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="modalviewpesan<?php echo $data->idmakanan?>" aria-hidden="true">
+									     <div class="modal-dialog">
+									       <div class="modal-content">
+									         <div class="modal-header">
+									           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									           <h3 id="myModalLabel">Detail Pesan</h3>
+									         </div>
+									         <div class="modal-body">
+									           <form method="POST" action="" enctype="multipart/form-data">
+									             <table class="table table-striped" border="0">
+									               <thead>
+									                 <td width="20%" ></td>
+									                 <td width="10%"  ></td>
+									                 <td width="60%" ></td>
+									               </thead>
+									               <tbody>
+									                 <tr>
+									                   <td>Id pesan</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><b><?php echo $data->idpesan  ?></b></td>
+									                 </tr>
+									                 <tr>
+									                   <td>Id Makanan</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->idmakanan ?></td>
+									                 </tr>
+													 <tr>
+									                   <td>Nama Picker</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->username ?></td>
+									                 </tr
+													 <tr>
+									                   <td>Halal</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->halal ?></td>
+									                 </tr>
+									                 <tr>
+									                   <td>Nama Makanan</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->nama ?></td>
+									                 </tr>
+													 <tr>
+									                   <td>Available</td>
+									                   <td>:</td>
+									                   <td style="text-transform:capitalize;"><?php echo $data->available ?></td>
+									                 </tr>
+									               </tbody>
+									             </table>
+									           </form>
+									         </div>
+									         <div class="modal-footer">
+									           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+									           <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
+									         </div>
+									       </div>
+									     </div>
+									   </div>
+									   <?php } ?> -->
+										<!-- end modal view buku -->
 
 											</div>
 											<div class="form-actions">
 												<div class="row">
-
+													
 												</div>
 											</div>
 										<!-- </form> -->
@@ -189,7 +245,7 @@
 			<div class="col-md-3 col-sm-6 col-xs12 footer-block">
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-
+			
 			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
 			</div>
@@ -205,113 +261,6 @@
 <div class="scroll-to-top">
 	<i class="icon-arrow-up"></i>
 </div>
-
-<!-- modal update -->
-<?php foreach($picker as $data){?>
-		<div class="modal fade" id="myModalUpdate<?php echo $data->username?>" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Approve</h4>
-        </div>
-        <div class="modal-body">
-		<table class="table table-responsive" border="0">
-                           <tbody>
-                             <tr>
-                               <td>Name</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->nama?></td>
-                             </tr>
-                             <tr>
-                               <td>Username</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->username?></td>
-                             </tr>
-                             <tr>
-                               <td>Family Conditions</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->kondisi?></td>
-                             </tr>
-                             <tr>
-                               <td>Address</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->alamat?></td>
-                             </tr>
-                             <tr>
-                               <td>Photo</td>
-                               <td>:</td>
-                               <td><img src="<?php blink('assets/img/'.$data->gambar.'');?>" width="200px"></td>
-                             </tr>
-                           </tbody>
-                         </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		  <a href="<?php blink('Admin/update/'.$data->username."")?>" class="btn btn-primary"><i class="fa fa-save"></i> Approve Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php }?>
-
-			   <!-- akhir modal update -->
-
-      <!-- Modal content-->
-	  <?php foreach($picker as $data){?>
-		<div class="modal fade" id="myModal<?php echo $data->username?>" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Profile Picker</h4>
-        </div>
-        <div class="modal-body">
-		<table class="table table-responsive" border="0">
-                           <tbody>
-                             <tr>
-                               <td>Name</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->nama?></td>
-                             </tr>
-                             <tr>
-                               <td>Username</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->username?></td>
-                             </tr>
-                             <tr>
-                               <td>Family Conditions</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->kondisi?></td>
-                             </tr>
-                             <tr>
-                               <td>Address</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->alamat?></td>
-                             </tr>
-														 <tr>
-                               <td>Active Status</td>
-                               <td>:</td>
-                               <td style="text-transform:capitalize;"><?php echo $data->active?></td>
-                             </tr>
-                             <tr>
-                               <td>Photo</td>
-                               <td>:</td>
-                               <td><img src="<?php blink('assets/img/'.$data->gambar.'');?>" width="200px"></td>
-                             </tr>
-                           </tbody>
-                         </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <?php }?>
-  <!-- akhir modal detil -->
-
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->

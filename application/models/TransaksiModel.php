@@ -12,11 +12,11 @@ class TransaksiModel extends CI_Model {
 
 	}
 
-    public function pesan($data){
-		$result = $this->db->set('pesan');
+    public function pesan($idmakanan){
+		$result = $this->db->insert('pesan', $idmakanan);
 		return $result;
     }
-    
+  
     public function getPicker(){
         $result = $this->db->get('picker');
         return $result->result();

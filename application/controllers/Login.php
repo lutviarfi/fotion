@@ -12,26 +12,22 @@ class Login extends CI_Controller {
 		$this->load->view('Login');
 	}
 
-	public function auth()
+	public function authResto()
 	{
 		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$password = md5($this->input->post('password'));
 
-		$checkUsername = $this->LoginModel->readPicker($username,$password);
-
+		$checkUsername = $this->LoginModel->readResto($username,$password);
+		
 		if($checkUsername==NULL){
-
 			echo "<script type='text/javascript'>
                alert ('Maaf Username Dan Password Anda Salah !');
                window.location.replace('index');
       			</script>";
-
 		}else{
 			$newdata = array(
-				'username'  => $checkUsername->username,
-				'name'  => $checkUsername->nama
-			  );
-			//set seassion
+				'username'  => $checkUsername->username);
+			//set session
 			$this->session->set_userdata($newdata);
 			redirect('HomeLogin');
 		}
@@ -41,5 +37,31 @@ class Login extends CI_Controller {
 	{
 		$this->session->sess_destroy();
 		redirect('Home');
+	}
+
+	public function loginPicker(){
+		$this->load->view('LoginPicker');
+	}
+
+	public function authPicker()
+	{
+		$username = $this->input->post('username');
+		$password = md5 ($this->input->post('password'));
+
+		$checkUsername = $this->LoginModel->readPicker($username,$password);
+		
+		if($checkUsername==NULL){
+			echo "<script type='text/javascript'>
+               alert ('Maaf Username Dan Password Anda Salah !');
+               window.location.replace('index');
+      			</script>";
+		}else{
+			$newdata = array(
+				'user'  => $checkUsername->username
+			);
+			//set session
+			$this->session->set_userdata($newdata);
+			redirect('HomeLogin');
+		}
 	}
 }
