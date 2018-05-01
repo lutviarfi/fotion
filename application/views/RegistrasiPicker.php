@@ -43,8 +43,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
           <ul class="toggle-menu">
-						<li><a href="<?php echo('Home')?>">Home</a></li>
-						<li><a class="active" href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a href="<?php blink('Home')?>">Home</a></li>
+						<li><a href="<?php blink('Login/loginPicker')?>">Login</a></li>
+            <li><a class="active" href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 					</ul>
 				</div>
 			<script>
@@ -68,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Registration</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Picker Registration</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">

@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Login</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Picker Login</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">
@@ -97,8 +97,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="row">
                 <div class="col-md-offset-2 col-md-10">
                   <!-- <button type="button" class="btn default">Cancel</button> -->
-                  <button type="submit" name="simpan" class="btn btn-primary">Login</button>
-                </div>
+
+                  <a href="<?php blink('RegisterPicker')?>" class="btn btn-success">Register Now</a>
+									<button type="submit" name="simpan" class="btn btn-primary">Login</button>
+									<button type="button"  class="btn btn-danger">Cancel</button>
+									
+							  </div>
               </div>
             </div>
           </form>

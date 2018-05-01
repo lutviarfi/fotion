@@ -5,7 +5,6 @@
 <link href="<?php blink('cooking/css/bootstrap.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
-<script src="<?php blink('cooking/bootstrap.min.js')?>"></script>
 <!-- Custom Theme files -->
 <!-- buat modal -->
 <script src="<?php blink('assets/global/plugins/bootstrap/js/bootstrap.js')?>" type="text/javascript"></script>
@@ -59,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="<?php echo('RegisterPicker')?>">Picker Registration</a></li>
 							<?php }else{}?>
 						<?php if($username==NULL && $user==NULL){?>
-						<li><a href="<?php echo('RestoranRegistController')?>">Donation Now</a></li>
+						<li><a href="<?php echo('Login')?>">Donation Now</a></li>
 							<?php }else{}?>
 						<?php if($username!=NULL && $user==NULL){?>
 						<li><a href="<?php echo('InsertMakananController')?>">Insert Donate Food</a></li>

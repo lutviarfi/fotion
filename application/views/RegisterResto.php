@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Restoran Registration</title>
+<title>Restaurant Registration</title>
 <link href="<?php blink('cooking/css/bootstrap.css')?>" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php blink('cooking/js/jquery.min.js')?>"></script>
@@ -43,8 +43,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
           <ul class="toggle-menu">
-						<li><a href="<?php echo('DaftarFood')?>">Home</a></li>
-						<li><a class="active" href="<?php echo('PickerRegister')?>">Picker Registration</a></li>
+						<li><a href="<?php echo('Home')?>">Home</a></li>
+						<li><a href="<?php echo('Login')?>">Login</a></li>
+						<li><a class="active" href="<?php blink('RestoranRegistController')?>">Restaurant Registration</a></li>
 					</ul>
 				</div>
 			<script>
@@ -68,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="portlet-title">
           <div class="caption font-green-haze">
             <i class="icon-settings font-green-haze"></i>
-            <span class="caption-subject bold uppercase"><h1>Registration</h1></span><br>
+            <span class="caption-subject bold uppercase"><h1>Restaurant Registration</h1></span><br>
           </div>
         </div>
         <div class="portlet-body form">

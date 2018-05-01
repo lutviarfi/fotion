@@ -51,7 +51,7 @@ class RegisterPicker extends CI_Controller {
 
 		$data = null;
 		if($result){
-			Redirect('RegisterPicker');
+			Redirect('Login/loginPicker');
 		}else{
 			$data['result']= "gagal";
 			$this->load->view('RegistrasiPicker',$data);
