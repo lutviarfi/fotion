@@ -45,7 +45,7 @@ class AdminModel extends CI_Model {
 		// return $result->result();
 
 		$result2 = $this->db->where('username',$username);
-		$result2 = $this->db->set('point',$point+4);
+		$result2 = $this->db->set('point');
 		$result2 = $this->db->update('resto');
 		
 		return $result2;

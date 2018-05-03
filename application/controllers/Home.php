@@ -19,6 +19,6 @@ class Home extends CI_Controller {
 		$ambilFood = $this->HomeModel->getFood();
 		$data['getFood']=$ambilFood;
 
-	 	$this->load->view('Homepage',$data);
+	 	$this->load->view('HomePage',$data);
 	}
 }

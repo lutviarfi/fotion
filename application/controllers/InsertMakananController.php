@@ -44,7 +44,8 @@ class InsertMakananController extends CI_Controller {
   		$halal = $this->input->post('halal');
   		$available = $this->input->post('available');
   		$ingredients = $this->input->post('ingredients');
-      $lokasi = $this->input->post('lokasi');
+			$lokasi = $this->input->post('lokasi');
+			$point = $this->input->post('point');
 
   		$data = array(
   		'idmakanan'=>$kode,
@@ -62,6 +63,8 @@ class InsertMakananController extends CI_Controller {
 
 			$this->AdminModel->getPointResto($username); 
 
+			$data['point']=$point;
+
 			$result2 = $this->AdminModel->updatePoint($username);
 			
 			$data = NULL;
@@ -75,21 +78,6 @@ class InsertMakananController extends CI_Controller {
   			$this->load->view('InsertMakanan',$data);
   		}
   	}
-  }
-
-	
-	public function updatePoin($username){
-	
-		$point = $this->ListModel->getUserResto($point);
-		$data['point'] = $point;
-		
-		// for ($point>=0){	
-		// 	$point = $point + 1;
-		// 	$data['point'] = $point;
-	
-
-        redirect('Resto',$data);
-		// }
 	}
 
 }
