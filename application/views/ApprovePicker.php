@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
           <ul class="toggle-menu">
-						<li><a href="<?php echo('Home')?>">Home</a></li>
+						<li><a href="<?php blink('Home')?>">Home</a></li>
 						<li><a class="active" href="<?php blink('Picker')?>">List Request</a></li>
 					</ul>
 				</div>

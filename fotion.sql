@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
--- http://www.phpmyadmin.net
+-- version 4.8.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2018 at 08:11 PM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Generation Time: May 03, 2018 at 09:14 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
+CREATE TABLE `admin` (
   `username` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
@@ -45,7 +47,7 @@ INSERT INTO `admin` (`username`, `nama`, `password`) VALUES
 -- Table structure for table `food`
 --
 
-CREATE TABLE IF NOT EXISTS `food` (
+CREATE TABLE `food` (
   `idmakanan` int(15) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `expire` varchar(50) NOT NULL,
@@ -55,31 +57,24 @@ CREATE TABLE IF NOT EXISTS `food` (
   `ingredients` varchar(200) DEFAULT NULL,
   `lokasi` varchar(200) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `food`
 --
 
 INSERT INTO `food` (`idmakanan`, `nama`, `expire`, `halal`, `available`, `gambar`, `ingredients`, `lokasi`, `username`) VALUES
-(28, 'nasi goreng', '2 days', 'halal', 2, '59b7210333d9e6d08f6b4b8cd30a8d5d.jpg', 'nasi, bumbu penyedap, sambal', 'tangerang', 'ss'),
-(29, 'sup iga', '3 days', 'halal', 5, '2ef9add6a33c766f1ec45d13a0dbb631.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'priuk', 'ss'),
-(30, 'buah apel', 'no', 'halal', 2, '02fb6ff2ddf9aa0c5761fa7353488e05.jpg', 'rujak', 'tangerang', 'ss'),
-(31, 'nasi pecel', '2 days', 'halal', 20, 'e31e10275a56415dab2b6bc22d23ee73.jpg', 'nasi, bumbu penyedap, sambal', 'bekasi', 'mcd'),
-(32, 'gurame kipas', '1 day', 'halal', 7, '0313ac8872d36228c4aced713a27fc7c.jpg', 'ikan gurame, tepung tapioka, penyedap makanan, maizena', 'bandung', 'mcd'),
-(33, 'nasi uduk', '1 day', 'halal', 4, '631761e2d4c41a0fbfda0b81cb45e633.jpg', 'nasi, bumbu penyedap, sambal', 'priuk', 'mcd'),
-(34, 'dfasfasdf', 'asdfasd', 'asdfasdfasdf', 12, 'asdadsf', 'asdfasdf', 'asdfasdf', 'mcd'),
-(35, 'asdfasdf', 'asdfasdf', 'asdfasdf', 12, '13bce9b02127f711c0b7c8760a112655.jpg', 'asdfadf', 'asdfadsf', 'mcd'),
-(36, 'bubur', '12 menit', 'halal', 12, 'asdkfja;dlfkj', 'alskdfj;aldskfj', 'alksdfj;alkdfj', 'ss'),
-(37, 'askdlf', '21', 'sd', 12, '0c205224b8de48c1a5b858e4800030d2.jpg', 'asdf', 'ff', 'mcd'),
-(38, 'zxc', '44', 'asd', 54, '2e1cf6567543567e5ce06f9c1fe276c2.jpg', 'asdfadfa fasdf saf asf', 'asdfffdfdf', 'mcd');
+(41, 'nasi goreng', '06-05-2018', 'halal', 4, '06bcb50404c1fc1dadddd9572a87e49b.jpg', 'nasi, bumbu penyedap, sambal', 'jakarta', 'periuk'),
+(42, 'ayam bakar', '12-05-2018', 'halal', 3, '8dca1a5c330eb409b28c085d3f133c5e.jpg', 'ayam, kecap, penyedap makanan', 'tangerang', 'periuk'),
+(43, 'sup iga', '12-05-2018', 'halal', 3, 'ea86cbfbcc681d9ad154d551c07ea6c5.jpg', 'iga sapi, bumbu penyedap, kaldu sup', 'bekasi', 'periuk'),
+(44, 'sapo tahu', '12-05-2018', 'halal', 9, 'af4f5784733a21abc463afd97e199070.jpg', 'sapo, bumbu penyedap, seafood', 'bandung', 'mcd'),
+(45, 'buah apel', 'no', 'halal', 3, '898b0213d75586a4c199357fdcc5eb23.jpg', 'apel', 'jakarta', 'mcd');
 
 --
 -- Triggers `food`
 --
 DELIMITER $$
-CREATE TRIGGER `update_point` AFTER INSERT ON `food`
- FOR EACH ROW BEGIN
+CREATE TRIGGER `update_point` AFTER INSERT ON `food` FOR EACH ROW BEGIN
 update resto set point = point + 1 where username = new.username;
 END
 $$
@@ -91,23 +86,22 @@ DELIMITER ;
 -- Table structure for table `pesan`
 --
 
-CREATE TABLE IF NOT EXISTS `pesan` (
+CREATE TABLE `pesan` (
   `idpesan` int(5) NOT NULL,
   `idmakanan` int(15) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL,
   `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pesan`
 --
 
 INSERT INTO `pesan` (`idpesan`, `idmakanan`, `username`, `status`) VALUES
-(33, 29, 'lutviarfi', 'APPROVE'),
-(34, 30, 'lutviarfi', 'APPROVE'),
-(35, 31, 'lutviarfi', 'APPROVE'),
-(36, 30, 'lutviarfi', 'Pending'),
-(37, 29, 'andyndy', 'Pending');
+(40, 42, 'lutviarfi', 'APPROVE'),
+(41, 43, 'lutviarfi', 'Pending'),
+(42, 45, 'habibi', 'Pending'),
+(43, 41, 'andyndy', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -115,7 +109,7 @@ INSERT INTO `pesan` (`idpesan`, `idmakanan`, `username`, `status`) VALUES
 -- Table structure for table `picker`
 --
 
-CREATE TABLE IF NOT EXISTS `picker` (
+CREATE TABLE `picker` (
   `username` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` varchar(100) NOT NULL,
@@ -130,9 +124,9 @@ CREATE TABLE IF NOT EXISTS `picker` (
 --
 
 INSERT INTO `picker` (`username`, `nama`, `alamat`, `kondisi`, `gambar`, `password`, `active`) VALUES
-('aldis', 'aldis', 'pamulang', 'biasa', '40ce05c2e5cd61ef9c0116561c65e5d0.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet'),
-('andyndy', 'andi', 'cipadu\r\n', 'biasa', '70a45feac2be84bebb6f62fe11f77b1d.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet'),
-('lutviarfi', 'lutvi', 'jakarta\r\n', 'biasa aja', '45d9d99f3b0e224523b403cd9b92c9d7.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet');
+('andyndy', 'andi', 'cipadu', 'sehat', '98f18d77d5c9d900f8ac6f63aaa4760a.jpg', '21232f297a57a5a743894a0e4a801fc3', 'Not Yet'),
+('habibi', 'iqra', 'bogor', 'very hungry', '109170645096bc2223827b47724b26de.jpeg', '21232f297a57a5a743894a0e4a801fc3', 'ACTIVE'),
+('lutviarfi', 'lutvi', 'jakarta\r\n', 'biasa aja', '45d9d99f3b0e224523b403cd9b92c9d7.jpg', '21232f297a57a5a743894a0e4a801fc3', 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -140,7 +134,7 @@ INSERT INTO `picker` (`username`, `nama`, `alamat`, `kondisi`, `gambar`, `passwo
 -- Table structure for table `resto`
 --
 
-CREATE TABLE IF NOT EXISTS `resto` (
+CREATE TABLE `resto` (
   `username` varchar(50) NOT NULL,
   `email` varchar(70) NOT NULL,
   `phone` varchar(15) NOT NULL,
@@ -154,8 +148,8 @@ CREATE TABLE IF NOT EXISTS `resto` (
 --
 
 INSERT INTO `resto` (`username`, `email`, `phone`, `password`, `point`, `active`) VALUES
-('mcd', 'lutvi04@gmail.com', '0987654', '21232f297a57a5a743894a0e4a801fc3', 7, 'ACTIVE'),
-('ss', 'lutvi04@gmail.com', '0897654', '21232f297a57a5a743894a0e4a801fc3', 4, 'PENDING');
+('mcd', 'lutvi04@gmail.com', '0987654', '21232f297a57a5a743894a0e4a801fc3', 2, 'ACTIVE'),
+('periuk', 'lutvi04@gmail.com', '090876543', '21232f297a57a5a743894a0e4a801fc3', 3, 'PENDING');
 
 --
 -- Indexes for dumped tables
@@ -202,12 +196,14 @@ ALTER TABLE `resto`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+  MODIFY `idmakanan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
+  MODIFY `idpesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
 --
 -- Constraints for dumped tables
 --
@@ -224,6 +220,7 @@ ALTER TABLE `food`
 ALTER TABLE `pesan`
   ADD CONSTRAINT `pesan_ibfk_1` FOREIGN KEY (`username`) REFERENCES `picker` (`username`),
   ADD CONSTRAINT `pesan_ibfk_2` FOREIGN KEY (`idmakanan`) REFERENCES `food` (`idmakanan`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
