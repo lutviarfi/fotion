@@ -61,11 +61,7 @@ class InsertMakananController extends CI_Controller {
 
 			$result = $this->InsertMakananModel->InsertUsername($data);
 
-			//$this->AdminModel->getPointResto($username);
-
-			//$data['point']=$point;
-
-			//$result2 = $this->AdminModel->updatePoint($username);
+			
 
 			$data = NULL;
   		if($result == null){
