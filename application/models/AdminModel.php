@@ -26,16 +26,29 @@ class AdminModel extends CI_Model {
 		return $result;
 	}
 
-	public function getAllResto($username){
-
+	public function getAllResto(){
+	
 		$result = $this->db->get('resto');
-		//$result = $this->db->query("SELECT COUNT(idmakanan) from food where ('username',$data)");
-        return $result->result();
+	    return $result->result();
+	}
+
+	public function getPointResto($username){
+	
+		$result = $this->db->where('username',$username);
+		$result = $this->db->get('resto');
+	    return $result->result();
 	}
 
 	public function updatePoint($username){
-		$result = $this->db->set('point')->where('username',$username)->update('resto');
-		return $result;
+		
+		// $result = $this->db->query("UPDATE resto SET 'point' = '$point' WHERE username = '$username'");
+		// return $result->result();
+
+		$result2 = $this->db->where('username',$username);
+		$result2 = $this->db->set('point',$point+4);
+		$result2 = $this->db->update('resto');
+		
+		return $result2;
 	}
 
 }

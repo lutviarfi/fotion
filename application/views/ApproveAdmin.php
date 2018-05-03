@@ -34,41 +34,6 @@
 <body>
 <!-- BEGIN HEADER -->
 <div class="page-header">
-	<!-- BEGIN HEADER TOP -->
-	<div class="page-header-top">
-		<div class="container">
-
-
-			<!-- BEGIN TOP NAVIGATION MENU -->
-			<div class="top-menu">
-				<ul class="nav navbar-nav pull-right">
-
-					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<li class="dropdown dropdown-user dropdown-dark">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-                        <span class="username username-hide-mobile"></span>
-
-					</a>
-						<ul class="dropdown-menu dropdown-menu-default">
-							<li>
-								<a href="extra_profile.html">
-								<i class="icon-user"></i> My Profile </a>
-							</li>
-							<li>
-								<a href="<?php blink('Login/logout')?>">
-								<i class="icon-key"></i> Log Out </a>
-							</li>
-						</ul>
-					</li>
-					<!-- END USER LOGIN DROPDOWN -->
-				</ul>
-			</div>
-			<!-- END TOP NAVIGATION MENU -->
-		</div>
-	</div>
-	<!-- END HEADER TOP -->
-	<!-- BEGIN HEADER MENU -->
 	<div class="page-header-menu">
 		<div class="container">
 			<!-- BEGIN MEGA MENU -->
@@ -77,7 +42,10 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li class="active">
-						<a href="<?php blink('Home') ?>">List Picker</a>
+						<a href="<?php blink('admin') ?>">List Request Picker</a>
+					</li>
+					<li>
+						<a href="<?php blink('admin/getAllResto') ?>">List Point</a>
 					</li>
 
 				</ul>
@@ -198,13 +166,6 @@
 </div>
 <!-- END PRE-FOOTER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="container">
-		 2018 &copy; UBL</div>
-</div>
-<div class="scroll-to-top">
-	<i class="icon-arrow-up"></i>
-</div>
 
 <!-- modal update -->
 <?php foreach($picker as $data){?>
@@ -301,10 +262,7 @@
                              </tr>
                            </tbody>
                          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+        
       </div>
 
     </div>

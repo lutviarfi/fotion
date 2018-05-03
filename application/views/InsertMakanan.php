@@ -128,6 +128,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
               </div>
+              <?php foreach($resto as $data):?>
+               <input type="hidden" name="point" value="<?php echo $data->point+1;?>">
+              <?php endforeach; ?>
             </div>
             <div class="form-actions">
               <div class="row">

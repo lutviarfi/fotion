@@ -13,6 +13,9 @@ class InsertMakananController extends CI_Controller {
 	{
 			$username = $this->session->username;
   		$data['username'] = $username;
+			
+			$point = $this->AdminModel->getPointResto($username);
+			$data['resto'] = $point;
 
 	 $this->load->view('InsertMakanan',$data);
 	}
@@ -52,21 +55,18 @@ class InsertMakananController extends CI_Controller {
   		'available' => $available,
 			'ingredients' => $ingredients,
 			'username'=>$this->session->username,
-			'lokasi' => $lokasi
+			'lokasi' => $lokasi,
 			);
+			
+			$result = $this->InsertMakananModel->InsertUsername($data);
 
-  		$result = $this->InsertMakananModel->InsertUsername($data);
+			$this->AdminModel->getPointResto($username); 
+
+			$result2 = $this->AdminModel->updatePoint($username);
+			
 			$data = NULL;
-  		if($result){
-			//ambil point
-			// $point = $this->AdminModel->getAllResto($username);
-			// $p = ['point'];
-			// $data = array(
-			// 		'point'=>$p+1
-			// 	);		
-			// 	//update disini
-			// 	$result = $this->AdminModel->updatePoint($username);
-  		 	redirect('HomeLogin');
+  		if($result && $result2){
+			 	redirect('HomeLogin');
   		}else{
 
   			$username = $this->session->username;
