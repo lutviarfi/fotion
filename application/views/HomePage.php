@@ -24,39 +24,42 @@
 
 			<div class="news-bottom">
 					<?php foreach ($getFood as $data ) {?>
-        	<div class="col-md-4 col-sm-4 col-xs-4 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-						<div class="container"><br>
-							<a class="photo_hover3" href="#"><img src="<?php blink('assets/img/'.$data->gambar.'') ?>" width="215" height="137" alt=""></a>
-							<table style="width:20%;">
-	              <tr>
-	                <td>Food Name</td>
-	                <td> <?php echo $data->nama;?></td>
-	              </tr>
-	              <tr>
-	                <td>Halal Description<br></td>
-	                <td><?php echo $data->halal;?></td>
-	              </tr>
-	              <!-- <tr>
-	                <td>Expired</td>
-	                <td><?php echo $data->expire;?></td>
-	              </tr>
-	              <tr>
-	                <td>Ingredients</td>
-	                <td><?php echo $data->ingredients;?></td>
-	              </tr>
-	              <tr>
-	                <td>Restaurant Name</td>
-	                <td><?php echo $username;?></td>
-	              </tr>
-	              <tr>
-	                <td>Location</td>
-	                <td><?php echo $data->lokasi;?></td>
-	              </tr> -->
-							</table>
-							<?php if($user!=NULL):?>
-								<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
-							<?php endif;?>
-								<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
+        	<div class="col-md-3 col-sm-3 col-xs-3 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<div class="thumbnail"><br>
+							<a class="photo_hover3" href="#"><img src="<?php blink('assets/img/'.$data->gambar.'') ?>" style="width:100%; height:100%;" alt=""></a>
+							<div class="caption">
+								<table style="width:20%;">
+		              <tr>
+		                <td>Food Name</td>
+		                <td> <?php echo $data->nama;?></td>
+		              </tr>
+		              <tr>
+		                <td>Halal Description<br></td>
+		                <td><?php echo $data->halal;?></td>
+		              </tr>
+		              <!-- <tr>
+		                <td>Expired</td>
+		                <td><?php echo $data->expire;?></td>
+		              </tr>
+		              <tr>
+		                <td>Ingredients</td>
+		                <td><?php echo $data->ingredients;?></td>
+		              </tr>
+		              <tr>
+		                <td>Restaurant Name</td>
+		                <td><?php echo $username;?></td>
+		              </tr>
+		              <tr>
+		                <td>Location</td>
+		                <td><?php echo $data->lokasi;?></td>
+		              </tr> -->
+								</table>
+								<?php if($user!=NULL):?>
+									<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
+								<?php endif;?>
+									<a href="#modalviewmakanan<?php echo $data->idmakanan ?>" class="btn btn-danger" data-toggle="modal" id="btnadd">Read More</a>
+							</div>
+
 						</div>
       		</div>
 				<?php } ?>
