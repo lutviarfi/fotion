@@ -26,7 +26,7 @@
 					<?php foreach ($getFood as $data ) {?>
         	<div class="col-md-3 col-sm-3 col-xs-3 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
 						<div class="thumbnail"><br>
-							<a class="photo_hover3" href="#"><img src="<?php blink('assets/img/'.$data->gambar.'') ?>" style="width:100%; height:100%;" alt=""></a>
+							<a class="photo_hover3" href="#"><img src="<?php blink('assets/img/'.$data->gambar.'') ?>" style="width:300px; height:180px;" alt=""></a>
 							<div class="caption">
 								<table style="width:20%;">
 		              <tr>
