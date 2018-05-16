@@ -4,10 +4,9 @@
 			<div class="footer-head">
 				<div class="col-md-8 footer-top animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<ul class=" in">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Picker Registration</a></li>
-						<li><a href="regis.html">Restaurant Register</a></li>
-						<li><a href="login_3.html">Login</a></li>
+						<li><a href="<?php blink('Home')?>">Home</a></li>
+						<li><a href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
+						<li><a href="<?php blink('Login')?>">Restaurant Register</a></li>
 						<span>There are many variations of passages</span>
 				</div>
 				<div class="col-md-4 footer-bottom  animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
