@@ -41,7 +41,7 @@
 	 <h3><small>Web Developer</small></h3>
  </div>
  <div class="col-sm-3 text-center mb-3">
-	<img class="img-circle" src="<?php blink('assets/img/1.jpg') ?>" width="200px" height="200px" alt="">
+	<img class="img-circle" src="<?php blink('assets/img/inug.jpg') ?>" width="200px" height="200px" alt="">
 	<h3>Kristanto Nugroho</h3>
 	<h3><small>Web Developer</small></h3>
  </div>
