@@ -10,15 +10,19 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		
+
 		$username = $this->session->username;
 		$user = $this->session->user;
 		$data['username'] = $username;
 		$data['user'] = $user;
-		
+
 		$ambilFood = $this->HomeModel->getFood();
 		$data['getFood']=$ambilFood;
 
 	 	$this->load->view('HomePage',$data);
 	}
+
+  public function tentang(){
+    $this->load->view('about');
+  }
 }

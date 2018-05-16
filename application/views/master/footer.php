@@ -7,9 +7,10 @@
 						<li><a href="<?php blink('Home')?>">Home</a></li>
 						<li><a href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 						<li><a href="<?php blink('Login')?>">Restaurant Register</a></li>
-						<span>There are many variations of passages</span>
+						<li><a href="<?php blink('Home/tentang')?>">About Us</a></li>
+						<span>There are many variations of food</span>
 				</div>
-				<div class="col-md-4 footer-bottom  animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+				<!-- <div class="col-md-4 footer-bottom  animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<h2>Follow Us</h2>
 					<label><i class="glyphicon glyphicon-menu-up"></i></label>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
@@ -21,7 +22,7 @@
 						<li><a href="#"><i class="ic3"></i></a></li>
 					</ul>
 
-				</div>
+				</div> -->
 			<div class="clearfix"> </div>
 
 			</div>

@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://206.189.84.220:81/';
+$config['base_url'] = 'http://localhost:80/fotion/';
 
 
 /*
