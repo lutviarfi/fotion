@@ -8,14 +8,6 @@
 						<li><a href="#">Picker Registration</a></li>
 						<li><a href="regis.html">Restaurant Register</a></li>
 						<li><a href="login_3.html">Login</a></li>
-
-					</ul>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="login_3.html">Login</a></li>
-						<li><a href="regis.html">Register</a></li>
-					</ul>
 						<span>There are many variations of passages</span>
 				</div>
 				<div class="col-md-4 footer-bottom  animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
