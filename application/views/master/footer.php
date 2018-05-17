@@ -2,13 +2,13 @@
 	<div class="footer">
 		<div class="container">
 			<div class="footer-head">
-				<div class="col-md-8 footer-top animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
+				<div class="col-md-10 footer-top animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<ul class=" in">
 						<li><a href="<?php blink('Home')?>">Home</a></li>
 						<li><a href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 						<li><a href="<?php blink('Login')?>">Restaurant Register</a></li>
 						<li><a href="<?php blink('Home/tentang')?>">About Us</a></li>
-						<span>There are many variations of food</span>
+						<span>Fotion merupakan website yang dapat menghubungkan restoran dengan konsumen yang membutuhkan Restoran yang memiliki makanan sisa yang masih layak dikonsumsi , Dan memberikan pada Picker yang membutuhkan.<br><br>-Sharing is caring</span>
 				</div>
 				<!-- <div class="col-md-4 footer-bottom  animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<h2>Follow Us</h2>
