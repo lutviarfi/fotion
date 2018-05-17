@@ -13,8 +13,10 @@ class ControllerPetunjuk extends CI_Controller {
 	{
 		$username = $this->session->username;
 		$data['username'] = $username;
+		$user = $this->session->user;
+		$data['user'] = $user;
 
-		$this->load->view('petunjuk');	
+		$this->load->view('petunjuk',$data);	
 	}
 
 	

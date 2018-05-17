@@ -54,8 +54,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="toggle">
 					<ul class="toggle-menu">
 						<li><a class="active" href="<?php blink('Home')?>">Home</a></li>
-						<?php if($username==NULL && $user==NULL){?>
 						<li><a href="<?php blink('ControllerPetunjuk')?>">Panduan Penggunaan Web</a></li>
+						<?php if($username==NULL && $user==NULL){?>
 						<li><a href="<?php blink('RegisterPicker')?>">Picker Registration</a></li>
 							<?php }else{}?>
 						<?php if($username==NULL && $user==NULL){?>

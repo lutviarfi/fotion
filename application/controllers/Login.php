@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 		if($checkUsername==NULL){
 			echo "<script type='text/javascript'>
                alert ('Maaf Username Dan Password Anda Salah !');
-               window.location.replace('index');
+               window.location.replace('loginPicker');
       			</script>";
 		}else{
 			$newdata = array(
