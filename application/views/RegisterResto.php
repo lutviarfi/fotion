@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="col-md-2 control-label" for="form_control_1">Username</label>
                 <div class="col-md-10">
 
-                  <input type="text" class="form-control" placeholder="Insert Your Restaurant Name" id="username" name="username" >
+                  <input type="text" class="form-control" required placeholder="Insert Your Restaurant Name" id="username" name="username" >
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Email</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                  <input type="email" required class="form-control" required name="email" id="email" placeholder="Email">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -105,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Phone Number</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Insert Number Phone">
+                  <input type="number" min="0" max="9" class="form-control" name="phone" required id="phone" placeholder="Insert Number Phone">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Password</label>
                 <div class="col-md-10">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password Here">
+                  <input type="password" class="form-control" required name="password" id="password" placeholder="Enter Password Here">
                   <div class="form-control-focus">
                   </div>
                 </div>
