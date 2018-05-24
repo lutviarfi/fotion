@@ -24,11 +24,11 @@
 
 			<div class="news-bottom">
 					<?php foreach ($getFood as $data ) {?>
-        	<div class="col-md-3 col-sm-3 col-xs-3 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-						<div class="thumbnail"><br>
-							<a class="photo_hover3" href="#"><img src="<?php blink('assets/img/'.$data->gambar.'') ?>" width="200px" height="200px" alt=""></a>
+						<div class="col-sm-4">
+							<div class="thumbnail"><br>
+							<img src="<?php blink('assets/img/'.$data->gambar.''); ?>" class="img-rounded" alt="Cinque Terre" style="width:100%; height:250px">
 							<div class="caption">
-								<table style="width:20%;">
+								<table style="width:80%;">
 		              <tr>
 		                <td>Food Name</td>
 		                <td> <?php echo $data->nama;?></td>
@@ -54,6 +54,7 @@
 		                <td><?php echo $data->lokasi;?></td>
 		              </tr> -->
 								</table>
+								<hr>
 								<?php if($user!=NULL):?>
 									<a href="<?php blink('Transaksi/pesan/'.$data->idmakanan) ?>" class="btn btn-primary" role="submit">Pick up</a>|
 								<?php endif;?>

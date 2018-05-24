@@ -23,6 +23,12 @@ class Home extends CI_Controller {
 	}
 
   public function tentang(){
-    $this->load->view('about');
+
+		$username = $this->session->username;
+		$user = $this->session->user;
+		$data['username'] = $username;
+		$data['user'] = $user;
+
+    $this->load->view('about',$data);
   }
 }
