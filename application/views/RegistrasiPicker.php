@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Picker Name</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="form_control_1" placeholder="Enter your Name">
+                  <input type="text" class="form-control placeholder-no-fix" required name="nama" id="form_control_1" placeholder="Enter your Name">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">username</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="username" id="form_control_1" placeholder="Enter your Username">
+                  <input type="text" class="form-control placeholder-no-fix" required name="username" id="form_control_1" placeholder="Enter your Username">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Password</label>
                 <div class="col-md-10">
-                  <input type="password" class="form-control" name="password" id="form_control_1" placeholder="Enter your password">
+                  <input type="password" class="form-control placeholder-no-fix" required name="password" id="form_control_1" placeholder="Enter your password">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="form-group form-md-line-input">
                   <label class="col-md-2 control-label" for="form_control_1">Condition</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" name="kondisi" id="form_control_1" placeholder="Enter your condition">
+                    <input type="text" class="form-control" required name="kondisi" id="form_control_1" placeholder="Enter your condition">
                     <div class="form-control-focus">
                     </div>
                   </div>
@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input has-success">
                 <label class="col-md-2 control-label" for="form_control_1">Address</label>
                 <div class="col-md-10">
-                  <textarea class="form-control" name="alamat" rows="3" placeholder="Enter your address"></textarea>
+                  <textarea class="form-control" required name="alamat" rows="3" placeholder="Enter your address"></textarea>
                   <div class="form-control-focus">
                   </div>
                 </div>
