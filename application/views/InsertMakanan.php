@@ -84,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Food Name</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="nama" id="nama" placeholder="The Name of The Food">
+                  <input type="text" class="form-control" required name="nama" id="nama" placeholder="The Name of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                     <label class="col-md-2 control-label" for="form_control_1">Food Image</label>
                     <div class="col-md-10">
-                      <input type="file" class="form-control" name="gambar" id="gambar" placeholder="Insert Food Image">
+                      <input type="file" class="form-control" required name="gambar" id="gambar" placeholder="Insert Food Image">
                       <div class="form-control-focus">
                       </div>
                     </div>
@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Expired Date</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="expire" id="expire" placeholder="Expired Date of The Food">
+                  <input type="date" class="form-control" required name="expire" id="expire" placeholder="Expired Date of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Halal Status</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="halal" id="halal" placeholder="Is Your Food Halal?">
+                  <input type="text" class="form-control" required name="halal" id="halal" placeholder="Is Your Food Halal?">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -116,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Available Portion</label>
                 <div class="col-md-10">
-                  <input type="number" class="form-control" name="available" id="available" placeholder="Amount of Available Portion">
+                  <input type="number" min="1" class="form-control" required name="available" id="available" placeholder="Amount of Available Portion">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -124,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Ingredients</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Ingredients of The Food">
+                  <input type="text" class="form-control" required name="ingredients" id="ingredients" placeholder="Ingredients of The Food">
                   <div class="form-control-focus">
                   </div>
                 </div>
@@ -132,7 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="form-group form-md-line-input">
                 <label class="col-md-2 control-label" for="form_control_1">Location To Pickup</label>
                 <div class="col-md-10">
-                  <input type="text" class="form-control" name="lokasi" id="lokasi" placeholder="Input your pickup location">
+                  <input type="text" class="form-control" required name="lokasi" id="lokasi" placeholder="Input your pickup location">
                   <div class="form-control-focus">
                   </div>
                 </div>
